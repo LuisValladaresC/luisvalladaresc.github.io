@@ -1,14 +1,13 @@
 module.exports = {
 	plugins: [
 		require('postcss-import'),
-		require('postcss-cssnext')({
-			autoprefixer: {
-				flexbox: false
-			},
-			customPropierties: false,
+		require('postcss-preset-env')({
+			features: {
+				'nesting-rules': true,
+			}
 		}),
-		require('cssnano')({
-            preset: 'default',
-        }),
+		// require('cssnano')({
+        //     preset: 'default',
+        // }),
 	]
 }
