@@ -30,7 +30,7 @@
 \* --------------------------- */
 
 html {
-	font-family: system-ui, sans-serif;
+	font-family: Segoe UI, sans-serif; /* */
 	scroll-behavior: smooth;
 }
 
@@ -144,11 +144,15 @@ main {
 		}
 
 		.hero-arrow-link {
-			display: block;
-			width: fit-content;
+			text-decoration: none;
 			margin: 0 auto;
 			cursor: pointer;
 		}
+		
+			.hero-arrow-link i {
+				color: var(--color-lightgray);
+				font-size: 3em;
+			}
 
 /* --------------------------- *\
     SECCION CONOCIMIENTOS
@@ -440,13 +444,15 @@ main {
 	.contacto-contenedor {
 		max-width: 1024px;
 		margin: 0 auto;
-		padding: var(--espaciado-alto);
+		padding: 0 var(--espaciado-alto);
+
+		position: relative;
+		height: 60vh; /* */
+		top: -30vh; /* */
 	}
 
 		.contacto-contenido {
-			position: relative;
 			height: 60vh; /* */
-			top: -30vh; /* */
 
 			background-color: #333b50;
 			padding: var(--espaciado-muy-alto);
@@ -511,16 +517,14 @@ main {
 					box-sizing: border-box;
 					resize: none;
 				}
-				.contacto-formulario input:focus,
-				.contacto-formulario textarea:focus {
-					border: 1px solid #00d646;
-				}
-
+				
 				#contacto_enviar {
 					border: none;
 					outline: none;
 					cursor: pointer;
+
 					color: var(--color-white);
+					line-height: 2.1;
 
 					transition: 250ms;
 					background-color: #00d646; /* */
@@ -529,12 +533,39 @@ main {
 					background-color: #324158; /* */
 				}
 
+		.contacto-arrow-container {
+			height: 30vh;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+			.contacto-arrow-link {
+				text-decoration: none;
+			}
+		
+				.contacto-arrow-link i {
+					color: var(--color-lightgray);
+					font-size: 3em;
+				}
 
 /* --------------------------- *\
         PIE DE PAGINA
 \* --------------------------- */
 
 #footer {
-	height: 120px;
+	height: 100px;
 	background-color: #333b50;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+	.footer-copyright {
+		color: var(--color-lightgray);
+		font-size: 0.7em;
+		font-weight: 350;
+		letter-spacing: .05em;
+	}
