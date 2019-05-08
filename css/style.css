@@ -439,7 +439,6 @@ main {
 
 #hero {
 	background-image: url('../../images/hero.png');
-	/* background-position-x: right; */
 	background-position-x: calc(100% + 0%);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -1003,7 +1002,7 @@ main {
 				}
 
 /* --------------------------- *\
-        PIE DE PAGINA
+			FOOTER
 \* --------------------------- */
 
 #footer {

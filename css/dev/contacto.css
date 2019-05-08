@@ -1,0 +1,119 @@
+/* --------------------------- *\
+        SECCION CONTACTO
+\* --------------------------- */
+
+#seccion_contacto {
+	background-image: url('../../images/contacto.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+	.contacto-contenedor {
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 0 var(--espaciado-alto);
+
+		position: relative;
+		height: 60vh; /* */
+		top: -30vh; /* */
+	}
+
+		.contacto-contenido {
+			height: 60vh; /* */
+
+			background-color: #333b50;
+			padding: var(--espaciado-muy-alto);
+			box-sizing: border-box;
+
+			display: grid;
+			grid-template-columns: repeat(2, minmax(auto, 400px));
+			grid-column-gap: var(--espaciado-alto);
+			justify-content: center;
+			align-content: center;
+		}
+
+			.contacto-informacion {
+				color: var(--color-white);
+
+				display: grid;
+				grid-template-rows: auto auto auto 1fr;
+			}
+
+				.contacto-titulo {
+					text-align: left;
+					font-size: 1.4em;
+					font-weight: 400;
+					letter-spacing: initial;
+				}
+
+				.contacto-descripcion,
+				.contacto-correo {
+					font-size: 0.9em;
+					font-weight: 350;
+					line-height: 1.8;
+					letter-spacing: .05em;
+				}
+
+				.contacto-redes-sociales {
+					margin-top: var(--espaciado-muy-leve);
+				}
+		
+					.contacto-icono {
+						color: white;
+						font-size: 1.5em;
+						margin: 0 var(--espaciado-leve);
+						margin-top: var(--espaciado-muy-alto);
+						cursor: pointer;
+					}
+					.contacto-icono:first-of-type {
+						margin-left: 0
+					}
+
+			.contacto-formulario {
+				display: grid;
+				align-content: center;
+				grid-row-gap: var(--espaciado-leve);
+			}
+
+				.contacto-formulario input,
+				.contacto-formulario textarea {
+					line-height: 1.8;
+					font-size: 0.9em;
+
+					padding: var(--espaciado-muy-leve) var(--espaciado-leve);
+					box-sizing: border-box;
+					resize: none;
+				}
+				
+				#contacto_enviar {
+					border: none;
+					outline: none;
+					cursor: pointer;
+
+					color: var(--color-white);
+					line-height: 2.1;
+
+					transition: 250ms;
+					background-color: #00d646; /* */
+				}
+				#contacto_enviar:hover {
+					background-color: #324158; /* */
+				}
+
+		.contacto-arrow-container {
+			height: 30vh;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+			.contacto-arrow-link {
+				text-decoration: none;
+			}
+		
+				.contacto-arrow-link i {
+					color: var(--color-lightgray);
+					font-size: 3em;
+				}

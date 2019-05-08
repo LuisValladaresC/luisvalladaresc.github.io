@@ -1,0 +1,24 @@
+/* --------------------------- *\
+			VARIABLES
+\* --------------------------- */
+
+:root {
+    /* Colores */
+	--color-menu: #00d646;
+	--color-background: rgba(20, 30, 60, .6);
+
+	--color-black: #000000;
+	--color-gray: #6c757d;
+	--color-lightgray: #bec7d5;
+	--color-white: #ffffff;
+
+    /* Espaciado */
+	--espaciado-muy-leve: calc(var(--espaciado-normal)/4);
+	--espaciado-leve: calc(var(--espaciado-normal)/2);
+	--espaciado-normal: 1.25rem;
+	--espaciado-alto: calc(var(--espaciado-normal)*1.5);
+	--espaciado-muy-alto: calc(var(--espaciado-normal)*2);
+
+	/* Otros */
+	--border-radius: 0.3rem;
+}

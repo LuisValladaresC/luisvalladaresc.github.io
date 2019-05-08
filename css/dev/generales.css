@@ -1,0 +1,51 @@
+/* --------------------------- *\
+			GENERALES
+\* --------------------------- */
+
+html {
+	font-family: Segoe UI, sans-serif; /* */
+	scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	color: var(--color-white);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h1 {
+	font-size: 4em;
+	line-height: 1.3;
+	letter-spacing: .1em;
+}
+	h1 span {
+		color: var(--color-menu)
+	}
+
+h2 {
+	font-size: 2.4em;
+	letter-spacing: .15em;
+}
+	h2 span {
+		color: var(--color-lightgray); /* */
+	}
+
+h3 {
+	margin: var(--espaciado-normal) 0;
+	font-size: 1.2em;
+	font-weight: 400;
+	letter-spacing: .2em;
+}
+
+main {
+	background-image: url('../../images/main.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.background-color-seccion {
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-background);
+}
