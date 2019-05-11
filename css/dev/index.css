@@ -2,8 +2,10 @@
 @import "./variables.css";
 @import "./generales.css";
 @import "./header.css";
+@import "./hero.css";
 @import "./conocimientos.css";
 @import "./trabajo.css";
 @import "./portafolio.css";
 @import "./contacto.css";
 @import "./footer.css";
+@import "./mobile.css";

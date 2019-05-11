@@ -1,15 +1,33 @@
-@media (max-width: 1000px) {
-
-}
+@media (max-width: 1000px) {}
 
 @media (max-width: 800px) {
+    /* --- GENERALES --- */
     html {
         font-size: 14px;
     }
+
 }
 
 @media (max-width: 600px) {
-    .hero-navbar {
-        /* display: none; */
+    /* --- GENERALES --- */
+    html {
+        font-size: 12px;
     }
+
+    .container-sections-header-hero {
+        background-size: cover;
+    }
+    
+    /* ----- HEADER ----- */
+    #header {
+        position: absolute;
+    }
+
+        .header-navbar {
+            display: none;
+        }
+
+        .header-menu-button {
+            display: block;
+        }
 }

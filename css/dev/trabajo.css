@@ -89,7 +89,7 @@
 		.trabajo-descripcion.impar {
 			left: 0;
 			right: -15%;
-			z-index: 100;
+			z-index: 1;
 		}
 		
 			.trabajo-descripcion-titulo {

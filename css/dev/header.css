@@ -1,75 +1,135 @@
 /* --------------------------- *\
-              HERO
+			HEADER
 \* --------------------------- */
 
-#hero {
-	background-image: url('../../images/hero.png');
-	background-position-x: calc(100% + 0%);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: contain;
+#header {
+	width: 100%;
+	height: 60px;
 }
 
-    .hero-navbar {
-        height: 60px;
-        box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.1);
+	.header-navbar {
+		height: inherit;
+		box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.1);
+		
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: center;
+		align-content: center;
+	}
 
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-        .hero-menu-link {
+		.header-navbar-link {
 			height: inherit;
 			padding: 0 var(--espaciado-alto);
 			
 			display: flex;
 			align-items: center;
 			
-            font-size: 0.7em;
+			font-size: 0.7em;
 			text-decoration: none;
-            text-transform: uppercase;
+			text-transform: uppercase;
 			color: var(--color-lightgray);
 			
 			cursor: pointer;
 			transition: 100ms;
 		}
-		.hero-menu-link:first-of-type {
+		.header-navbar-link:first-of-type {
 			color: var(--color-menu);
 		}
-		.hero-menu-link:hover {
+		.header-navbar-link:hover {
 			transform: scale(1.1)
 		}
 
-			.hero-menu-link span {
+			.header-navbar-link span {
 				padding: var(--espaciado-leve);
 				border: solid 1px var(--color-lightgray);
 				border-radius: var(--border-radius);
 			}
 
-	.hero-contenido {
-		width: 100%;
-        height: calc(100vh - 100px); /* */
-        text-transform: uppercase;
-        color: var(--color-white);
+	.header-menu-button {
+		width: 22px;
+		height: 20px;
+		cursor: pointer;
+		margin-top: var(--espaciado-normal);
+		margin-left: var(--espaciado-leve);
 
-        display: grid;
-        align-content: center;
-        justify-content: center;
+		position: relative;
+		z-index: 100;
+
+		display: none;
 	}
 
-		.hero-parrafo {
-			margin: var(--espaciado-muy-alto) 0;
+		.header-button-line {
+			height: 2px;
+			width: 100%;
+			border-radius: 2px;
+			background-color: var(--color-lightgray);
+
+			position: absolute;
+			transition: 250ms ease-in-out;
 		}
 
-		.hero-arrow-link {
-			text-decoration: none;
-			margin: 0 auto;
-			cursor: pointer;
+		.button-line-1 {
+			top: 0;
 		}
-		
-			.hero-arrow-link i {
-				color: var(--color-lightgray);
-				font-size: 3em;
+		.button-line-2 {
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.button-line-3 {
+			bottom: 0;
+		}
+			/* Clase agregada mediante JS en el evento click del Padre */
+			.button-line-1.active {
+				transform: translateY(calc(10px - 50%)) rotate(-45deg);
 			}
+			.button-line-2.active {
+				opacity: 0;
+			}
+			.button-line-3.active {
+				transform: translateY(calc(-10px + 50%)) rotate(45deg);
+			}
+
+	.header-menu {
+		display: grid;
+		justify-content: center;
+		align-content: center;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		background-color: #333b50;
+
+		transition: 0.5s;
+		will-change: opacity;
+	}
+	.header-menu.active {
+		opacity: 1;
+	}
+	.header-menu.inactive {
+		opacity: 0;
+		animation: bottom-auto 0.5s forwards;
+	}
+	@keyframes bottom-auto {
+		99% { bottom: 0 } 100% { bottom: auto }
+	}
+
+		.header-menu-link {
+			color: var(--color-white);
+			margin: var(--espaciado-normal) 0;
+			
+			font-size: 1.2em;
+			font-weight: 400;
+			letter-spacing: .2em;
+
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			display: none;
+		}
+		.header-menu.active .header-menu-link {
+			display: block;
+		}

@@ -1,0 +1,29 @@
+/* --------------------------- *\
+              HERO
+\* --------------------------- */
+
+.hero-contenido {
+    width: 100%;
+    height: calc(100vh - 100px); /* */
+    text-transform: uppercase;
+    color: var(--color-white);
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+    .hero-parrafo {
+        margin: var(--espaciado-muy-alto) 0;
+    }
+
+    .hero-arrow-link {
+        text-decoration: none;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    
+        .hero-arrow-link i {
+            color: var(--color-lightgray);
+            font-size: 3em;
+        }

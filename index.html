@@ -9,27 +9,42 @@
     <title>Luis Valladares</title>
 </head>
 <body>
-    <header id="hero">
-        <div class="background-color-seccion">
-            <nav class="hero-navbar">
-                <a class="hero-menu-link">Inicio</a>
-                <a href="#seccion_conocimientos" class="hero-menu-link">Profesional</a>
-                <a href="#seccion_trabajo" class="hero-menu-link">Trabajo</a>
-                <a href="#seccion_portafolio" class="hero-menu-link">Portafolio</a>
-                <a href="#trabajemos_juntos" class="hero-menu-link"><span>Trabajemos Juntos</span></a>
-            </nav>
-            <div class="hero-contenido">
+    <div class="container-sections-header-hero">
+        <div class="section-background-color">
+            <header id="header">
+                <nav class="header-navbar">
+                    <a class="header-navbar-link">Inicio</a>
+                    <a class="header-navbar-link" href="#seccion_conocimientos">Profesional</a>
+                    <a class="header-navbar-link" href="#seccion_trabajo">Trabajo</a>
+                    <a class="header-navbar-link" href="#seccion_portafolio">Portafolio</a>
+                    <a class="header-navbar-link" href="#trabajemos_juntos"><span>Trabajemos Juntos</span></a>
+                </nav>
+                <div class="header-menu-button" id="btn_menu">
+                    <span class="header-button-line button-line-1"></span>
+                    <span class="header-button-line button-line-2"></span>
+                    <span class="header-button-line button-line-3"></span>
+                </div>
+                <nav class="header-menu" id="menu">
+                    <a class="header-menu-link" href="#header">Inicio</a>
+                    <a class="header-menu-link" href="#seccion_conocimientos">Profesional</a>
+                    <a class="header-menu-link" href="#seccion_trabajo">Trabajo</a>
+                    <a class="header-menu-link" href="#seccion_portafolio">Portafolio</a>
+                    <a class="header-menu-link" href="#trabajemos_juntos"><span>Trabajemos Juntos</span></a>
+                </nav>
+            </header>
+
+            <section id="hero" class="hero-contenido">
                 <h1 class="hero-titulo">Yo soy</h1>
                 <h1 class="hero-titulo">Luis</h1>
-                <h1 class="hero-titulo">Valladares<span>.</span></h1>
+                <h1 class="hero-titulo">Valladares<span></span></h1>
                 <h3 class="hero-parrafo">Desarrollador de Paginas Web</h3>
                 <a class="hero-arrow-link" href="#seccion_conocimientos"><i class="fas fa-chevron-down"></i></a>
-            </div>
+            </section>
         </div>
-    </header>
+    </div>
 
     <section id="seccion_conocimientos">
-        <div class="background-color-seccion">
+        <div class="section-background-color">
             <div class="conocimientos-contenido">
                 <h2 class="conocimientos-titulo"><span>01</span> Profesional</h2>
                 <h3 class="conocimientos-subtitulo">Mi nivel de conocimiento en software</h3>
@@ -80,7 +95,7 @@
     </section>
 
     <main class="contenedor-trabajo-portafolio">
-        <div class="background-color-seccion">
+        <div class="section-background-color">
             <section id="seccion_trabajo">
                 <h2 class="trabajo-titulo"><span>02</span> Trabajo</h2>
                 <!-- 1er Apartado de Trabajo -->
@@ -168,7 +183,7 @@
     </main>
 
     <section id="seccion_contacto">
-        <div class="background-color-seccion">
+        <div class="section-background-color">
             <div class="contacto-contenedor" id="trabajemos_juntos">
                 <div class="contacto-contenido">
                     <div class="contacto-informacion">
@@ -197,5 +212,6 @@
     <footer id="footer">
         <p class="footer-copyright">Derechos Reservado © 2019 LUISVC.COM</p>
     </footer>
+    <script src="./index.js"></script>
 </body>
 </html>
