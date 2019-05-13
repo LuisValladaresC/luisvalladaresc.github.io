@@ -47,7 +47,7 @@
 
 	.header-menu-button {
 		width: 22px;
-		height: 20px;
+		height: 16px;
 		cursor: pointer;
 		margin-top: var(--espaciado-normal);
 		margin-left: var(--espaciado-leve);
@@ -81,13 +81,13 @@
 		}
 			/* Clase agregada mediante JS en el evento click del Padre */
 			.button-line-1.active {
-				transform: translateY(calc(10px - 50%)) rotate(-45deg);
+				transform: translateY(calc(8px - 50%)) rotate(-45deg);
 			}
 			.button-line-2.active {
 				opacity: 0;
 			}
 			.button-line-3.active {
-				transform: translateY(calc(-10px + 50%)) rotate(45deg);
+				transform: translateY(calc(-8px + 50%)) rotate(45deg);
 			}
 
 	.header-menu {

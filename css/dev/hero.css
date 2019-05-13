@@ -2,9 +2,12 @@
               HERO
 \* --------------------------- */
 
-.hero-contenido {
+#hero {
     width: 100%;
-    height: calc(100vh - 100px); /* */
+    min-height: calc(100vh - 100px);
+    padding: var(--espaciado-muy-alto) 0;
+    box-sizing: border-box;
+
     text-transform: uppercase;
     color: var(--color-white);
 
@@ -14,7 +17,7 @@
 }
 
     .hero-parrafo {
-        margin: var(--espaciado-muy-alto) 0;
+        margin: var(--espaciado-alto) 0;
     }
 
     .hero-arrow-link {

@@ -1,4 +1,9 @@
-@media (max-width: 1000px) {}
+@media (max-width: 1000px) {
+    /* --- GENERALES --- */
+    .container-sections-header-hero {
+        background-position-x: calc(100% + 12vh);
+    }
+}
 
 @media (max-width: 800px) {
     /* --- GENERALES --- */
@@ -6,16 +11,15 @@
         font-size: 14px;
     }
 
+    .container-sections-header-hero {
+        background-size: cover;
+    }
 }
 
 @media (max-width: 600px) {
     /* --- GENERALES --- */
     html {
         font-size: 12px;
-    }
-
-    .container-sections-header-hero {
-        background-size: cover;
     }
     
     /* ----- HEADER ----- */

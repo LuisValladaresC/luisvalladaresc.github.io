@@ -426,7 +426,8 @@ h3 {
 
 .container-sections-header-hero {
 	background-image: url('../../images/hero.png');
-	background-position-x: calc(100% + 0%);
+	background-position-x: 100%;
+	background-position-y: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -503,7 +504,7 @@ main {
 
 .header-menu-button {
 		width: 22px;
-		height: 20px;
+		height: 16px;
 		cursor: pointer;
 		margin-top: 1.25rem;
 		margin-top: var(--espaciado-normal);
@@ -544,8 +545,8 @@ main {
 /* Clase agregada mediante JS en el evento click del Padre */
 
 .button-line-1.active {
-				-webkit-transform: translateY(calc(10px - 50%)) rotate(-45deg);
-				        transform: translateY(calc(10px - 50%)) rotate(-45deg);
+				-webkit-transform: translateY(calc(8px - 50%)) rotate(-45deg);
+				        transform: translateY(calc(8px - 50%)) rotate(-45deg);
 			}
 
 .button-line-2.active {
@@ -553,8 +554,8 @@ main {
 			}
 
 .button-line-3.active {
-				-webkit-transform: translateY(calc(-10px + 50%)) rotate(45deg);
-				        transform: translateY(calc(-10px + 50%)) rotate(45deg);
+				-webkit-transform: translateY(calc(-8px + 50%)) rotate(45deg);
+				        transform: translateY(calc(-8px + 50%)) rotate(45deg);
 			}
 
 .header-menu {
@@ -616,9 +617,13 @@ main {
               HERO
 \* --------------------------- */
 
-.hero-contenido {
+#hero {
     width: 100%;
-    height: calc(100vh - 100px); /* */
+    min-height: calc(100vh - 100px);
+    padding: calc(1.25rem*2) 0;
+    padding: var(--espaciado-muy-alto) 0;
+    box-sizing: border-box;
+
     text-transform: uppercase;
     color: #ffffff;
     color: var(--color-white);
@@ -629,8 +634,8 @@ main {
 }
 
 .hero-parrafo {
-        margin: calc(1.25rem*2) 0;
-        margin: var(--espaciado-muy-alto) 0;
+        margin: calc(1.25rem*1.5) 0;
+        margin: var(--espaciado-alto) 0;
     }
 
 .hero-arrow-link {
@@ -1147,18 +1152,10 @@ main {
 	}
 
 @media (max-width: 1000px) {
-    /* .container-sections-header-hero {
-        background-image: url('../../images/hero.png');
-        background-position-x: calc(100% + 0%);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: contain;
+    /* --- GENERALES --- */
+    .container-sections-header-hero {
+        background-position-x: calc(100% + 12vh);
     }
-
-    #header {
-        width: 100%;
-        height: 60px;
-    } */
 }
 
 @media (max-width: 800px) {
@@ -1167,16 +1164,15 @@ main {
         font-size: 14px;
     }
 
+    .container-sections-header-hero {
+        background-size: cover;
+    }
 }
 
 @media (max-width: 600px) {
     /* --- GENERALES --- */
     html {
         font-size: 12px;
-    }
-
-    .container-sections-header-hero {
-        background-size: cover;
     }
     
     /* ----- HEADER ----- */
