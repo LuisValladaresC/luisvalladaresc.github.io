@@ -34,4 +34,14 @@
         .header-menu-button {
             display: block;
         }
+
+    /* ------ HERO ------ */
+    #hero {
+        min-height: calc(100vh - 40px);
+    }
+
+    /* - CONOCIMIENTOS - */
+    .nivel-barra {
+        padding: 0 var(--espaciado-leve);
+    }
 }
