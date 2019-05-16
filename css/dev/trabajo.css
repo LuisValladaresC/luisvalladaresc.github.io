@@ -1,18 +1,18 @@
-/* --------------------------- *\
+ /* --------------------------- *\
         SECCION TRABAJO
 \* --------------------------- */
 
 #seccion_trabajo {
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: 10% var(--espaciado-alto) 0; /* */
+	padding: var(--espaciado-muy-alto) var(--espaciado-normal);
 
 	display: grid;
 	grid-row-gap: var(--espaciado-muy-alto);
 }
 
 	.trabajo-titulo {
-		margin: var(--espaciado-normal) 0;
+		margin-top: var(--espaciado-normal)
 	}
 
 	.trabajo-contenido {
@@ -42,7 +42,7 @@
 				right: 0;
 				top: 0;
 				bottom: 0;
-				background-color: rgba(20, 40, 70, .6);
+				background-color: var(--color-background);
 
 				display: grid;
 				grid-auto-flow: column;
@@ -53,12 +53,15 @@
 
 				.trabajo-icono {
 					color: white;
-					font-size: 4em;
+					font-size: 3.2em;
+					opacity: 0.85;
 				}
 
 				.trabajo-etiqueta {
 					position: absolute;
 					color: var(--color-white);
+					font-size: 0.9em;
+					opacity: 0.85;
 
 					border: 1px solid var(--color-white);
 					border-radius: var(--border-radius);
@@ -70,16 +73,17 @@
 				}
 
 		.trabajo-descripcion {
-			height: 70%;
-			width: calc(100% + 15%);
+			min-height: 60%;
+			width: calc(100% + 30%);
 			box-sizing: border-box;
 			position: relative;
-			left: -15%;
+			left: -30%;
 
-			padding: var(--espaciado-alto);
-			background-color: rgba(255, 255, 255, 0.85);
+			padding: var(--espaciado-normal) var(--espaciado-alto);
+			background-color: var(--color-white);
+			opacity: 0.85;
 
-			border-radius: calc(var(--border-radius) * 2);
+			border-radius: var(--border-radius);
 			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
 
 			align-self: center;
@@ -88,7 +92,6 @@
 		}
 		.trabajo-descripcion.impar {
 			left: 0;
-			right: -15%;
 			z-index: 1;
 		}
 		
@@ -99,6 +102,7 @@
 			}
 
 			.trabajo-descripcion-parrafo {
-				margin-bottom: 0;
+				margin: 0;
 				line-height: 1.5;
+				text-align: justify;
 			}
