@@ -620,8 +620,8 @@ h3 {
 #hero {
     width: 100%;
     min-height: calc(100vh - 100px);
-    padding: calc(1.25rem*2) 0;
-    padding: var(--espaciado-muy-alto) 0;
+    padding: calc(1.25rem*2) 0 15%;
+    padding: var(--espaciado-muy-alto) 0 15%;
     box-sizing: border-box;
 
     text-transform: uppercase;
@@ -667,9 +667,9 @@ h3 {
 		max-width: 900px;
 		margin: 0 auto;
 
-		padding: calc(1.25rem*2) 1.25rem;
+		padding: 15% 1.25rem;
 
-		padding: var(--espaciado-muy-alto) var(--espaciado-normal);
+		padding: 15% var(--espaciado-normal);
 		box-sizing: border-box;
 
 		display: grid;
@@ -772,20 +772,16 @@ h3 {
 #seccion_trabajo {
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: calc(1.25rem*2) 1.25rem;
-	padding: var(--espaciado-muy-alto) var(--espaciado-normal);
+	padding: 15% 1.25rem;
+	padding: 15% var(--espaciado-normal);
 
 	display: grid;
-	grid-row-gap: calc(1.25rem*2);
-	grid-row-gap: var(--espaciado-muy-alto);
 }
 
-.trabajo-titulo {
-		margin-top: 1.25rem;
-		margin-top: var(--espaciado-normal)
-	}
-
 .trabajo-contenido {
+		margin-top: calc(1.25rem*2);
+		margin-top: var(--espaciado-muy-alto);
+
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -899,25 +895,18 @@ h3 {
 \* --------------------------- */
 
 #seccion_portafolio {
-	min-height: calc(100vh - 40px);
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: 0 1.25rem;
-	padding: 0 var(--espaciado-normal);
+	padding: 0 1.25rem 15%;
+	padding: 0 var(--espaciado-normal) 15%;
+	box-sizing: border-box;
 
 	display: grid;
-	align-content: center;
 }
-
-.portafolio-titulo {
-		margin-top: 1.25rem;
-		margin-top: var(--espaciado-normal);
-	}
 
 .portafolio-proyectos {
 		margin-top: calc(1.25rem*2);
 		margin-top: var(--espaciado-muy-alto);
-		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
 
 		display: grid;
 		grid-auto-flow: column;
@@ -927,6 +916,7 @@ h3 {
 			margin: 0;
 			position: relative;
 			cursor: pointer;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
 		}
 
 .portafolio-imagen {
@@ -939,12 +929,13 @@ h3 {
 			}
 
 .portafolio-proyecto:hover .portafolio-imagen {
-				-webkit-filter: brightness(0.7);
-				        filter: brightness(0.7);
+				-webkit-filter: brightness(0.6);
+				        filter: brightness(0.6);
 			}
 
 .portafolio-etiqueta {
-				padding: 0.7em;
+				padding: calc(1.25rem/2);
+				padding: var(--espaciado-leve);
 				margin: calc(1.25rem/2);
 				margin: var(--espaciado-leve);
 
@@ -963,6 +954,49 @@ h3 {
 				right: 0;
 				top: 0;
 			}
+
+.portafolio-descripcion {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				display: none;
+				align-content: center;
+				
+				padding: calc(1.25rem*1.5);
+				
+				padding: var(--espaciado-alto);
+				color: #ffffff;
+				color: var(--color-white);
+			}
+
+.portafolio-proyecto:hover .portafolio-descripcion {
+				display: grid;
+			}
+
+.portafolio-descripcion-titulo {
+					margin: 0;
+					margin-top: 1.25rem;
+					margin-top: var(--espaciado-normal);
+
+					font-weight: 500;
+					letter-spacing: .05em;
+					text-transform: uppercase;
+					text-align: center;
+				}
+
+.portafolio-descripcion-parrafo {
+					font-size: 0.9em;
+					line-height: 1.5;
+					text-align: justify;
+				}
+
+.portafolio-icono {
+					text-align: center;
+					font-size: 1.5em;
+				}
 
 .portafolio-espaciado-final {
 		height: 30vh; /* */
@@ -1130,6 +1164,12 @@ h3 {
     .container-sections-header-hero {
         background-position-x: calc(100% + 12vh);
     }
+
+    /* --- PORTAFOLIO --- */
+    .portafolio-descripcion {
+        padding: 1.25rem;
+        padding: var(--espaciado-normal);
+    }
 }
 
 @media (max-width: 800px) {
@@ -1170,6 +1210,25 @@ h3 {
             margin: calc(1.25rem/2);
             margin: var(--espaciado-leve);
         }
+
+    /* --- PORTAFOLIO --- */
+    .portafolio-proyectos {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+    }
+
+        .portafolio-etiqueta {
+            font-size: 1em;
+        }
+
+        .portafolio-descripcion {
+            padding: 1.25rem;
+            padding: var(--espaciado-normal);
+        }
+
+            .portafolio-descripcion-parrafo {
+                font-size: 1em;
+            }
 }
 
 @media (max-width: 600px) {
@@ -1240,6 +1299,20 @@ h3 {
         .trabajo-descripcion.impar {
             right: 0;
         }
+
+    /* --- PORTAFOLIO --- */
+    .portafolio-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+        .portafolio-imagen {
+            height: calc(55vw - calc(1.25rem*1.5));
+            height: calc(55vw - var(--espaciado-alto));
+        }
+
+            .portafolio-descripcion-parrafo {
+                text-align: center;
+            }
 }
 
 @media (max-width: 420px) {

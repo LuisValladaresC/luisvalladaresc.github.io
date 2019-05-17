@@ -15,7 +15,7 @@
 		max-width: 900px;
 		margin: 0 auto;
 
-		padding: var(--espaciado-muy-alto) var(--espaciado-normal);
+		padding: 15% var(--espaciado-normal);
 		box-sizing: border-box;
 
 		display: grid;

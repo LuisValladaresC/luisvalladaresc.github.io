@@ -5,17 +5,14 @@
 #seccion_trabajo {
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: var(--espaciado-muy-alto) var(--espaciado-normal);
+	padding: 15% var(--espaciado-normal);
 
 	display: grid;
-	grid-row-gap: var(--espaciado-muy-alto);
 }
 
-	.trabajo-titulo {
-		margin-top: var(--espaciado-normal)
-	}
-
 	.trabajo-contenido {
+		margin-top: var(--espaciado-muy-alto);
+
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
