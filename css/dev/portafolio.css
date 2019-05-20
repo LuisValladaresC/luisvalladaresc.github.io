@@ -5,8 +5,7 @@
 #seccion_portafolio {
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: 0 var(--espaciado-normal) 15%;
-	box-sizing: border-box;
+	padding: var(--espaciado-minimo-entre-seccion) var(--espaciado-normal);
 
 	display: grid;
 }
@@ -89,6 +88,7 @@
 					font-size: 1.5em;
 				}
 
-	.portafolio-espaciado-final {
-		height: 30vh; /* */
+	.portafolio-espaciado-de-contacto {
+		height: var(--espaciado-seccion-contacto);
+		margin: var(--espaciado-leve);
 	}

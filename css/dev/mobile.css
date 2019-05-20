@@ -62,6 +62,11 @@
             .portafolio-descripcion-parrafo {
                 font-size: 1em;
             }
+
+    /* ---- CONTACTO ---- */
+    .contacto-contenido {
+        padding: var(--espaciado-muy-alto) var(--espaciado-alto);
+    }
 }
 
 @media (max-width: 600px) {
@@ -143,8 +148,35 @@
             .portafolio-descripcion-parrafo {
                 text-align: center;
             }
+
+    /* ---- CONTACTO ---- */
+    .contacto-contenido {
+        grid-template: auto auto / 1fr;
+        grid-gap: var(--espaciado-alto);
+    }
+
+        .contacto-contenido-informacion {
+            display: grid;
+            grid-template: auto / auto auto;
+        }
+
+            .contacto-informacion-titulo {
+                grid-column: 2 span;
+                text-align: center;
+            }
+            .contacto-informacion-descripcion {
+                grid-column: 2 span;
+                text-align: justify;
+            }
+            .contacto-informacion-redes-sociales {
+                text-align: right;
+                margin-top: var(--espaciado-leve);
+            }
 }
 
 @media (max-width: 420px) {
-
+    /* --- GENERALES --- */
+    html {
+        font-size: 10px;
+    }
 }

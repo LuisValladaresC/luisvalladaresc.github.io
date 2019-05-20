@@ -6,6 +6,7 @@
     /* Colores */
 	--color-menu: #00d646;
 	--color-background: rgba(20, 30, 60, .6);
+	--color-background-solido: #333b50;
 
 	--color-black: #000000;
 	--color-gray: #6c757d;
@@ -21,4 +22,6 @@
 
 	/* Otros */
 	--border-radius: 0.3rem;
+	--espaciado-seccion-contacto: 30vh;
+	--espaciado-minimo-entre-seccion: calc(var(--espaciado-muy-alto) * 3);
 }

@@ -12,15 +12,14 @@
 	.contacto-contenedor {
 		max-width: 1024px;
 		margin: 0 auto;
-		padding: 0 var(--espaciado-alto);
+		padding: 0 var(--espaciado-normal);
 
 		position: relative;
-		height: 60vh; /* */
-		top: -30vh; /* */
+		bottom: var(--espaciado-seccion-contacto);
 	}
 
 		.contacto-contenido {
-			height: 60vh; /* */
+			min-height: calc(var(--espaciado-seccion-contacto) * 2);
 
 			background-color: #333b50;
 			padding: var(--espaciado-muy-alto);
@@ -28,46 +27,46 @@
 
 			display: grid;
 			grid-template-columns: repeat(2, minmax(auto, 400px));
-			grid-column-gap: var(--espaciado-alto);
+			grid-gap: var(--espaciado-alto);
 			justify-content: center;
 			align-content: center;
 		}
 
-			.contacto-informacion {
+			.contacto-contenido-informacion {
 				color: var(--color-white);
 
 				display: grid;
 				grid-template-rows: auto auto auto 1fr;
 			}
 
-				.contacto-titulo {
+				.contacto-informacion-titulo {
 					text-align: left;
 					font-size: 1.4em;
 					font-weight: 400;
 					letter-spacing: initial;
+					margin-bottom: var(--espaciado-normal);
 				}
 
-				.contacto-descripcion,
-				.contacto-correo {
+				.contacto-informacion-descripcion,
+				.contacto-informacion-correo {
 					font-size: 0.9em;
 					font-weight: 350;
 					line-height: 1.8;
 					letter-spacing: .05em;
+					margin-top: var(--espaciado-leve);
 				}
 
-				.contacto-redes-sociales {
+				.contacto-informacion-redes-sociales {
 					margin-top: var(--espaciado-muy-leve);
 				}
 		
 					.contacto-icono {
 						color: white;
 						font-size: 1.5em;
-						margin: 0 var(--espaciado-leve);
-						margin-top: var(--espaciado-muy-alto);
 						cursor: pointer;
 					}
 					.contacto-icono:first-of-type {
-						margin-left: 0
+						margin-right: var(--espaciado-normal)
 					}
 
 			.contacto-formulario {
@@ -95,14 +94,17 @@
 					line-height: 2.1;
 
 					transition: 250ms;
-					background-color: #00d646; /* */
+					background-color: var(--color-menu);
 				}
 				#contacto_enviar:hover {
-					background-color: #324158; /* */
+					background-color: var(--color-background-solido);
 				}
 
 		.contacto-arrow-container {
-			height: 30vh;
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: var(--espaciado-seccion-contacto);
 
 			display: flex;
 			align-items: center;
