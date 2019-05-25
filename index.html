@@ -97,12 +97,14 @@
     <main class="contenedor-trabajo-portafolio">
         <div class="section-background-color">
             <section id="seccion_trabajo">
-                <h2 class="trabajo-titulo"><span>02</span> Trabajo</h2>
-                <h3 class="portafolio-subtitulo">Descripcion de mi trabajo</h3>
+                <div class="trabajo-encabezado">
+                    <h2 class="encabezado-titulo"><span>02</span> Trabajo</h2>
+                    <h3 class="encabezado-subtitulo">Descripcion de mi trabajo</h3>
+                </div>
                 <!-- 1er Apartado de Trabajo -->
                 <div class="trabajo-contenido">
                     <figure class="trabajo-contenedor-imagen">
-                        <img class="trabajo-imagen" src="./images/trabajo.png" alt="">
+                        <img class="trabajo-imagen" src="./images/trabajo-maquetacion@2x.png" srcset="./images/trabajo-maquetacion.png, ./images/trabajo-maquetacion@2x.png 2x" alt="Imagen Decorativa (Maquetacion)">
                         <div class="trabajo-imagen-capa">
                             <p class="trabajo-etiqueta">2018 - 2019</p>
                             <i class="trabajo-icono fab fa-html5"></i>
@@ -119,14 +121,14 @@
                 <div class="trabajo-contenido">
                     <div class="trabajo-descripcion impar">
                         <h3 class="trabajo-descripcion-titulo">Interactividad Local y Remota</h3>
-                        <p class="trabajo-descripcion-parrafo">Dotamos su pagina web con una interfaz dinamica e interactiva ayudandole a brindar una experiencia mas completa y memorable a sus usuarios.</p>
+                        <p class="trabajo-descripcion-parrafo">Dotamos su pagina web con una interfaz dinamica e interactiva ayudandole a brindar una experiencia completa y memorable.</p>
                     </div>
                     <figure class="trabajo-contenedor-imagen impar">
                         <div class="trabajo-imagen-capa">
                             <p class="trabajo-etiqueta impar">2018 - 2019</p>
                             <i class="trabajo-icono fab fa-js-square"></i>
                         </div>
-                        <img class="trabajo-imagen" src="./images/trabajo.png" alt="">
+                        <img class="trabajo-imagen" src="./images/trabajo-interactividad@2x.png" srcset="./images/trabajo-interactividad.png, ./images/trabajo-interactividad@2x.png 2x" alt="Imagen Decorativa (Interactividad)">
                     </figure>
                 </div>
                 <!-- 3er Apartado de Trabajo -->
@@ -137,11 +139,11 @@
                             <i class="trabajo-icono fab fa-git-square"></i>
                             <i class="trabajo-icono fab fa-github"></i>
                         </div>
-                        <img class="trabajo-imagen" src="./images/trabajo.png" alt="">
+                        <img class="trabajo-imagen" src="./images/trabajo-remoto@2x.png" srcset="./images/trabajo-remoto.png, ./images/trabajo-remoto@2x.png 2x" alt="Imagen Decorativa (Trabajo Remoto)">
                     </figure>
                     <div class="trabajo-descripcion">
                         <h3 class="trabajo-descripcion-titulo">Trabajo Remoto y Respaldos</h3>
-                        <p class="trabajo-descripcion-parrafo">El desarrollo de su sitio web, actualizaciones y solucion de problemas pueden realizarse de manera remota con un respaldo en la nube que garantiza la seguridad del proyecto.</p>
+                        <p class="trabajo-descripcion-parrafo">El desarrollo de su sitio web se realiza de manera remota con respaldos en la nube que garantizan la seguridad del proyecto.</p>
                     </div>
                 </div>
             </section>
@@ -152,31 +154,28 @@
                 <div class="portafolio-proyectos">
                     <!-- 1er apartado de proyecto -->
                     <figure class="portafolio-proyecto">
-                        <img class="portafolio-imagen" src="./images/portafolio.png" alt="">
-                        <p class="portafolio-etiqueta">2019</p>
-                        <div class="portafolio-descripcion">
+                        <img class="portafolio-imagen platzi-conf" src="./images/portafolio-platzi-conf.png" alt="">
+                        <div class="portafolio-descripcion" id="platzi_conf">
                             <h4 class="portafolio-descripcion-titulo">Platzi Conf Hawaii</h4>
-                            <p class="portafolio-descripcion-parrafo">Sitio web de muestra para promover un evento social.</p>
+                            <p class="portafolio-descripcion-parrafo">Sitio web desarrolado como modelo para promover un evento social.</p>
                             <i class="portafolio-icono fas fa-search-plus"></i>
                         </div>
                     </figure>
                     <!-- 2do apartado de proyecto -->
                     <figure class="portafolio-proyecto">
-                        <img class="portafolio-imagen" src="./images/portafolio2.png" alt="">
-                        <p class="portafolio-etiqueta">2019</p>
-                        <div class="portafolio-descripcion">
+                        <img class="portafolio-imagen platzi-video" src="./images/portafolio-platzi-video.png" alt="">
+                        <div class="portafolio-descripcion" id="platzi_video">
                             <h4 class="portafolio-descripcion-titulo">Platzi Video</h4>
-                            <p class="portafolio-descripcion-parrafo">Sitio web de muestra para un servicio de películas online.</p>
+                            <p class="portafolio-descripcion-parrafo">Sitio web desarrolado como modelo de un servicio de películas online.</p>
                             <i class="portafolio-icono fas fa-search-plus"></i>
                         </div>
                     </figure>
                     <!-- 3er apartado de proyecto -->
                     <figure class="portafolio-proyecto">
-                        <img class="portafolio-imagen" src="./images/portafolio3.png" alt="">
-                        <p class="portafolio-etiqueta">2019</p>
-                        <div class="portafolio-descripcion">
-                            <h4 class="portafolio-descripcion-titulo">Blog Personal</h4>
-                            <p class="portafolio-descripcion-parrafo">Sitio web de muestra para promover una marca personal.</p>
+                        <img class="portafolio-imagen portafolio-personal" src="./images/portafolio-personal.png" alt="">
+                        <div class="portafolio-descripcion" id="portafolio_personal">
+                            <h4 class="portafolio-descripcion-titulo">Portafolio Personal</h4>
+                            <p class="portafolio-descripcion-parrafo">Sitio web actual desarrollado para promover mi marca personal.</p>
                             <i class="portafolio-icono fas fa-search-plus"></i>
                         </div>
                     </figure>
@@ -216,6 +215,9 @@
     <footer id="footer">
         <p class="footer-copyright">Derechos Reservado © 2019 LUISVC.COM</p>
     </footer>
+
+    <div id="modal" class="inactive"></div>
+
     <script src="./index.js"></script>
 </body>
 </html>

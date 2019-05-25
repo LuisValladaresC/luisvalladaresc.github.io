@@ -31,23 +31,11 @@
 				vertical-align: top;
 				transition: 500ms;
 			}
-			.portafolio-proyecto:hover .portafolio-imagen {
-				filter: brightness(0.6);
+			.portafolio-imagen.platzi-video {
+				filter: contrast(80%) brightness(0.9);
 			}
-
-			.portafolio-etiqueta {
-				padding: var(--espaciado-leve);
-				margin: var(--espaciado-leve);
-
-				color: var(--color-white);
-				font-size: 0.8em;
-
-				border: 1px solid var(--color-white);
-				border-radius: var(--border-radius);
-
-				position: absolute;
-				right: 0;
-				top: 0;
+			.portafolio-proyecto:hover .portafolio-imagen {
+				filter: opacity(80%) brightness(0.4);
 			}
 
 			.portafolio-descripcion {
@@ -59,9 +47,11 @@
 
 				display: none;
 				align-content: center;
+				justify-content: center;
 				
 				padding: var(--espaciado-alto);
 				color: var(--color-white);
+				text-decoration: none;
 			}
 			.portafolio-proyecto:hover .portafolio-descripcion {
 				display: grid;

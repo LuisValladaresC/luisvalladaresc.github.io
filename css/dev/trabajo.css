@@ -8,11 +8,10 @@
 	padding: var(--espaciado-minimo-entre-seccion) var(--espaciado-normal) 0;
 
 	display: grid;
+	grid-row-gap: var(--espaciado-muy-alto);
 }
 
 	.trabajo-contenido {
-		margin-top: var(--espaciado-muy-alto);
-
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}

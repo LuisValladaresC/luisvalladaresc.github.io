@@ -67,16 +67,15 @@
 			position: absolute;
 			transition: 250ms ease-in-out;
 		}
-
-		.button-line-1 {
+		.header-button-line.button-line-1 {
 			top: 0;
 		}
-		.button-line-2 {
+		.header-button-line.button-line-2 {
 			top: 0;
 			bottom: 0;
 			margin: auto;
 		}
-		.button-line-3 {
+		.header-button-line.button-line-3 {
 			bottom: 0;
 		}
 			/* Clase agregada mediante JS en el evento click del Padre */

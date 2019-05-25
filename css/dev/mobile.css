@@ -141,13 +141,15 @@
         grid-template-columns: 1fr;
     }
 
-        .portafolio-imagen {
-            height: calc(55vw - var(--espaciado-alto));
+        .portafolio-imagen.platzi-conf {
+            content: url('../../images/portafolio-platzi-conf-stretch.png')
         }
-
-            .portafolio-descripcion-parrafo {
-                text-align: center;
-            }
+        .portafolio-imagen.platzi-video {
+            content: url('../../images/portafolio-platzi-video-stretch.png')
+        }
+        .portafolio-imagen.portafolio-personal {
+            content: url('../../images/portafolio-personal-stretch.png')
+        }
 
     /* ---- CONTACTO ---- */
     .contacto-contenido {

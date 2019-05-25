@@ -26,6 +26,116 @@ function monstrarAlternativamenteMenu() {
     
 }
 
+/* ------------------------------------------------------------- */
+/* TRABAJAMOS CON EL MODAL QUE MOSTRARA LOS DATOS DE UN PROYECTO */
+/* ------------------------------------------------------------- */
+
+// Plantillas para c/u de los proyectos mediante las cuales se creara un modal personalizado
+const plantillaPlatziConf = {
+    titulo: 'Platzi Conf Hawaii',
+    imagen: './images/modal.png',
+    descripcion: 'Sitio web desarrolado como modelo para promover un evento social. Este proyecto cuenta con una interface responsive con un diseño atractivo logrado con ayuda de Bootstrap.',
+    url: {
+        website: 'https://luisvalladaresc.github.io/platzi-conf',
+        github: 'https://github.com/LuisValladaresC/platzi-conf'
+    },
+    requerimientos: ['html', 'css', 'bootstrap']
+}
+const plantillaPlatziVideo = {
+    titulo: 'Platzi Video',
+    imagen: './images/modal.png',
+    descripcion: 'Sitio web creado como modelo para un servicio de películas online. Este proyecto cuenta con un código que realiza multiples peticiones a API\'s externas y una interface responsive de diseño simple y pulido.',
+    url: {
+        website: 'https://luisvalladaresc.github.io/platzi-video',
+        github: 'https://github.com/LuisValladaresC/platzi-video'
+    },
+    requerimientos: ['html', 'css', 'javascript']
+}
+const plantillaPortafolio = {
+    titulo: 'Portafolio Personal',
+    imagen: './images/modal.png',
+    descripcion: 'Sitio web actual desarrollado para promover mi marca personal. Esta proyecto cuenta con una interface responsive que resalta por su diseño simple, calido y atractivo. Ademas posee multiples animaciones y un sistema de mensajes de correo.',
+    url: {
+        website: 'https://www.luisvc.com',
+        github: 'https://github.com/LuisValladaresC/portafolio-personal'
+    },
+    requerimientos: ['html', 'css', 'javascript']
+}
+
+// Agregamos un escucha a c/u de los proyectos del portafolio, el cual, creara el modal mediante las plantillas
+const $platziConf = document.getElementById("platzi_conf");
+const $platziVideo = document.getElementById("platzi_video");
+const $portafolioPersonal = document.getElementById("portafolio_personal");
+
+$platziConf.addEventListener('click', () => crearPlantillaHtmlModal(plantillaPlatziConf));
+$platziVideo.addEventListener('click', () => crearPlantillaHtmlModal(plantillaPlatziVideo));
+$portafolioPersonal.addEventListener('click', () => crearPlantillaHtmlModal(plantillaPortafolio));
+
+// Esta funcion crea un elemento HTML con los datos del proyecto y lo añade al modal 
+function crearPlantillaHtmlModal(plantilla) {
+    let $modalContainer = document.createElement('div');
+    $modalContainer.setAttribute('id', 'modal_container');
+
+    $modalContainer.innerHTML = 
+    `<div class="modal-container-header">
+        <h3 class="modal-encabezado-titulo">${plantilla.titulo}</h3>
+        <button class="modal-encabezado-button" id="btn_cerrar_modal">×</button>
+    </div>
+    <div class="modal-container-body">
+        <figure class="modal-body-imagen">
+            <img src="${plantilla.imagen}" alt="">
+        </figure>
+        <div class="modal-body-contenido">
+            <h4 class="modal-contenido-titulo">Descripcion</h4>
+            <p class="modal-contenido-parrafo">${plantilla.descripcion}</p>
+            <h4 class="modal-contenido-titulo">URL / Github</h4>
+            <div class="modal-contenido-enlaces">
+                <a class="modal-enlaces-url" href="${plantilla.url.website}" target="_blank">${plantilla.url.website}</a>
+                <a class="modal-enlaces-github" href="${plantilla.url.github}" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <h4 class="modal-contenido-titulo">Requerimientos</h4>
+            <div class="modal-contenido-requerimientos">
+                ${String(plantilla.requerimientos.map(lenguaje => `<span class="${lenguaje}">${lenguaje}</span>`)).replace(/,/g, ' ')}
+            </div>
+        </div>
+    </div>`
+
+    $modal.appendChild($modalContainer);
+    $modalContainer.addEventListener('click', event => event.stopPropagation());
+    document.getElementById("btn_cerrar_modal").addEventListener('click', () => cerrarModal(event));
+    
+    abrirModal();
+}
+
+// Agregamos un escucha al modal que llamara una funcion que lo cerrara
+const $modal = document.getElementById('modal');
+$modal.addEventListener('click', () => cerrarModal(event));
+
+function abrirModal() {
+    // Agrega la clase active y de manera asicrona sin demora la clase inactive para activar una transicion
+    $modal.classList.add('active');
+    setTimeout(() => $modal.classList.remove('inactive'), 0);
+    // Bloqueamos el desplazamiente en la web
+    document.body.classList.add('overflow-hidden');
+}
+
+function cerrarModal(event) {
+    // Evita que un elemento padre reaccione al evento con el mismo click
+    event.stopPropagation()
+    // Agrega la clase inactive que define una animacion al elemento, a la cual, agregamos un escucha
+    $modal.classList.add('inactive');
+    $modal.addEventListener('animationend', cerrarModal)
+
+    // funcion del evento que remueve la clase active, el #modal_container y su escucha al finalizar la animacion
+    function cerrarModal() {
+        $modal.classList.remove('active');
+        $modal.removeEventListener('animationend', cerrarModal)
+        $modal.children[0].remove()
+        // Desbloqueamos el desplazamiente en la web
+        document.body.classList.remove('overflow-hidden');
+    }
+}
+
 /* -------------------------------------------------------------------------------------- */
 /* ESPIAMOS EL SCROLL PARA ACTIVAR LA ANIMACION DE RELLENO EN LA SECCION DE CONOCIMIENTOS */
 /* -------------------------------------------------------------------------------------- */
