@@ -33,31 +33,33 @@ function monstrarAlternativamenteMenu() {
 // Plantillas para c/u de los proyectos mediante las cuales se creara un modal personalizado
 const plantillaPlatziConf = {
     titulo: 'Platzi Conf Hawaii',
-    imagen: './images/modal.png',
-    descripcion: 'Sitio web desarrolado como modelo para promover un evento social. Este proyecto cuenta con una interface responsive con un diseño atractivo logrado con ayuda de Bootstrap.',
+    imagen: './images/modal-platzi-conf.png',
+    imagen2x: './images/modal-platzi-conf@2x.png',
+    descripcion: 'Platzi Conf Hawaii fue desarrolado como modelo para promover un evento social. Cuenta con una interface responsive de diseño atractivo lograda con ayuda de Bootstrap.',
     url: {
-        website: 'https://luisvalladaresc.github.io/platzi-conf',
+        website: 'luisvalladaresc.github.io/platzi-conf',
         github: 'https://github.com/LuisValladaresC/platzi-conf'
     },
     requerimientos: ['html', 'css', 'bootstrap']
 }
 const plantillaPlatziVideo = {
     titulo: 'Platzi Video',
-    imagen: './images/modal.png',
-    descripcion: 'Sitio web creado como modelo para un servicio de películas online. Este proyecto cuenta con un código que realiza multiples peticiones a API\'s externas y una interface responsive de diseño simple y pulido.',
+    imagen: './images/modal-platzi-video.png',
+    imagen2x: './images/modal-platzi-video@2x.png',
+    descripcion: 'Platzi Video fue creado como modelo para un servicio de películas online. Cuenta con un código que realiza multiples peticiones a API\'s externas y una interface responsive de diseño simple y pulido.',
     url: {
-        website: 'https://luisvalladaresc.github.io/platzi-video',
+        website: 'luisvalladaresc.github.io/platzi-video',
         github: 'https://github.com/LuisValladaresC/platzi-video'
     },
     requerimientos: ['html', 'css', 'javascript']
 }
 const plantillaPortafolio = {
     titulo: 'Portafolio Personal',
-    imagen: './images/modal.png',
-    descripcion: 'Sitio web actual desarrollado para promover mi marca personal. Esta proyecto cuenta con una interface responsive que resalta por su diseño simple, calido y atractivo. Ademas posee multiples animaciones y un sistema de mensajes de correo.',
+    imagen: './images/modal-portafolio.png',
+    imagen2x: './images/modal-portafolio@2x.png',
+    descripcion: 'Sitio web actual desarrollado para promover mi marca personal. Cuenta con un sistema de mensajes de correo, multiples y muy bien pulidas animaciones y una interface responsive que resalta por su diseño simple, calido y atractivo.',
     url: {
-        website: 'https://www.luisvc.com',
-        github: 'https://github.com/LuisValladaresC/portafolio-personal'
+        website: 'www.luisvc.com',
     },
     requerimientos: ['html', 'css', 'javascript']
 }
@@ -83,15 +85,15 @@ function crearPlantillaHtmlModal(plantilla) {
     </div>
     <div class="modal-container-body">
         <figure class="modal-body-imagen">
-            <img src="${plantilla.imagen}" alt="">
+            <img src="${plantilla.imagen2x}" srcset="${plantilla.imagen}, ${plantilla.imagen2x} 2x" alt="${plantilla.titulo}">
         </figure>
         <div class="modal-body-contenido">
             <h4 class="modal-contenido-titulo">Descripcion</h4>
             <p class="modal-contenido-parrafo">${plantilla.descripcion}</p>
             <h4 class="modal-contenido-titulo">URL / Github</h4>
             <div class="modal-contenido-enlaces">
-                <a class="modal-enlaces-url" href="${plantilla.url.website}" target="_blank">${plantilla.url.website}</a>
-                <a class="modal-enlaces-github" href="${plantilla.url.github}" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="modal-enlaces-url" href="https://${plantilla.url.website}" target="_blank">${plantilla.url.website}</a>
+                ${plantilla.url.github ? `<a class="modal-enlaces-github" href="${plantilla.url.github}" target="_blank"><i class="fab fa-github"></i></a>` : ''}
             </div>
             <h4 class="modal-contenido-titulo">Requerimientos</h4>
             <div class="modal-contenido-requerimientos">
@@ -174,4 +176,28 @@ function activarAnimacionSeccionConocimietos() {
         // Si todos los elementos dentro del arreglo de barras fueron animados esto dara 'true' y desactivara el scrollSpy
         if (desactivarEvento) document.removeEventListener('scroll', activarAnimacionSeccionConocimietos);
     }
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* TRABAJAMOS CON EL BODY Y OBTENEMOS SU VH REAL DEBIDO A PROBLEMAS CON NAVEGADORES MOVILES */
+/* ---------------------------------------------------------------------------------------- */
+
+// Verifica si el navegador es movil y activa ciertos eventos que modificaran el VH del body
+if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ || typeof window.orientation !== "undefined") {
+    calcularViewportHeight();
+    window.addEventListener('onorientationchange', calcularViewportHeight, true);
+    window.addEventListener('resize', calcularViewportHeight, true);
+}
+
+// Funcion de evento que calcula el alto real del VH y lo asigna al body
+function calcularViewportHeight() {
+    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    document.body.style.height = viewportHeight + "px";
 }

@@ -52,14 +52,14 @@
 					padding: 0 var(--espaciado-normal);
 					box-sizing: border-box;
 				}
-				.nivel-barra.n95 {
+				.nivel-barra.n90 {
 					width: 95%;
 				}
-				.nivel-barra.n90 {
-					width: 90%;
-				}
 				.nivel-barra.n85 {
-					width: 85%;
+					width: 89%;
+				}
+				.nivel-barra.n80 {
+					width: 83%;
 				}
 
 					.barra-relleno {

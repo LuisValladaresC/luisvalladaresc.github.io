@@ -29,4 +29,8 @@
         .hero-arrow-link i {
             color: var(--color-lightgray);
             font-size: 3em;
+            transition: 150ms;
+        }
+        .hero-arrow-link i:hover {
+            transform: scale(1.05)
         }

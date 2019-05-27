@@ -35,7 +35,7 @@
 				filter: contrast(80%) brightness(0.9);
 			}
 			.portafolio-proyecto:hover .portafolio-imagen {
-				filter: opacity(80%) brightness(0.4);
+				filter: contrast(80%) brightness(0.6);
 			}
 
 			.portafolio-descripcion {

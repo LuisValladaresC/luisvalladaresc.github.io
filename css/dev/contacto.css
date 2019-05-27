@@ -56,6 +56,11 @@
 					margin-top: var(--espaciado-leve);
 				}
 
+				.contacto-informacion-correo {
+					text-decoration: none;
+					color: var(--color-white);
+				}
+
 				.contacto-informacion-redes-sociales {
 					margin-top: var(--espaciado-muy-leve);
 				}
@@ -67,6 +72,10 @@
 					}
 					.contacto-icono:first-of-type {
 						margin-right: var(--espaciado-normal)
+					}
+					.contacto-icono:hover,
+					.contacto-informacion-correo:hover {
+						color: var(--color-menu);
 					}
 
 			.contacto-formulario {
@@ -97,7 +106,7 @@
 					background-color: var(--color-menu);
 				}
 				#contacto_enviar:hover {
-					background-color: var(--color-background-solido);
+					background-color: var(--color-background-solido-light);
 				}
 
 		.contacto-arrow-container {
@@ -118,4 +127,8 @@
 				.contacto-arrow-link i {
 					color: var(--color-lightgray);
 					font-size: 3em;
+					transition: 150ms;
+				}
+				.contacto-arrow-link i:hover {
+					transform: scale(1.05)
 				}

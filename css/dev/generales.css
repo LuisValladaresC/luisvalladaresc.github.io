@@ -3,7 +3,7 @@
 \* --------------------------- */
 
 html {
-	font-family: Segoe UI, sans-serif; /* */
+	font-family: Segoe UI, arial, sans-serif;
 	scroll-behavior: smooth;
 }
 
@@ -32,7 +32,7 @@ h2 {
 	letter-spacing: .15em;
 }
 	h2 span {
-		color: var(--color-lightgray); /* */
+		color: var(--color-lightgray);
 	}
 
 h3 {

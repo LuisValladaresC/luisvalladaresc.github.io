@@ -3,16 +3,25 @@
 \* --------------------------- */
 
 :root {
-    /* Colores */
-	--color-menu: #00d646;
-	--color-background: rgba(20, 30, 60, .6);
-	--color-background-solido: #333b50;
-
+	/* Colores */
 	--color-black: #000000;
 	--color-darkgray: #5a6268;
 	--color-gray: #6c757d;
 	--color-lightgray: #bec7d5;
 	--color-white: #ffffff;
+	
+	--color-menu: #00d646;
+	--color-background: rgba(20, 30, 60, .6);
+	--color-background-solido: #333b50;
+	--color-background-solido-light: #324158;
+
+	--color-enlace: #007bff;
+	--color-enlace-hover: #0056b3;
+
+	--color-html: #ff7d00;
+	--color-css: #0096d1;
+	--color-javascript: #f7df1e;
+	--color-bootstrap: #563d7c;
 
     /* Espaciado */
 	--espaciado-muy-leve: calc(var(--espaciado-normal)/4);

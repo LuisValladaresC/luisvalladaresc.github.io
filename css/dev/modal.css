@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: 0.5s;
     will-change: opacity;
 }
@@ -31,7 +31,7 @@
 
     #modal_container {
         max-width: 1024px;
-        max-height: calc(100vh - var(--espaciado-normal) * 2);
+        max-height: calc(100% - var(--espaciado-normal) * 2);
 
         background-color: var(--color-white);
         border-radius: var(--border-radius);
@@ -108,6 +108,7 @@
                 }
 
             .modal-body-contenido {
+                min-width: 0;
                 align-self: flex-start;
             }
 
@@ -134,10 +135,15 @@
 
                     .modal-contenido-enlaces a {
                         text-decoration: none;
-                        color: #007bff;
+                        color: var(--color-enlace);
                     }
                     .modal-contenido-enlaces a:hover {
-                        color: #0056b3;
+                        color: var(--color-enlace-hover);
+                    }
+
+                    .modal-enlaces-url {
+                        min-width: 0;
+                        word-wrap: break-word;
                     }
 
                     .modal-enlaces-github {
