@@ -65,7 +65,7 @@
 
     /* ---- CONTACTO ---- */
     .contacto-contenido {
-        padding: var(--espaciado-muy-alto) var(--espaciado-alto);
+        /* padding: var(--espaciado-muy-alto) var(--espaciado-alto); */
     }
 
     /* ------ MODAL ----- */
@@ -151,7 +151,7 @@
     }
 
         .portafolio-imagen.platzi-conf {
-            content: url('../../images/portafolio-platzi-conf-stretch.png')
+            content: url('../../images/portafolio-platziconf-stretch.png')
         }
         .portafolio-imagen.platzi-video {
             content: url('../../images/portafolio-platzi-video-stretch.png')
@@ -162,6 +162,7 @@
 
     /* ---- CONTACTO ---- */
     .contacto-contenido {
+        padding: var(--espaciado-muy-alto);
         grid-template: auto auto / 1fr;
         grid-gap: var(--espaciado-alto);
     }

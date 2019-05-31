@@ -22,11 +22,12 @@
 			min-height: calc(var(--espaciado-seccion-contacto) * 2);
 
 			background-color: #333b50;
-			padding: var(--espaciado-muy-alto);
+			/* padding: var(--espaciado-muy-alto); */
+			padding: calc(var(--espaciado-muy-alto) * 2);
 			box-sizing: border-box;
 
 			display: grid;
-			grid-template-columns: repeat(2, minmax(auto, 400px));
+			/* grid-template-columns: repeat(2, minmax(auto, 400px)); */
 			grid-gap: var(--espaciado-alto);
 			justify-content: center;
 			align-content: center;
@@ -36,15 +37,23 @@
 				color: var(--color-white);
 
 				display: grid;
-				grid-template-rows: auto auto auto 1fr;
+				/* grid-template-rows: auto auto auto 1fr; */
+				grid-template: auto / auto auto; /* */
 			}
 
 				.contacto-informacion-titulo {
-					text-align: left;
-					font-size: 1.4em;
+					grid-column: 2 span; /* */
+					/* text-align: left; */
+					text-align: center; /* */
+					/* font-size: 1.4em; */
+					font-size: 1.6em; /* */
 					font-weight: 400;
 					letter-spacing: initial;
 					margin-bottom: var(--espaciado-normal);
+				}
+
+				.contacto-informacion-descripcion {
+					grid-column: 2 span; /* */
 				}
 
 				.contacto-informacion-descripcion,
@@ -57,12 +66,14 @@
 				}
 
 				.contacto-informacion-correo {
-					text-decoration: none;
+					/* text-decoration: none; */
 					color: var(--color-white);
 				}
 
 				.contacto-informacion-redes-sociales {
-					margin-top: var(--espaciado-muy-leve);
+					text-align: right; /* */
+					/* margin-top: var(--espaciado-muy-leve); */
+					margin-top: var(--espaciado-leve); /* */
 				}
 		
 					.contacto-icono {
@@ -79,7 +90,8 @@
 					}
 
 			.contacto-formulario {
-				display: grid;
+				/* display: grid; */
+				display: none;
 				align-content: center;
 				grid-row-gap: var(--espaciado-leve);
 			}

@@ -90,7 +90,7 @@ function crearPlantillaHtmlModal(plantilla) {
         <div class="modal-body-contenido">
             <h4 class="modal-contenido-titulo">Descripcion</h4>
             <p class="modal-contenido-parrafo">${plantilla.descripcion}</p>
-            <h4 class="modal-contenido-titulo">URL / Github</h4>
+            <h4 class="modal-contenido-titulo">URL ${plantilla.url.github ? '/ Github' : ''}</h4>
             <div class="modal-contenido-enlaces">
                 <a class="modal-enlaces-url" href="https://${plantilla.url.website}" target="_blank">${plantilla.url.website}</a>
                 ${plantilla.url.github ? `<a class="modal-enlaces-github" href="${plantilla.url.github}" target="_blank"><i class="fab fa-github"></i></a>` : ''}

@@ -1038,12 +1038,13 @@ h3 {
 			min-height: calc(var(--espaciado-seccion-contacto) * 2);
 
 			background-color: #333b50;
-			padding: calc(1.25rem*2);
-			padding: var(--espaciado-muy-alto);
+			/* padding: var(--espaciado-muy-alto); */
+			padding: calc(calc(1.25rem*2) * 2);
+			padding: calc(var(--espaciado-muy-alto) * 2);
 			box-sizing: border-box;
 
 			display: grid;
-			grid-template-columns: repeat(2, minmax(auto, 400px));
+			/* grid-template-columns: repeat(2, minmax(auto, 400px)); */
 			grid-gap: calc(1.25rem*1.5);
 			grid-gap: var(--espaciado-alto);
 			justify-content: center;
@@ -1055,17 +1056,25 @@ h3 {
 				color: var(--color-white);
 
 				display: grid;
-				grid-template-rows: auto auto auto 1fr;
+				/* grid-template-rows: auto auto auto 1fr; */
+				grid-template: auto / auto auto; /* */
 			}
 
 .contacto-informacion-titulo {
-					text-align: left;
-					font-size: 1.4em;
+					grid-column: 2 span; /* */
+					/* text-align: left; */
+					text-align: center; /* */
+					/* font-size: 1.4em; */
+					font-size: 1.6em; /* */
 					font-weight: 400;
 					letter-spacing: normal;
 					letter-spacing: initial;
 					margin-bottom: 1.25rem;
 					margin-bottom: var(--espaciado-normal);
+				}
+
+.contacto-informacion-descripcion {
+					grid-column: 2 span; /* */
 				}
 
 .contacto-informacion-descripcion,
@@ -1079,14 +1088,16 @@ h3 {
 				}
 
 .contacto-informacion-correo {
-					text-decoration: none;
+					/* text-decoration: none; */
 					color: #ffffff;
 					color: var(--color-white);
 				}
 
 .contacto-informacion-redes-sociales {
-					margin-top: calc(1.25rem/4);
-					margin-top: var(--espaciado-muy-leve);
+					text-align: right; /* */
+					/* margin-top: var(--espaciado-muy-leve); */
+					margin-top: calc(1.25rem/2);
+					margin-top: var(--espaciado-leve); /* */
 				}
 
 .contacto-icono {
@@ -1107,7 +1118,8 @@ h3 {
 					}
 
 .contacto-formulario {
-				display: grid;
+				/* display: grid; */
+				display: none;
 				align-content: center;
 				grid-row-gap: calc(1.25rem/2);
 				grid-row-gap: var(--espaciado-leve);
@@ -1488,8 +1500,7 @@ h3 {
 
     /* ---- CONTACTO ---- */
     .contacto-contenido {
-        padding: calc(1.25rem*2) calc(1.25rem*1.5);
-        padding: var(--espaciado-muy-alto) var(--espaciado-alto);
+        /* padding: var(--espaciado-muy-alto) var(--espaciado-alto); */
     }
 
     /* ------ MODAL ----- */
@@ -1579,7 +1590,7 @@ h3 {
     }
 
         .portafolio-imagen.platzi-conf {
-            content: url('../../images/portafolio-platzi-conf-stretch.png')
+            content: url('../../images/portafolio-platziconf-stretch.png')
         }
         .portafolio-imagen.platzi-video {
             content: url('../../images/portafolio-platzi-video-stretch.png')
@@ -1590,6 +1601,8 @@ h3 {
 
     /* ---- CONTACTO ---- */
     .contacto-contenido {
+        padding: calc(1.25rem*2);
+        padding: var(--espaciado-muy-alto);
         grid-template: auto auto / 1fr;
         grid-gap: calc(1.25rem*1.5);
         grid-gap: var(--espaciado-alto);
