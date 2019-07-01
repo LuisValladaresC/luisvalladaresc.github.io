@@ -16,8 +16,11 @@
     justify-content: center;
 }
 
-    .hero-parrafo {
+    .hero-subtitulo {
         margin: var(--espaciado-alto) 0;
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: .2em;
     }
 
     .hero-arrow-link {
