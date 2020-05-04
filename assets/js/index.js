@@ -33,8 +33,8 @@ function monstrarAlternativamenteMenu() {
 // Plantillas para c/u de los proyectos mediante las cuales se creara un modal personalizado
 const plantillaPlatziConf = {
     titulo: 'Platzi Conf Hawaii',
-    imagen: './images/modal-platzi-conf.png',
-    imagen2x: './images/modal-platzi-conf@2x.png',
+    imagen: './assets/img/public/modal-platzi-conf.png',
+    imagen2x: './assets/img/public/modal-platzi-conf@2x.png',
     descripcion: 'Platzi Conf Hawaii fue desarrolado como modelo para promover un evento social. Cuenta con una interface responsive de diseño atractivo lograda con ayuda de Bootstrap.',
     url: {
         website: 'luisvalladaresc.github.io/platzi-conf',
@@ -44,8 +44,8 @@ const plantillaPlatziConf = {
 }
 const plantillaPlatziVideo = {
     titulo: 'Platzi Video',
-    imagen: './images/modal-platzi-video.png',
-    imagen2x: './images/modal-platzi-video@2x.png',
+    imagen: './assets/img/public/modal-platzi-video.png',
+    imagen2x: './assets/img/public/modal-platzi-video@2x.png',
     descripcion: 'Platzi Video fue creado como modelo para un servicio de películas online. Cuenta con un código que realiza multiples peticiones a API\'s externas y una interface responsive de diseño simple y pulido.',
     url: {
         website: 'luisvalladaresc.github.io/platzi-video',
@@ -55,8 +55,8 @@ const plantillaPlatziVideo = {
 }
 const plantillaPortafolio = {
     titulo: 'Portafolio Personal',
-    imagen: './images/modal-portafolio.png',
-    imagen2x: './images/modal-portafolio@2x.png',
+    imagen: './assets/img/public/modal-portafolio.png',
+    imagen2x: './assets/img/public/modal-portafolio@2x.png',
     descripcion: 'Sitio web actual desarrollado para promover mi marca personal. Cuenta con un sistema de mensajes de correo, multiples y muy bien pulidas animaciones y una interface responsive que resalta por su diseño simple, calido y atractivo.',
     url: {
         website: 'www.luisvc.com',

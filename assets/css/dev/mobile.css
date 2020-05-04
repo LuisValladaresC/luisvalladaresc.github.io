@@ -151,13 +151,13 @@
     }
 
         .portafolio-imagen.platzi-conf {
-            content: url('../../images/portafolio-platziconf-stretch.png')
+            content: url('../../img/public/portafolio-platziconf-stretch.png')
         }
         .portafolio-imagen.platzi-video {
-            content: url('../../images/portafolio-platzi-video-stretch.png')
+            content: url('../../img/public/portafolio-platzi-video-stretch.png')
         }
         .portafolio-imagen.portafolio-personal {
-            content: url('../../images/portafolio-personal-stretch.png')
+            content: url('../../img/public/portafolio-personal-stretch.png')
         }
 
     /* ---- CONTACTO ---- */
