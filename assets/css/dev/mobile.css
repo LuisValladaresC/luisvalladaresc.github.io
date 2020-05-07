@@ -1,12 +1,17 @@
 @media (max-width: 1000px) {
     /* --- GENERALES --- */
-    .container-sections-header-hero {
+    #inicio {
         background-position-x: calc(100% + 12vh);
     }
 
     /* --- PORTAFOLIO --- */
     .portafolio-descripcion {
         padding: var(--espaciado-normal);
+    }
+
+    /* ---- CONTACTO ---- */
+    .contacto-contenido {
+        padding: var(--espaciado-muy-alto);
     }
 }
 
@@ -16,7 +21,7 @@
         font-size: 14px;
     }
 
-    .container-sections-header-hero {
+    #inicio {
         background-size: cover;
     }
 
@@ -64,8 +69,8 @@
             }
 
     /* ---- CONTACTO ---- */
-    .contacto-contenido {
-        /* padding: var(--espaciado-muy-alto) var(--espaciado-alto); */
+    .contacto-informacion-descripcion {
+        text-align: justify;
     }
 
     /* ------ MODAL ----- */
@@ -102,13 +107,13 @@
         min-height: calc(100vh - 40px);
     }
 
-    /* - CONOCIMIENTOS - */
-    .nivel-barra {
+    /* --- PROFESIONAL -- */
+    .profesional-nivel-barra {
         padding: 0 var(--espaciado-leve);
     }
 
     /* ---- TRABAJO ---- */
-    .trabajo-contenido {
+    .trabajo-servicio {
         grid-template-columns: 1fr;
 
         position: relative;
@@ -149,41 +154,6 @@
     .portafolio-proyectos {
         grid-template-columns: 1fr;
     }
-
-        .portafolio-imagen.platzi-conf {
-            content: url('../../img/public/portafolio-platziconf-stretch.png')
-        }
-        .portafolio-imagen.platzi-video {
-            content: url('../../img/public/portafolio-platzi-video-stretch.png')
-        }
-        .portafolio-imagen.portafolio-personal {
-            content: url('../../img/public/portafolio-personal-stretch.png')
-        }
-
-    /* ---- CONTACTO ---- */
-    .contacto-contenido {
-        padding: var(--espaciado-muy-alto);
-        grid-template: auto auto / 1fr;
-        grid-gap: var(--espaciado-alto);
-    }
-
-        .contacto-contenido-informacion {
-            display: grid;
-            grid-template: auto / auto auto;
-        }
-
-            .contacto-informacion-titulo {
-                grid-column: 2 span;
-                text-align: center;
-            }
-            .contacto-informacion-descripcion {
-                grid-column: 2 span;
-                text-align: justify;
-            }
-            .contacto-informacion-redes-sociales {
-                text-align: right;
-                margin-top: var(--espaciado-leve);
-            }
 
     /* ------ MODAL ----- */
     .modal-container-body {

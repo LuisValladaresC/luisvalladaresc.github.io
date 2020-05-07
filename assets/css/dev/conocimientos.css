@@ -1,8 +1,8 @@
 /* --------------------------- *\
-    SECCION CONOCIMIENTOS
+    SECCION PROFESIONAL
 \* --------------------------- */
 
-#conocimientos {
+#profesional {
 	background-image: url('../../img/public/conocimientos.png');
 	background-position-x: center;
 	background-attachment: fixed;
@@ -10,7 +10,7 @@
 	background-size: cover;
 }
 
-	.conocimientos-contenido {
+	.profesional-contenido {
 		min-height: calc(100vh - 40px);
 		max-width: 900px;
 		margin: 0 auto;
@@ -22,11 +22,11 @@
 		align-content: center;
 	}
 
-		.conocimientos-subtitulo {
+		.profesional-subtitulo {
 			line-height: 1.5;
 		}
 
-		.conocimientos-listado {
+		.profesional-conocimientos {
 			font-size: 0.8em;
 			text-transform: uppercase;
 			color: var(--color-lightgray);
@@ -38,31 +38,34 @@
 			grid-row-gap: var(--espaciado-muy-leve);
 		}
 
-			.tema-nombre {
+			.profesional-conocimiento-nombre {
 				text-align: right;
 			}
 
-			.tema-nivel {
+			.profesional-conocimiento-nivel {
 				display: flex;
 				align-items: center;
 			}
 
-				.nivel-barra {
+				.profesional-nivel-barra {
 					height: .8em;
 					padding: 0 var(--espaciado-normal);
 					box-sizing: border-box;
 				}
-				.nivel-barra.n90 {
+				.profesional-nivel-barra.n95 {
+					width: 100%;
+				}
+				.profesional-nivel-barra.n90 {
 					width: 95%;
 				}
-				.nivel-barra.n85 {
+				.profesional-nivel-barra.n85 {
 					width: 89%;
 				}
-				.nivel-barra.n80 {
+				.profesional-nivel-barra.n80 {
 					width: 83%;
 				}
 
-					.barra-relleno {
+					.profesional-barra-relleno {
 						width: 0;
 						height: inherit;
 						background-color: var(--color-menu);
@@ -70,7 +73,7 @@
 						/* animation: relleno-animado 1.5s forwards; */
 					}
 					
-				.tema-porcentaje {
+				.profesional-nivel-porcentaje {
 					opacity: 0;
 					will-change: opacity;
 					/* animation: porcentaje-animado .75s forwards; */

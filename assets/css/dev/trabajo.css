@@ -2,7 +2,7 @@
         SECCION TRABAJO
 \* --------------------------- */
 
-#seccion_trabajo {
+#trabajo {
 	max-width: 1024px;
 	margin: 0 auto;
 	padding: var(--espaciado-minimo-entre-seccion) var(--espaciado-normal) 0;
@@ -11,7 +11,12 @@
 	grid-row-gap: var(--espaciado-muy-alto);
 }
 
-	.trabajo-contenido {
+	.trabajo-servicios {
+		display: grid;
+		grid-row-gap: var(--espaciado-muy-alto);
+	}
+
+	.trabajo-servicio {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}

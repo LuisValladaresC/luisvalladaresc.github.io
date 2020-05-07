@@ -46,7 +46,7 @@ h3 {
 	overflow: hidden;
 }
 
-.container-sections-header-hero {
+#inicio {
 	background-image: url('../../img/public/hero.png');
 	background-position-x: 100%;
 	background-position-y: center;
@@ -55,7 +55,7 @@ h3 {
 	background-size: contain;
 }
 
-.contenedor-trabajo-portafolio {
+main {
 	background-image: url('../../img/public/main.png');
 	background-repeat: no-repeat;
 	background-size: cover;

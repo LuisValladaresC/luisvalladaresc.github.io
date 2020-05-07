@@ -10,15 +10,17 @@
     <title>Luis Valladares</title>
 </head>
 <body>
-    <div class="container-sections-header-hero">
+    <!-- SECCION HEADER Y HERO -->
+    <div id="inicio">
         <div class="section-background-color">
+            <!-- SECCION HEADER -->
             <header id="header">
                 <nav class="header-navbar">
                     <a class="header-navbar-link">Inicio</a>
-                    <a class="header-navbar-link" href="#conocimientos">Profesional</a>
-                    <a class="header-navbar-link" href="#seccion_trabajo">Trabajo</a>
-                    <a class="header-navbar-link" href="#seccion_portafolio">Portafolio</a>
-                    <a class="header-navbar-link" href="#trabajemos_juntos"><span>Trabajemos Juntos</span></a>
+                    <a class="header-navbar-link" href="#profesional">Profesional</a>
+                    <a class="header-navbar-link" href="#trabajo">Trabajo</a>
+                    <a class="header-navbar-link" href="#portafolio">Portafolio</a>
+                    <a class="header-navbar-link" href="#contacto"><span>Trabajemos Juntos</span></a>
                 </nav>
                 <div class="header-menu-button" id="btn_menu">
                     <span class="header-button-line button-line-1"></span>
@@ -26,177 +28,137 @@
                     <span class="header-button-line button-line-3"></span>
                 </div>
                 <nav class="header-menu" id="menu">
-                    <a class="header-menu-link" href="#header">Inicio</a>
-                    <a class="header-menu-link" href="#conocimientos">Profesional</a>
-                    <a class="header-menu-link" href="#seccion_trabajo">Trabajo</a>
-                    <a class="header-menu-link" href="#seccion_portafolio">Portafolio</a>
-                    <a class="header-menu-link" href="#trabajemos_juntos">Trabajemos Juntos</a>
+                    <a class="header-menu-link" href="#inicio">Inicio</a>
+                    <a class="header-menu-link" href="#profesional">Profesional</a>
+                    <a class="header-menu-link" href="#trabajo">Trabajo</a>
+                    <a class="header-menu-link" href="#portafolio">Portafolio</a>
+                    <a class="header-menu-link" href="#contacto">Trabajemos Juntos</a>
                 </nav>
             </header>
 
+            <!-- SECCION HERO -->
             <section id="hero">
                 <h1 class="hero-titulo">Yo soy<br>Luis<br>Valladares<span>.</span></h1>
                 <h2 class="hero-subtitulo">Desarrollador de Paginas Web</h2>
-                <a class="hero-arrow-link" href="#conocimientos"><i class="fas fa-chevron-down"></i></a>
+                <a class="hero-arrow-link" href="#profesional"><i class="fas fa-chevron-down"></i></a>
             </section>
         </div>
     </div>
 
-    <section id="conocimientos">
+    <!-- SECCION PROFESIONAL -->
+    <section id="profesional">
         <div class="section-background-color">
-            <div class="conocimientos-contenido">
-                <h2 class="conocimientos-titulo"><span>01</span> Profesional</h2>
-                <h3 class="conocimientos-subtitulo">Mi nivel de conocimiento en software</h3>
+            <div class="profesional-contenido">
+                <h2 class="profesional-titulo"><span>01</span> Profesional</h2>
+                <h3 class="profesional-subtitulo">Mi nivel de conocimiento en software</h3>
     
-                <div class="conocimientos-listado">
-                    <p class="tema-nombre">HTML</p>
-                    <div class="tema-nivel">
-                        <div class="nivel-barra n90">
-                            <div class="barra-relleno"></div>
+                <div class="profesional-conocimientos">
+                    <!-- PLANTILLA -->
+                    <!-- <p class="profesional-conocimiento-nombre">${conocimiento.titulo}</p>
+                    <div class="profesional-conocimiento-nivel">
+                        <div class="profesional-nivel-barra n${conocimiento.nivel}">
+                            <div class="profesional-barra-relleno"></div>
                         </div>
-                        <p class="tema-porcentaje">90%</p>
-                    </div>
-    
-                    <p class="tema-nombre">CSS</p>
-                    <div class="tema-nivel">
-                        <div class="nivel-barra n85">
-                            <div class="barra-relleno"></div>
-                        </div>
-                        <p class="tema-porcentaje">85%</p>
-                    </div>
-    
-                    <p class="tema-nombre">Javascript</p>
-                    <div class="tema-nivel">
-                        <div class="nivel-barra n80">
-                            <div class="barra-relleno"></div>
-                        </div>
-                        <p class="tema-porcentaje">80%</p>
-                    </div>
-    
-                    <p class="tema-nombre">Bootstrap</p>
-                    <div class="tema-nivel">
-                        <div class="nivel-barra n80">
-                            <div class="barra-relleno"></div>
-                        </div>
-                        <p class="tema-porcentaje">80%</p>
-                    </div>
-    
-                    <p class="tema-nombre">Git & GitHub</p>
-                    <div class="tema-nivel">
-                        <div class="nivel-barra n85">
-                            <div class="barra-relleno"></div>
-                        </div>
-                        <p class="tema-porcentaje">85%</p>
-                    </div>
+                        <p class="profesional-nivel-porcentaje">${conocimiento.nivel}%</p>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="contenedor-trabajo-portafolio">
+    <!-- SECCION TRABAJO Y PORTAFOLIO -->
+    <main>
         <div class="section-background-color">
-            <section id="seccion_trabajo">
+
+            <!-- SECCION TRABAJO -->
+            <section id="trabajo">
                 <div class="trabajo-encabezado">
                     <h2 class="encabezado-titulo"><span>02</span> Trabajo</h2>
                     <h3 class="encabezado-subtitulo">Descripcion de mi trabajo</h3>
                 </div>
-                <!-- 1er Apartado de Trabajo -->
-                <div class="trabajo-contenido">
-                    <figure class="trabajo-contenedor-imagen">
-                        <img class="trabajo-imagen" src="./assets/img/public/trabajo-maquetacion@2x.png" srcset="./assets/img/public/trabajo-maquetacion.png, ./assets/img/public/trabajo-maquetacion@2x.png 2x" alt="Pagina Web">
-                        <div class="trabajo-imagen-capa">
-                            <p class="trabajo-etiqueta">2018 - 2019</p>
-                            <i class="trabajo-icono fab fa-html5"></i>
-                            <i class="trabajo-icono fab fa-css3-alt"></i>
-                            <i class="trabajo-icono fab fa-bootstrap"></i>
+
+                <div class="trabajo-servicios">
+                    <!-- PLANTILLA A-->
+                    <!-- <div class="trabajo-servicio">
+                        <figure class="trabajo-contenedor-imagen">
+                            <img class="trabajo-imagen" src="${servicio.imagen.url}" srcset="${servicio.imagen.url}, ${servicio.imagen.url2x} 2x" alt="Pagina Web">
+                            <div class="trabajo-imagen-capa">
+                                <p class="trabajo-etiqueta">${servicio.fecha_inicio} - 2020</p>
+                                <i class="trabajo-icono fab fa-html5"></i>
+                                <i class="trabajo-icono fab fa-css3-alt"></i>
+                                <i class="trabajo-icono fab fa-js-square"></i>
+                                <i class="trabajo-icono fab fa-bootstrap"></i>
+                                <i class="trabajo-icono fab fa-git-square"></i>
+                                <i class="trabajo-icono fab fa-github"></i>
+                            </div>
+                        </figure>
+                        <div class="trabajo-descripcion">
+                            <h3 class="trabajo-descripcion-titulo">${servicio.titulo}</h3>
+                            <p class="trabajo-descripcion-parrafo">${servicio.descripcion}</p>
                         </div>
-                    </figure>
-                    <div class="trabajo-descripcion">
-                        <h3 class="trabajo-descripcion-titulo">Maquetacion de Website</h3>
-                        <p class="trabajo-descripcion-parrafo">Transformamos el diseño de un producto web en un conjunto de archivos capaces de ser reproducidos por los navegadores web.</p>
-                    </div>
-                </div>
-                <!-- 2do Apartado de Trabajo -->
-                <div class="trabajo-contenido">
-                    <div class="trabajo-descripcion impar">
-                        <h3 class="trabajo-descripcion-titulo">Interactividad Local y Remota</h3>
-                        <p class="trabajo-descripcion-parrafo">Dotamos su pagina web con una interfaz dinamica e interactiva ayudandole a brindar una experiencia completa y memorable.</p>
-                    </div>
-                    <figure class="trabajo-contenedor-imagen impar">
-                        <div class="trabajo-imagen-capa">
-                            <p class="trabajo-etiqueta impar">2018 - 2019</p>
-                            <i class="trabajo-icono fab fa-js-square"></i>
+                    </div> -->
+
+                    <!-- PLANTILLA B -->
+                    <!-- <div class="trabajo-servicio">
+                        <div class="trabajo-descripcion impar">
+                            <h3 class="trabajo-descripcion-titulo">${servicio.titulo}</h3>
+                            <p class="trabajo-descripcion-parrafo">${servicio.descripcion}</p>
                         </div>
-                        <img class="trabajo-imagen" src="./assets/img/public/trabajo-interactividad@2x.png" srcset="./assets/img/public/trabajo-interactividad.png, ./assets/img/public/trabajo-interactividad@2x.png 2x" alt="Pagina Web">
-                    </figure>
-                </div>
-                <!-- 3er Apartado de Trabajo -->
-                <div class="trabajo-contenido">
-                    <figure class="trabajo-contenedor-imagen">
-                        <div class="trabajo-imagen-capa">
-                            <p class="trabajo-etiqueta">2018 - 2019</p>
-                            <i class="trabajo-icono fab fa-git-square"></i>
-                            <i class="trabajo-icono fab fa-github"></i>
-                        </div>
-                        <img class="trabajo-imagen" src="./assets/img/public/trabajo-remoto@2x.png" srcset="./assets/img/public/trabajo-remoto.png, ./assets/img/public/trabajo-remoto@2x.png 2x" alt="Pagina Web">
-                    </figure>
-                    <div class="trabajo-descripcion">
-                        <h3 class="trabajo-descripcion-titulo">Trabajo Remoto y Respaldos</h3>
-                        <p class="trabajo-descripcion-parrafo">El desarrollo de su sitio web se realiza de manera remota con respaldos en la nube que garantizan la seguridad del proyecto.</p>
-                    </div>
+                        <figure class="trabajo-contenedor-imagen impar">
+                            <div class="trabajo-imagen-capa">
+                                <p class="trabajo-etiqueta impar">${servicio.fecha_inicio} - 2020</p>
+                                <i class="trabajo-icono fab fa-html5"></i>
+                                <i class="trabajo-icono fab fa-css3-alt"></i>
+                                <i class="trabajo-icono fab fa-js-square"></i>
+                                <i class="trabajo-icono fab fa-bootstrap"></i>
+                                <i class="trabajo-icono fab fa-git-square"></i>
+                                <i class="trabajo-icono fab fa-github"></i>
+                            </div>
+                            <img class="trabajo-imagen" src="${servicio.imagen.url}" srcset="${servicio.imagen.url}, ${servicio.imagen.url2x} 2x" alt="Pagina Web">
+                        </figure>
+                    </div> -->
                 </div>
             </section>
 
-            <section id="seccion_portafolio">
+            <!-- SECCION PORTAFOLIO -->
+            <section id="portafolio">
                 <h2 class="portafolio-titulo"><span>03</span> Portafolio</h2>
                 <h3 class="portafolio-subtitulo">Mis proyectos recientes</h3>
                 <div class="portafolio-proyectos">
-                    <!-- 1er apartado de proyecto -->
-                    <figure class="portafolio-proyecto">
-                        <img class="portafolio-imagen platzi-conf" src="./assets/img/public/portafolio-platzi-conf@2x.png" srcset="./assets/img/public/portafolio-platzi-conf.png, ./assets/img/public/portafolio-platzi-conf@2x.png 2x" alt="Pagina Web">
-                        <div class="portafolio-descripcion" id="platzi_conf">
-                            <h4 class="portafolio-descripcion-titulo">Platzi Conf Hawaii</h4>
-                            <p class="portafolio-descripcion-parrafo">Sitio web desarrolado como modelo para promover un evento social.</p>
-                            <i class="portafolio-icono fas fa-search-plus"></i>
-                        </div>
-                    </figure>
-                    <!-- 2do apartado de proyecto -->
-                    <figure class="portafolio-proyecto">
-                        <img class="portafolio-imagen platzi-video" src="./assets/img/public/portafolio-platzi-video@2x.png" srcset="./assets/img/public/portafolio-platzi-video.png, ./assets/img/public/portafolio-platzi-video@2x.png 2x" alt="Pagina Web">
-                        <div class="portafolio-descripcion" id="platzi_video">
-                            <h4 class="portafolio-descripcion-titulo">Platzi Video</h4>
-                            <p class="portafolio-descripcion-parrafo">Sitio web desarrolado como modelo de un servicio de películas online.</p>
-                            <i class="portafolio-icono fas fa-search-plus"></i>
-                        </div>
-                    </figure>
-                    <!-- 3er apartado de proyecto -->
-                    <figure class="portafolio-proyecto">
-                        <img class="portafolio-imagen portafolio-personal" src="./assets/img/public/portafolio-personal@2x.png" srcset="./assets/img/public/portafolio-personal.png, ./assets/img/public/portafolio-personal@2x.png 2x" alt="Pagina Web">
+                    <!-- PLANTILLA -->
+                    <!-- <figure class="portafolio-proyecto">
+                        <picture class="portafolio-imagen">
+                            <source srcset="${proyecto.imagen.portada.responsive}" media="(max-width: 600px)">
+                            <img src="${proyecto.imagen.portada.url}" srcset="${proyecto.imagen.portada.url}, ${proyecto.imagen.portada.url2x} 2x" alt="Pagina Web">
+                        </picture>
                         <div class="portafolio-descripcion" id="portafolio_personal">
-                            <h4 class="portafolio-descripcion-titulo">Portafolio Personal</h4>
-                            <p class="portafolio-descripcion-parrafo">Sitio web actual desarrollado para promover mi marca personal.</p>
+                            <h4 class="portafolio-descripcion-titulo">${proyecto.titulo}</h4>
+                            <p class="portafolio-descripcion-parrafo">${proyecto.resumen}</p>
                             <i class="portafolio-icono fas fa-search-plus"></i>
                         </div>
-                    </figure>
+                    </figure> -->
                 </div>
                 <div class="portafolio-espaciado-de-contacto"></div>
             </section>
         </div>
     </main>
 
-    <section id="seccion_contacto">
+    <!-- SECCION CONTACTO -->
+    <section id="contacto">
         <div class="section-background-color">
-            <div class="contacto-contenedor" id="trabajemos_juntos">
+            <div class="contacto-contenedor">
                 <div class="contacto-contenido">
                     <div class="contacto-contenido-informacion">
-                        <h2 class="contacto-informacion-titulo">Contacto</h2>
-                        <p class="contacto-informacion-descripcion">Soy desarrollor de paginas web con un alto nivel de estudios en la rama. Mi trabajo es el fruto de detalle y pasión y justo ahora me encuentro explorando nuevas oportunidades para continuar creciendo profesionalmente.</p>
-                        <!-- <a class="contacto-informacion-correo" href="mailto:info@luisvc.com">info@luisvc.com</a> -->
-                        <a class="contacto-informacion-correo" href="mailto:ls.valladares7@gmail.com">ls.valladares7@gmail.com</a>
+                        <!-- PLANTILLA -->
+                        <!-- <h2 class="contacto-informacion-titulo">Contacto</h2>
+                        <p class="contacto-informacion-descripcion">${contacto.acerca_de_mi}</p>
+                        <a class="contacto-informacion-correo" href="mailto:${contacto.correo}">${contacto.correo}</a>
                         <div class="contacto-informacion-redes-sociales">
-                            <a href="https://github.com/LuisValladaresC" class="contacto-icono" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/luisvalladaresc/" class="contacto-icono" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                            <a href="${contacto.redes_sociales.github}" class="contacto-icono" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="${contacto.redes_sociales.instagram}" class="contacto-icono" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="${contacto.redes_sociales.twitter}" class="contacto-icono" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="${contacto.redes_sociales.linkedin}" class="contacto-icono" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
                     </div>
                     <form action="" class="contacto-formulario">
                         <input type="text" name="name" id="name" placeholder="Nombre" required>
@@ -206,18 +168,47 @@
                     </form>
                 </div>
                 <div class="contacto-arrow-container">
-                    <a class="contacto-arrow-link" href="#header"><i class="fas fa-chevron-up"></i></a>
+                    <a class="contacto-arrow-link" href="#inicio"><i class="fas fa-chevron-up"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SECCION FOOTER -->
     <footer id="footer">
         <p class="footer-copyright">Derechos Reservado © 2019 LUISVC.COM</p>
     </footer>
 
-    <div id="modal" class="inactive"></div>
+    <!-- MODAL PARA C/U DE LOS PROYECTOS -->
+    <div id="modal" class="inactive">
+        <div id="modal_container">
+            <!-- PLANTILLA -->
+            <!-- <div class="modal-container-header">
+                <h3 class="modal-encabezado-titulo">${proyecto.titulo}</h3>
+                <button class="modal-encabezado-button" id="btn_cerrar_modal">×</button>
+            </div>
+            <div class="modal-container-body">
+                <figure class="modal-body-imagen">
+                    <img src="${proyecto.imagen.descripcion.url}" srcset="${proyecto.imagen.descripcion.url}, ${proyecto.imagen.descripcion.url2x} 2x" alt="Pagina Web">
+                </figure>
+                <div class="modal-body-contenido">
+                    <h4 class="modal-contenido-titulo">Descripcion</h4>
+                    <p class="modal-contenido-parrafo">${proyecto.descripcion}</p>
+                    <h4 class="modal-contenido-titulo">URL / Github</h4>
+                    <div class="modal-contenido-enlaces">
+                        <a class="modal-enlaces-url" href="https://${proyecto.url.website}" target="_blank">${proyecto.url.website}</a>
+                        <a class="modal-enlaces-github" href="${proyecto.url.github}" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h4 class="modal-contenido-titulo">Requerimientos</h4>
+                    <div class="modal-contenido-requerimientos">
+                        <span class="${proyecto.herramientas[0]}">${proyecto.herramientas[0]}</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
 
+    <script src="./assets/data/data.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

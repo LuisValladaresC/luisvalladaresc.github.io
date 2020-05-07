@@ -2,7 +2,7 @@
         SECCION PORTAFOLIO
 \* --------------------------- */
 
-#seccion_portafolio {
+#portafolio {
 	max-width: 1024px;
 	margin: 0 auto;
 	padding: var(--espaciado-minimo-entre-seccion) var(--espaciado-normal);
@@ -30,9 +30,6 @@
 				object-fit: cover;
 				vertical-align: top;
 				transition: 500ms;
-			}
-			.portafolio-imagen.platzi-video {
-				filter: contrast(80%) brightness(0.9);
 			}
 			.portafolio-proyecto:hover .portafolio-imagen {
 				filter: contrast(80%) brightness(0.6);
