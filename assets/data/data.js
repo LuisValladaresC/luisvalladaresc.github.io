@@ -27,8 +27,8 @@ const DATA = {
             descripcion: "Transformamos el diseño de un producto web en un conjunto de archivos capaces de ser reproducidos por los navegadores web.",
             fecha_inicio: 2018,
             imagen: {
-                url: './assets/img/public/trabajo-maquetacion.png',
-                url2x: './assets/img/public/trabajo-maquetacion@2x.png'
+                url: './assets/img/public/servicios/maquetacion.png',
+                url2x: './assets/img/public/servicios/maquetacion@2x.png'
             },
             herramientas: ["html", "css", "bootstrap"]
         },
@@ -37,8 +37,8 @@ const DATA = {
             descripcion: "Dotamos su pagina web con una interfaz dinamica e interactiva ayudandole a brindar una experiencia completa y memorable.",
             fecha_inicio: 2018,
             imagen: {
-                url: './assets/img/public/trabajo-interactividad.png',
-                url2x: './assets/img/public/trabajo-interactividad@2x.png'
+                url: './assets/img/public/servicios/interactividad.png',
+                url2x: './assets/img/public/servicios/interactividad@2x.png'
             },
             herramientas: ["javascript"]
         },
@@ -47,8 +47,8 @@ const DATA = {
             descripcion: "El desarrollo de su sitio web se realiza de manera remota con respaldos en la nube que garantizan la seguridad del proyecto.",
             fecha_inicio: 2018,
             imagen: {
-                url: './assets/img/public/trabajo-remoto.png',
-                url2x: './assets/img/public/trabajo-remoto@2x.png'
+                url: './assets/img/public/servicios/remoto.png',
+                url2x: './assets/img/public/servicios/remoto@2x.png'
             },
             herramientas: ["git", "github"]
         },
@@ -64,13 +64,13 @@ const DATA = {
             },
             imagen: {
                 portada: {
-                    url: "./assets/img/public/portafolio-platzi-conf.png",
-                    url2x: "./assets/img/public/portafolio-platzi-conf@2x.png",
-                    responsive: "./assets/img/public/portafolio-platzi-conf-stretch.png",
+                    url: "./assets/img/public/proyectos/platzi-conf.png",
+                    url2x: "./assets/img/public/proyectos/platzi-conf@2x.png",
+                    responsive: "./assets/img/public/proyectos/platzi-conf-stretch.png",
                 },
                 descripcion: {
-                    url: "./assets/img/public/modal-platzi-conf.png",
-                    url2x: "./assets/img/public/modal-platzi-conf@2x.png"
+                    url: "./assets/img/public/proyectos/platzi-conf-full.png",
+                    url2x: "./assets/img/public/proyectos/platzi-conf-full@2x.png"
                 },
             },
             herramientas: ["html", "css", "bootstrap"]
@@ -85,13 +85,13 @@ const DATA = {
             },
             imagen: {
                 portada: {
-                    url: "./assets/img/public/portafolio-platzi-video.png",
-                    url2x: "./assets/img/public/portafolio-platzi-video@2x.png",
-                    responsive: "./assets/img/public/portafolio-platzi-video-stretch.png"
+                    url: "./assets/img/public/proyectos/platzi-video.png",
+                    url2x: "./assets/img/public/proyectos/platzi-video@2x.png",
+                    responsive: "./assets/img/public/proyectos/platzi-video-stretch.png"
                 },
                 descripcion: {
-                    url: "./assets/img/public/modal-platzi-video.png",
-                    url2x: "./assets/img/public/modal-platzi-video@2x.png"
+                    url: "./assets/img/public/proyectos/platzi-video-full.png",
+                    url2x: "./assets/img/public/proyectos/platzi-video-full@2x.png"
                 },
             },
             herramientas: ["html", "css", "javascript"]
@@ -106,13 +106,13 @@ const DATA = {
             },
             imagen: {
                 portada: {
-                    url: "./assets/img/public/portafolio-personal.png",
-                    url2x: "./assets/img/public/portafolio-personal@2x.png",
-                    responsive: "./assets/img/public/portafolio-personal-stretch.png"
+                    url: "./assets/img/public/proyectos/portafolio-personal.png",
+                    url2x: "./assets/img/public/proyectos/portafolio-personal@2x.png",
+                    responsive: "./assets/img/public/proyectos/portafolio-personal-stretch.png"
                 },
                 descripcion: {
-                    url: "./assets/img/public/modal-portafolio.png",
-                    url2x: "./assets/img/public/modal-portafolio@2x.png"
+                    url: "./assets/img/public/proyectos/portafolio-personal-full.png",
+                    url2x: "./assets/img/public/proyectos/portafolio-personal-full@2x.png"
                 },
             },
             herramientas: ["html", "css", "javascript"]
