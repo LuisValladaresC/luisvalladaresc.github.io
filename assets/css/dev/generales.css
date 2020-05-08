@@ -59,6 +59,9 @@ main {
 	background-image: url('../../img/public/main.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	position: relative;
+	margin-bottom: calc(var(--espaciado-seccion-contacto) * -1);
 }
 
 .section-background-color {

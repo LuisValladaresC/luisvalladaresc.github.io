@@ -72,11 +72,25 @@
 						will-change: width;
 						/* animation: relleno-animado 1.5s forwards; */
 					}
+					.profesional-conocimiento-nivel.active .profesional-barra-relleno {
+						animation: relleno-animado 1s forwards;
+						animation-play-state: paused;
+					}
+					.profesional-conocimiento-nivel.mostrar .profesional-barra-relleno {
+						animation-play-state: running;
+					}
 					
 				.profesional-nivel-porcentaje {
 					opacity: 0;
 					will-change: opacity;
 					/* animation: porcentaje-animado .75s forwards; */
+				}
+				.profesional-conocimiento-nivel.active .profesional-nivel-porcentaje {
+					animation: porcentaje-animado .5s forwards 1s;
+					animation-play-state: paused;
+				}
+				.profesional-conocimiento-nivel.mostrar .profesional-nivel-porcentaje {
+					animation-play-state: running;
 				}
 
 /* Animaciones añadidas en el evento scroll mediante JS */

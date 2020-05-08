@@ -65,12 +65,12 @@ const DATA = {
             imagen: {
                 portada: {
                     url: "./assets/img/public/portafolio-platzi-conf.png",
-                    url2x: "./assets/img/public/portafolio-platzi-conf@x2.png",
+                    url2x: "./assets/img/public/portafolio-platzi-conf@2x.png",
                     responsive: "./assets/img/public/portafolio-platzi-conf-stretch.png",
                 },
                 descripcion: {
                     url: "./assets/img/public/modal-platzi-conf.png",
-                    url2x: "./assets/img/public/modal-platzi-conf@x2.png"
+                    url2x: "./assets/img/public/modal-platzi-conf@2x.png"
                 },
             },
             herramientas: ["html", "css", "bootstrap"]
@@ -86,12 +86,12 @@ const DATA = {
             imagen: {
                 portada: {
                     url: "./assets/img/public/portafolio-platzi-video.png",
-                    url2x: "./assets/img/public/portafolio-platzi-video@x2.png",
+                    url2x: "./assets/img/public/portafolio-platzi-video@2x.png",
                     responsive: "./assets/img/public/portafolio-platzi-video-stretch.png"
                 },
                 descripcion: {
                     url: "./assets/img/public/modal-platzi-video.png",
-                    url2x: "./assets/img/public/modal-platzi-video@x2.png"
+                    url2x: "./assets/img/public/modal-platzi-video@2x.png"
                 },
             },
             herramientas: ["html", "css", "javascript"]
@@ -107,12 +107,12 @@ const DATA = {
             imagen: {
                 portada: {
                     url: "./assets/img/public/portafolio-personal.png",
-                    url2x: "./assets/img/public/portafolio-personal@x2.png",
+                    url2x: "./assets/img/public/portafolio-personal@2x.png",
                     responsive: "./assets/img/public/portafolio-personal-stretch.png"
                 },
                 descripcion: {
                     url: "./assets/img/public/modal-portafolio.png",
-                    url2x: "./assets/img/public/modal-portafolio@x2.png"
+                    url2x: "./assets/img/public/modal-portafolio@2x.png"
                 },
             },
             herramientas: ["html", "css", "javascript"]

@@ -91,7 +91,7 @@
     
     /* ----- HEADER ----- */
     #header {
-        position: absolute;
+        /* position: absolute; */
     }
 
         .header-navbar {
@@ -100,6 +100,7 @@
 
         .header-menu-button {
             display: block;
+            position: fixed;
         }
 
     /* ------ HERO ------ */

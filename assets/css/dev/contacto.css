@@ -15,7 +15,7 @@
 		padding: 0 var(--espaciado-normal);
 
 		position: relative;
-		bottom: var(--espaciado-seccion-contacto);
+		z-index: 98;
 	}
 
 		.contacto-contenido {
@@ -118,9 +118,6 @@
 				}
 
 		.contacto-arrow-container {
-			position: absolute;
-			left: 0;
-			right: 0;
 			height: var(--espaciado-seccion-contacto);
 
 			display: flex;

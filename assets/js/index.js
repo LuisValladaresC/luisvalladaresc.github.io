@@ -255,44 +255,105 @@ function cerrar_modal() {
     }
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* ESPIAMOS EL SCROLL PARA ACTIVAR LA ANIMACION DE RELLENO EN LA SECCION DE CONOCIMIENTOS */
-/* -------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+/* ESPIAMOS EL SCROLL PARA CONOCER EN TODO MOMENTO LA SECCION ACTUAL Y DEFINIRLE UNA CLASE A SU MENU LINK */
+/* ------------------------------------------------------------------------------------------------------ */
 
-// Arreglos de elementos a los que definiremos una animacion
-const $barrasNivel = Array.from(document.getElementsByClassName('profesional-barra-relleno'))
-const $porcentajesNivel = Array.from(document.getElementsByClassName('profesional-nivel-porcentaje'))
-// Las animaciones se haran 1 despues de otra mediante este retardo
-var retardoAnimacion = 0;
+// Secciones
+const $seccion_inicio = document.getElementById("inicio");
+const $seccion_profesional = document.getElementById("profesional");
+const $seccion_trabajo = document.getElementById("trabajo");
+const $seccion_portafolio = document.getElementById("portafolio");
+const $seccion_contacto = document.getElementById('contacto');
 
-document.addEventListener('scroll', activarAnimacionSeccionConocimietos);
+// Menu links correspondientes a cada una de las secciones (unicamente en la version responsive <600px)
+const $menu_link_inicio = document.querySelector(".header-menu-link.inicio")
+const $menu_link_profesional = document.querySelector(".header-menu-link.profesional")
+const $menu_link_trabajo = document.querySelector(".header-menu-link.trabajo")
+const $menu_link_portafolio = document.querySelector(".header-menu-link.portafolio")
+const $menu_link_contacto = document.querySelector(".header-menu-link.contacto")
 
-function activarAnimacionSeccionConocimietos() {
-    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-    // Verifica si el Scroll esta dentro de la posicion donde se encuentran las barras de nivel de la Seccion
-    if ($barrasNivel[0].offsetTop - window.innerHeight <= scrollPosition &&
-        scrollPosition <= $barrasNivel[4].offsetTop) {
-        let desactivarEvento = true;
-        // Itera por cada indice dentro del arreglo de nodos que contiene las barras de nivel
-        for (i in $barrasNivel) {
-            // Verifica si la barra ya fue animada
-            if (!$barrasNivel[i].style.animation) {
-                desactivarEvento = false;
-                // Verifica si la barra / elemento se encuentra dentro del espacio que abarca el Scroll
-                if ($barrasNivel[i].offsetTop - window.innerHeight <= scrollPosition &&
-                    scrollPosition <= $barrasNivel[i].offsetTop) {
-                    // Define una animacion a la barra de nivel y a su elemento hermano el porcentaje
-                    $barrasNivel[i].style.animation = `relleno-animado 1s forwards ${retardoAnimacion}s`;
-                    $porcentajesNivel[i].style.animation = `porcentaje-animado .5s forwards ${1 + retardoAnimacion}s`;
-                    // Suma y resta continuamenete el retardo para que las animacion sucedan con el mismo espacio de tiempo
-                    retardoAnimacion += .4;
-                    setTimeout(() => retardoAnimacion -= .5, 500)
-                }
+// Variable global que contendra el nodo correspondiente a la seccion actual
+var $seccion_actual = $seccion_inicio;
+
+// Evento que se activara al hacer scroll en la pagina web
+document.addEventListener('scroll',encontrar_seccion_actual);
+
+// Redefine el valor de la variable $seccion_actual y aplica la clase "active" al $menu_link correspondiente
+function encontrar_seccion_actual(){
+    // Posicion superior y centra del scroll en el eje Y (en pixeles)
+    var scroll_position_top = document.documentElement.scrollTop || document.body.scrollTop;
+    var scroll_position_center = scroll_position_top + (window.innerHeight / 2);
+
+    // Arreglo de cada una de las secciones y menu links utilizados para manejar dichos valores mas comodamente
+    var $secciones = [$seccion_inicio, $seccion_profesional, $seccion_trabajo, $seccion_portafolio, $seccion_contacto];
+    var $menu_links = [$menu_link_inicio, $menu_link_profesional, $menu_link_trabajo, $menu_link_portafolio, $menu_link_contacto];
+
+    $secciones.map(($seccion, indice) => {
+        // Posicion superior e inferior de la seccion en su eje Y
+        var posicion_inicio_seccion = $seccion.getBoundingClientRect().top + scrollY;
+        var posicion_final_seccion = $seccion.getBoundingClientRect().bottom + scrollY;
+        // Si la posicion central del scroll se encuentra sobre la seccion actual
+        if (scroll_position_center > posicion_inicio_seccion && scroll_position_center <= posicion_final_seccion){
+            // Si la seccion es diferente a la ya definida como actual
+            if ($seccion_actual != $seccion) {
+                // Esta clase resalta el menu link correspondiente a la seccion actual
+                $menu_links[indice].classList.add("active");
+                // Elimina la clase "active" del menu link correspondiente a la seccion actual anterior
+                $menu_links.map($link => {
+                    if ($link.classList.contains($seccion_actual.id)) {
+                        $link.classList.remove("active")
+                    }
+                })
+                $seccion_actual = $seccion;
             }
         }
-        // Si todos los elementos dentro del arreglo de barras fueron animados esto dara 'true' y desactivara el scrollSpy
-        if (desactivarEvento) document.removeEventListener('scroll', activarAnimacionSeccionConocimietos);
-    }
+    });
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* ESPIAMOS EL SCROLL PARA ACTIVAR LA ANIMACION DE RELLENO EN CADA UNO DE LOS CONOCIMIENTOS */
+/* ---------------------------------------------------------------------------------------- */
+
+// Contenedores de cada una de las barras de niveles y textos de porcentaje a animar
+const $conocimientos_niveles = Array.from(document.querySelectorAll('#profesional .profesional-conocimiento-nivel'));
+// Valor que sera utilizado como retardo entre cada una de las animaciones de los niveles
+var retardo_para_animaciones = 0;
+
+// Evento que se activara al hacer scroll en la pagina web
+document.addEventListener('scroll', mostrar_niveles_de_conocimiento);
+
+function mostrar_niveles_de_conocimiento() {
+    var desactivarEvento = true;
+    // Posicion superior e inferior del scroll en pixeles (eje Y)
+    var scroll_position_top = document.documentElement.scrollTop || document.body.scrollTop;
+    var scroll_position_bottom = scroll_position_top + window.innerHeight;
+
+    $conocimientos_niveles.map($nivel => {
+        // Verifica si el nivel actual todavia no ha sido animado
+        if (!$nivel.classList.contains('active')){
+            desactivarEvento = false;
+            // Posicion superior e inferior del nivel actual en pixeles (eje Y)
+            var nivel_position_top = $nivel.getBoundingClientRect().top + scrollY;
+            var nivel_position_bottom = $nivel.getBoundingClientRect().bottom + scrollY;
+            // Verifica si el nivel actual se encuentra dentro del espacio que abarca el Scroll
+            if (nivel_position_top > scroll_position_top && nivel_position_top < scroll_position_bottom ||
+                nivel_position_bottom > scroll_position_top && nivel_position_bottom < scroll_position_bottom) {
+                // Añade una clase "active" elemento actual, la cual definira una animacion en su barra de relleno y texto de porcentaje
+                $nivel.classList.add('active');
+                // Utiliza un temporizador para añadir la clase "mostrar" para correr la animacion definida previamente
+                setTimeout(() => {
+                    $nivel.classList.add('mostrar');
+                }, retardo_para_animaciones);
+                // Suma y resta continuamenete el retardo para que las animacion sucedan con el mismo espacio de tiempo
+                retardo_para_animaciones += 500;
+                setTimeout(() => retardo_para_animaciones -= 500, 500)
+            }
+        }
+    });
+
+    // Si todos los elementos dentro del arreglo de barras fueron animados se desactivara el evento
+    if (desactivarEvento) document.removeEventListener('scroll', mostrar_niveles_de_conocimiento);
 }
 
 /* ---------------------------------------------------------------------------------------- */

@@ -12,6 +12,7 @@
 
 	.portafolio-proyectos {
 		margin-top: var(--espaciado-muy-alto);
+		margin-bottom: var(--espaciado-seccion-contacto);
 
 		display: grid;
 		grid-auto-flow: column;
@@ -74,8 +75,3 @@
 					text-align: center;
 					font-size: 1.5em;
 				}
-
-	.portafolio-espaciado-de-contacto {
-		height: var(--espaciado-seccion-contacto);
-		margin: var(--espaciado-leve);
-	}

@@ -50,7 +50,7 @@
 		height: 16px;
 		cursor: pointer;
 		margin-top: var(--espaciado-normal);
-		margin-left: var(--espaciado-leve);
+		margin-left: var(--espaciado-alto);
 
 		position: relative;
 		z-index: 100;
@@ -62,10 +62,11 @@
 			height: 2px;
 			width: 100%;
 			border-radius: 2px;
-			background-color: var(--color-lightgray);
+			background-color: var(--color-menu);
 
 			position: absolute;
 			transition: 250ms ease-in-out;
+			box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.05);
 		}
 		.header-button-line.button-line-1 {
 			top: 0;
@@ -98,7 +99,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 10;
+		z-index: 99;
 		background-color: #333b50;
 
 		transition: 0.5s;
@@ -128,6 +129,10 @@
 			text-transform: uppercase;
 
 			display: none;
+		}
+		.header-menu-link:hover,
+		.header-menu-link.active{
+			color: var(--color-menu);
 		}
 		.header-menu.active .header-menu-link {
 			display: block;
