@@ -15,7 +15,8 @@
 		margin-bottom: var(--espaciado-seccion-contacto);
 
 		display: grid;
-		grid-auto-flow: column;
+		grid-template-columns: repeat(3, 1fr);
+		gap: calc(var(--espaciado-muy-leve) / 2);
 	}
 		
 		.portafolio-proyecto {
