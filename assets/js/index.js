@@ -72,8 +72,11 @@ function crear_plantilla_HTML(data, $contenedor) {
                                 <p class="trabajo-etiqueta">${servicio.fecha_inicio} - ${new Date().getFullYear()}</p>
                                 ${servicio.herramientas.includes('html') ? '<i class="trabajo-icono fab fa-html5"></i>' : ''}
                                 ${servicio.herramientas.includes('css') ? '<i class="trabajo-icono fab fa-css3-alt"></i>' : ''}
-                                ${servicio.herramientas.includes('javascript') ? '<i class="trabajo-icono fab fa-js-square"></i>' : ''}
                                 ${servicio.herramientas.includes('bootstrap') ? '<i class="trabajo-icono fab fa-bootstrap"></i>' : ''}
+                                ${servicio.herramientas.includes('javascript') ? '<i class="trabajo-icono fab fa-js-square"></i>' : ''}
+                                ${servicio.herramientas.includes('php') ? '<i class="trabajo-icono fab fa-php"></i>' : ''}
+                                ${servicio.herramientas.includes('laravel') ? '<i class="trabajo-icono fab fa-laravel"></i>' : ''}
+                                ${servicio.herramientas.includes('mysql') ? '<i class="trabajo-icono fab fa-mysql"></i>' : ''}
                                 ${servicio.herramientas.includes('git') ? '<i class="trabajo-icono fab fa-git-square"></i>' : ''}
                                 ${servicio.herramientas.includes('github') ? '<i class="trabajo-icono fab fa-github"></i>' : ''}
                             </div>
@@ -85,20 +88,23 @@ function crear_plantilla_HTML(data, $contenedor) {
                     </div>`
                 }else{
                     plantilla_HTML += `
-                    <div class="trabajo-servicio">
-                        <div class="trabajo-descripcion impar">
+                    <div class="trabajo-servicio impar">
+                        <div class="trabajo-descripcion">
                             <h3 class="trabajo-descripcion-titulo">${servicio.titulo}</h3>
                             <p class="trabajo-descripcion-parrafo">${servicio.descripcion}</p>
                         </div>
-                        <figure class="trabajo-contenedor-imagen impar">
+                        <figure class="trabajo-contenedor-imagen">
                             <div class="trabajo-imagen-capa">
-                                <p class="trabajo-etiqueta impar">${servicio.fecha_inicio} - ${new Date().getFullYear()}</p>
                                 ${servicio.herramientas.includes('html') ? '<i class="trabajo-icono fab fa-html5"></i>' : ''}
                                 ${servicio.herramientas.includes('css') ? '<i class="trabajo-icono fab fa-css3-alt"></i>' : ''}
-                                ${servicio.herramientas.includes('javascript') ? '<i class="trabajo-icono fab fa-js-square"></i>' : ''}
                                 ${servicio.herramientas.includes('bootstrap') ? '<i class="trabajo-icono fab fa-bootstrap"></i>' : ''}
+                                ${servicio.herramientas.includes('javascript') ? '<i class="trabajo-icono fab fa-js-square"></i>' : ''}
+                                ${servicio.herramientas.includes('php') ? '<i class="trabajo-icono fab fa-php"></i>' : ''}
+                                ${servicio.herramientas.includes('laravel') ? '<i class="trabajo-icono fab fa-laravel"></i>' : ''}
+                                ${servicio.herramientas.includes('mysql') ? '<i class="trabajo-icono fas fa-database"></i>' : ''}
                                 ${servicio.herramientas.includes('git') ? '<i class="trabajo-icono fab fa-git-square"></i>' : ''}
                                 ${servicio.herramientas.includes('github') ? '<i class="trabajo-icono fab fa-github"></i>' : ''}
+                                <p class="trabajo-etiqueta">${servicio.fecha_inicio} - ${new Date().getFullYear()}</p>
                             </div>
                             <img class="trabajo-imagen" 
                                 src="${servicio.imagen.url2x || servicio.imagen.url}" 
@@ -114,9 +120,9 @@ function crear_plantilla_HTML(data, $contenedor) {
         case $contenedor_proyectos:
             data.map(proyecto => {
                 plantilla_HTML += `
-                <figure class="portafolio-proyecto">
-                    <picture class="portafolio-imagen">
-                        <source srcset="${proyecto.imagen.portada.responsive}" media="(max-width: 600px)">
+                <div class="portafolio-proyecto">
+                    <picture>
+                        <source srcset="${proyecto.imagen.portada.responsive}, ${proyecto.imagen.portada.responsive2x} 2x" media="(max-width: 600px)">
                         <img class="portafolio-imagen" 
                             src="${proyecto.imagen.portada.url2x || proyecto.imagen.portada.url}" 
                             srcset="${proyecto.imagen.portada.url2x ? proyecto.imagen.portada.url + ', ' + proyecto.imagen.portada.url2x + ' 2x' : ''}"
@@ -127,7 +133,7 @@ function crear_plantilla_HTML(data, $contenedor) {
                         <p class="portafolio-descripcion-parrafo">${proyecto.resumen}</p>
                         <i class="portafolio-icono fas fa-search-plus"></i>
                     </div>
-                </figure>`
+                </div>`
             });
             return plantilla_HTML;
 
