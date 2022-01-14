@@ -122,7 +122,6 @@ function crear_plantilla_HTML(data, $contenedor) {
                 plantilla_HTML += `
                 <div class="portafolio-proyecto">
                     <picture>
-                        <source srcset="${proyecto.imagen.portada.responsive}, ${proyecto.imagen.portada.responsive2x} 2x" media="(max-width: 600px)">
                         <img class="portafolio-imagen" 
                             src="${proyecto.imagen.portada.url2x || proyecto.imagen.portada.url}" 
                             srcset="${proyecto.imagen.portada.url2x ? proyecto.imagen.portada.url + ', ' + proyecto.imagen.portada.url2x + ' 2x' : ''}"

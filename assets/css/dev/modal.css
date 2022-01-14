@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
     z-index: 100;
+    min-width: inherit;
 
     display: flex;
     justify-content: center;
@@ -88,7 +89,6 @@
 
         .modal-container-body {
             display: grid;
-            grid-template-columns: 3fr 2fr;
             grid-gap: var(--espaciado-normal);
             
             margin: 1.5rem var(--espaciado-normal);
@@ -175,4 +175,31 @@
                     }
                     .modal-contenido-requerimientos .bootstrap {
                         background-color: #563d7c;
+                    }
+                    .modal-contenido-requerimientos .nunjucks {
+                        background-color: #1e5a1e;
+                    }
+                    .modal-contenido-requerimientos .nodejs {
+                        background-color: #026e00;
+                    }
+                    .modal-contenido-requerimientos .php {
+                        background-color: #8892bf;
+                    }
+                    .modal-contenido-requerimientos .mysql {
+                        background-color: #447e9b;
+                    }
+                    .modal-contenido-requerimientos .firebase {
+                        background-color: #ffcc30;
+                    }
+                    .modal-contenido-requerimientos .gulp {
+                        background-color: #cf4647;
+                    }
+                    .modal-contenido-requerimientos .git {
+                        background-color: #f14e32;
+                    }
+                    .modal-contenido-requerimientos .github {
+                        background-color: #24292f;
+                    }
+                    .modal-contenido-requerimientos .gitlab {
+                        background-color: #f96424;
                     }
