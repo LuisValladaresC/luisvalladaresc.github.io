@@ -32,13 +32,13 @@ const DATA = {
     servicios: [
         {
             titulo: "Maquetación Web",
-            descripcion: "Desarrollo de cualquier tipo de interfaz web partiendo desde una idea o diseño predefinido hasta el desarrollo de un conjunto de archivos capaces de ser reproducidos por un navegador web.",
+            descripcion: "Desarrollo de cualquier tipo de interfaz web partiendo desde una idea o un diseño, hasta el desarrollo de un conjunto de archivos capaces de ser reproducidos por todo tipo de navegadores web.",
             fecha_inicio: 2018,
             imagen: {
                 url: './assets/img/public/servicios/maquetacion.png',
                 url2x: './assets/img/public/servicios/maquetacion@2x.png'
             },
-            herramientas: ["html", "css", "bootstrap"]
+            herramientas: ["html", "css"]
         },
         {
             titulo: "Interactividad local y remota",
@@ -48,17 +48,17 @@ const DATA = {
                 url: './assets/img/public/servicios/interactividad.png',
                 url2x: './assets/img/public/servicios/interactividad@2x.png'
             },
-            herramientas: ["javascript", "php", "laravel", "mysql",]
+            herramientas: ["javascript", "nodejs", "mysql", "firebase"]
         },
         {
-            titulo: "Trabajo remoto y respaldos",
-            descripcion: "Manejo de múltiples herramientas que facilitan la comunicación durante el desarrollo y respaldos en la nube que garantizan un trabajo remoto completamente eficiente.",
+            titulo: "Trabajo remoto y colaborativo",
+            descripcion: "Manejo de múltiples herramientas que facilitan la comunicación y revision del proyecto durante el desarrollo, con respaldos en la nube y un control de versiones que garantizan un trabajo remoto y colaborativo completamente eficiente.",
             fecha_inicio: 2018,
             imagen: {
                 url: './assets/img/public/servicios/remoto.png',
                 url2x: './assets/img/public/servicios/remoto@2x.png'
             },
-            herramientas: ["git", "github"]
+            herramientas: ["git", "github", "gitlab"]
         },
     ],
     proyectos: [
