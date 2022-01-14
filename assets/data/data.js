@@ -68,7 +68,7 @@ const DATA = {
             resumen: "",
             descripcion: "Proyecto en el que se desarrollo la pagina web de Giacchetta Networks, empresa que brinda servicios relacionados con Marketing, Negocios y Desarrollo de Proyectos. El desarrollado comenzó de 0, incluido su diseño, y se llevo a cabo con ayuda de \"Front\"' una plantilla de Bootstrap. Cuenta con múltiples interfaces, desde su pagina de inicio, un blog e incluso términos y condiciones de uso. Cabe mencionar, que cada interfaz es responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con posibilidad de incluir diferentes idiomas, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.", 
             url: {
-                website: 'https://luisvalladaresc.github.io/',
+                website: 'https://giacchetta.net',
             },
             imagen: {
                 portada: {
@@ -87,7 +87,7 @@ const DATA = {
             resumen: "",
             descripcion: "Proyecto en el que se desarrollo la pagina web de Moegui, empresa que brinda servicios de consultoría relacionados con DevOps, SecOps y TestOps. El desarrollado comenzó a partir de una pagina de inicio y se llevo a cabo con ayuda de \"Front\" una plantilla de Bootstrap. Cuenta con multiples interfaces, como su pagina de inicio (actualizada), nuevas paginas como acerca de, contacto, blog, documentación, ayuda, políticas de privacidad, términos y condiciones, e incluso paginas creadas dinámicamente para cada uno de sus productos, blogs, servicios y oportunidades de trabajo. Cabe mencionar, que cada interfaz es responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con posibilidad de incluir diferentes idiomas, con múltiples animaciones, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.", 
             url: {
-                website: 'https://luisvalladaresc.github.io/',
+                website: 'https://moegui.com',
             },
             imagen: {
                 portada: {
@@ -106,8 +106,8 @@ const DATA = {
             resumen: "",
             descripcion: "Proyecto en el que se desarrollo la pagina web actual enfocada en promover mi trabajo. El desarrollado comenzó de 0, incluido su diseño. Cuenta con una interfaz responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con animaciones sutiles, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.", 
             url: {
-                website: 'https://luisvalladaresc.github.io/',
-                github: 'https://github.com/LuisValladaresC/luisvalladaresc.github.io'
+                website: 'https://luisvalladaresc.github.io',
+                github: 'https://github.com/LuisValladaresC/luisvalladaresc.github.io',
             },
             imagen: {
                 portada: {
@@ -126,7 +126,7 @@ const DATA = {
             resumen: "",
             descripcion: "Proyecto en el que se dio mantenimiento y desarrollaron nuevas características para una aplicación web enfocada gestionar inventarios de productos y realizar pedidos. Las nuevas implementaciones fueron desde cambios menores en las diferentes interfaces, revisión y reparación de errores, diseño y desarrollo de nuevas interfaces con su lógica de base de datos e interactividad con el servidor.", 
             url: {
-                website: 'https://luisvalladaresc.github.io/',
+                website: 'https://www.behance.net/gallery/135108777/Sistema-de-Inventarios',
             },
             imagen: {
                 portada: {
@@ -145,7 +145,7 @@ const DATA = {
             resumen: "",
             descripcion: "Proyecto en el que se desarrollo una pagina web minimalista enfocada en promover la marca personal del cliente. El desarrollado comenzó a partir de un diseño inicial. Cuenta con una interfaz responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con animaciones sutiles, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.",
             url: {
-                website: 'https://luisvalladaresc.github.io/Rafa-Cavestany/',
+                website: 'http://www.rcavestany.com',
             },
             imagen: {
                 portada: {
@@ -164,7 +164,7 @@ const DATA = {
             resumen: "",
             descripcion: "Proyecto en el que se desarrollo una pagina web enfocada en promover la marca personal del cliente. El desarrollado comenzó a partir de un diseño inicial. Cuenta con una interfaz responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con animaciones sutiles y optimizada para tener un excelente rendimiento y velocidad de carga.",
             url: {
-                website: 'https://luisvalladaresc.github.io/XabiDB/',
+                website: 'https://luisvalladaresc.github.io/XabiDB',
             },
             imagen: {
                 portada: {
