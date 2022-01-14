@@ -72,13 +72,13 @@ function crear_plantilla_HTML(data, $contenedor) {
                                 <p class="trabajo-etiqueta">${servicio.fecha_inicio} - ${new Date().getFullYear()}</p>
                                 ${servicio.herramientas.includes('html') ? '<i class="trabajo-icono fab fa-html5"></i>' : ''}
                                 ${servicio.herramientas.includes('css') ? '<i class="trabajo-icono fab fa-css3-alt"></i>' : ''}
-                                ${servicio.herramientas.includes('bootstrap') ? '<i class="trabajo-icono fab fa-bootstrap"></i>' : ''}
                                 ${servicio.herramientas.includes('javascript') ? '<i class="trabajo-icono fab fa-js-square"></i>' : ''}
+                                ${servicio.herramientas.includes('nodejs') ? '<i class="trabajo-icono fab fa-node"></i>' : ''}
                                 ${servicio.herramientas.includes('php') ? '<i class="trabajo-icono fab fa-php"></i>' : ''}
-                                ${servicio.herramientas.includes('laravel') ? '<i class="trabajo-icono fab fa-laravel"></i>' : ''}
                                 ${servicio.herramientas.includes('mysql') ? '<i class="trabajo-icono fab fa-mysql"></i>' : ''}
                                 ${servicio.herramientas.includes('git') ? '<i class="trabajo-icono fab fa-git-square"></i>' : ''}
                                 ${servicio.herramientas.includes('github') ? '<i class="trabajo-icono fab fa-github"></i>' : ''}
+                                ${servicio.herramientas.includes('gitlab') ? '<i class="trabajo-icono fab fa-gitlab"></i>' : ''}
                             </div>
                         </figure>
                         <div class="trabajo-descripcion">
@@ -97,13 +97,13 @@ function crear_plantilla_HTML(data, $contenedor) {
                             <div class="trabajo-imagen-capa">
                                 ${servicio.herramientas.includes('html') ? '<i class="trabajo-icono fab fa-html5"></i>' : ''}
                                 ${servicio.herramientas.includes('css') ? '<i class="trabajo-icono fab fa-css3-alt"></i>' : ''}
-                                ${servicio.herramientas.includes('bootstrap') ? '<i class="trabajo-icono fab fa-bootstrap"></i>' : ''}
                                 ${servicio.herramientas.includes('javascript') ? '<i class="trabajo-icono fab fa-js-square"></i>' : ''}
+                                ${servicio.herramientas.includes('nodejs') ? '<i class="trabajo-icono fab fa-node"></i>' : ''}
                                 ${servicio.herramientas.includes('php') ? '<i class="trabajo-icono fab fa-php"></i>' : ''}
-                                ${servicio.herramientas.includes('laravel') ? '<i class="trabajo-icono fab fa-laravel"></i>' : ''}
                                 ${servicio.herramientas.includes('mysql') ? '<i class="trabajo-icono fas fa-database"></i>' : ''}
                                 ${servicio.herramientas.includes('git') ? '<i class="trabajo-icono fab fa-git-square"></i>' : ''}
                                 ${servicio.herramientas.includes('github') ? '<i class="trabajo-icono fab fa-github"></i>' : ''}
+                                ${servicio.herramientas.includes('gitlab') ? '<i class="trabajo-icono fab fa-gitlab"></i>' : ''}
                                 <p class="trabajo-etiqueta">${servicio.fecha_inicio} - ${new Date().getFullYear()}</p>
                             </div>
                             <img class="trabajo-imagen" 

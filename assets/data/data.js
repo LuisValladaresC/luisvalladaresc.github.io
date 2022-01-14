@@ -1,31 +1,31 @@
 const DATA = {
     conocimientos: [
         {
-            titulo: "HTML & CSS",
-            nivel: "95"
+            titulo: "HTML",
+            nivel: "90"
         },
         {
-            titulo: "Bootstrap",
-            nivel: "85"
+            titulo: "CSS",
+            nivel: "90"
         },
         {
             titulo: "Javascript",
-            nivel: "90"
-        },
-        {
-            titulo: "PHP",
-            nivel: "90"
-        },
-        {
-            titulo: "Laravel",
             nivel: "85"
         },
         {
-            titulo: "MySQL",
-            nivel: "80"
+            titulo: "Node.js",
+            nivel: "70"
         },
         {
-            titulo: "Git & GitHub",
+            titulo: "MySQL",
+            nivel: "70"
+        },
+        {
+            titulo: "Firebase",
+            nivel: "75"
+        },
+        {
+            titulo: "Git, GitHub & Gitlab",
             nivel: "85"
         },
     ],
