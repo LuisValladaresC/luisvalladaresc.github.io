@@ -181,14 +181,14 @@ function crear_plantilla_HTML(data, $contenedor) {
                 ${contacto.redes_sociales.github ? 
                     `<a href="${contacto.redes_sociales.github}" class="contacto-icono" target="_blank"><i class="fab fa-github"></i></a>`
                 : ''}
-                ${contacto.redes_sociales.instagram ? 
-                    `<a href="${contacto.redes_sociales.instagram}" class="contacto-icono" target="_blank"><i class="fab fa-instagram"></i></a>`
-                : ''}
                 ${contacto.redes_sociales.twitter ? 
                     `<a href="${contacto.redes_sociales.twitter}" class="contacto-icono" target="_blank"><i class="fab fa-twitter"></i></a>`
                 : ''}
                 ${contacto.redes_sociales.linkedin ? 
                     `<a href="${contacto.redes_sociales.linkedin}" class="contacto-icono" target="_blank"><i class="fab fa-linkedin-in"></i></a>`
+                : ''}
+                ${contacto.redes_sociales.workana ? 
+                    `<a href="${contacto.redes_sociales.workana}" class="contacto-icono" target="_blank"><i class="fas fa-globe-americas"></i></a>`
                 : ''}
             </div>`
             return plantilla_HTML;
