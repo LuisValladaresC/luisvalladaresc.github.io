@@ -180,13 +180,13 @@ const DATA = {
         },
     ],
     contacto: {
-        acerca_de_mi: "Soy un desarrollador de páginas web con mucha experiencia y un alto nivel de estudios en la rama. Justo ahora me encuentro explorando nuevas oportunidades laborales. Así que si lo desea puede escribirme ahora mismo a alguna de mis redes sociales para que juntos pongamos en marcha tu proyecto.",
+        acerca_de_mi: "Soy un Frontend Developer con mas de 3 años de experiencia en desarrollo y mantenimiento de paginas web para diferentes sectores, entre los que puedo resaltar mi colaboración trabajando de manera remota en la plataforma de Workana. Mi objetivo es seguir mejorando mis habilidades profesionales, por lo que me encuentro en una continua actualización de mis conocimientos y en la búsqueda de nuevas oportunidades laborales.",
         correo: "ls.valladares7@gmail.com",
         redes_sociales: {
             github: 'https://github.com/LuisValladaresC/',
             linkedin: '',
-            instagram: '',
-            twitter: ''
+            twitter: '',
+            workana: 'https://www.workana.com/freelancer/ed6857354a8d6dccd9db81d9d9a40743',
         }
     }
 }
