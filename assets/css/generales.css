@@ -47,7 +47,7 @@ h3 {
 }
 
 #inicio {
-	background-image: url('../../img/public/hero.png');
+	background-image: url('../img/public/hero.png');
 	background-position-x: 100%;
 	background-position-y: center;
 	background-attachment: fixed;
@@ -56,7 +56,7 @@ h3 {
 }
 
 main {
-	background-image: url('../../img/public/main.png');
+	background-image: url('../img/public/main.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 

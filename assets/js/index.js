@@ -1,3 +1,5 @@
+import DATA from "../data/data";
+
 /* ---------------------------------------------------------------------------------- */
 /* CARGAMOS EL CONTENIDO DE LAS SECCIONES PROFESIONAL, TRABAJO, PORTAFOLIO Y CONTACTO */
 /* ---------------------------------------------------------------------------------- */
@@ -10,10 +12,10 @@ const $contenedor_contacto = document.querySelector("#contacto .contacto-conteni
 
 (function cargar_datos(){
     // Obtiene la informacion para las secciones del HTML desde una DB provisional (archivo JSON)
-    conocimientos = DATA.conocimientos;
-    servicios = DATA.servicios;
-    proyectos = DATA.proyectos;
-    contacto = DATA.contacto;
+    const conocimientos = DATA.conocimientos;
+    const servicios = DATA.servicios;
+    const proyectos = DATA.proyectos;
+    const contacto = DATA.contacto;
 
     // Añada la informacion obtenida al HTML
     agregar_datos_a_HTML(conocimientos, $contenedor_conocimientos)
