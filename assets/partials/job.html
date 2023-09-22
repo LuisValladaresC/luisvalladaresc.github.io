@@ -1,0 +1,68 @@
+<section id="trabajo">
+  <div class="trabajo-encabezado">
+    <h2 class="encabezado-titulo"><span>02</span> {{ job.title }}</h2>
+    <h3 class="encabezado-subtitulo">{{ job.subtitle }}</h3>
+  </div>
+
+  <div class="trabajo-servicios">
+    {{#each job.services as |service index| }}
+      {{#if (isEven index)}}
+        <!-- Plantilla A-->
+        <div class="trabajo-servicio">
+          <figure class="trabajo-contenedor-imagen">
+            <img
+              class="trabajo-imagen"
+              src="{{ service.image.url }}"
+              srcset="{{ service.image.url }}, {{ service.image.url2x }} 2x"
+              alt="Pagina Web"
+            />
+            <div class="trabajo-imagen-capa">
+              <p class="trabajo-etiqueta">{{ service.start_date }} - 2023</p>
+              {{#if (hasItem service.tools 'html')}} <i class="trabajo-icono fab fa-html5"></i> {{/if}}
+              {{#if (hasItem service.tools 'css')}} <i class="trabajo-icono fab fa-css3-alt"></i> {{/if}}
+              {{#if (hasItem service.tools 'javascript')}} <i class="trabajo-icono fab fa-js-square"></i> {{/if}}
+              {{#if (hasItem service.tools 'nodejs')}}<i class="trabajo-icono fab fa-node"></i> {{/if}}
+              {{#if (hasItem service.tools 'php')}}<i class="trabajo-icono fab fa-php"></i> {{/if}}
+              {{#if (hasItem service.tools 'mysql')}}<i class="trabajo-icono fab fa-mysql"></i> {{/if}}
+              {{#if (hasItem service.tools 'git')}}<i class="trabajo-icono fab fa-git-square"></i> {{/if}}
+              {{#if (hasItem service.tools 'github')}}<i class="trabajo-icono fab fa-github"></i> {{/if}}
+              {{#if (hasItem service.tools 'gitlab')}}<i class="trabajo-icono fab fa-gitlab"></i> {{/if}}
+            </div>
+          </figure>
+          <div class="trabajo-descripcion">
+            <h3 class="trabajo-descripcion-titulo">{{ service.title }}</h3>
+            <p class="trabajo-descripcion-parrafo">{{ service.description }}</p>
+          </div>
+        </div>
+      {{else}}
+        <!-- Plantilla B -->
+        <div class="trabajo-servicio impar">
+          <div class="trabajo-descripcion">
+            <h3 class="trabajo-descripcion-titulo">{{ service.title }}</h3>
+            <p class="trabajo-descripcion-parrafo">{{ service.description }}</p>
+          </div>
+          <figure class="trabajo-contenedor-imagen">
+            <div class="trabajo-imagen-capa">
+              {{#if (hasItem service.tools 'html')}} <i class="trabajo-icono fab fa-html5"></i> {{/if}}
+              {{#if (hasItem service.tools 'css')}} <i class="trabajo-icono fab fa-css3-alt"></i> {{/if}}
+              {{#if (hasItem service.tools 'javascript')}} <i class="trabajo-icono fab fa-js-square"></i> {{/if}}
+              {{#if (hasItem service.tools 'nodejs')}}<i class="trabajo-icono fab fa-node"></i> {{/if}}
+              {{#if (hasItem service.tools 'php')}}<i class="trabajo-icono fab fa-php"></i> {{/if}}
+              {{#if (hasItem service.tools 'mysql')}}<i class="trabajo-icono fab fa-mysql"></i> {{/if}}
+              {{#if (hasItem service.tools 'git')}}<i class="trabajo-icono fab fa-git-square"></i> {{/if}}
+              {{#if (hasItem service.tools 'github')}}<i class="trabajo-icono fab fa-github"></i> {{/if}}
+              {{#if (hasItem service.tools 'gitlab')}}<i class="trabajo-icono fab fa-gitlab"></i> {{/if}}
+              <p class="trabajo-etiqueta">{{ service.start_date }} - 2023</p>
+            </div>
+            <img
+              class="trabajo-imagen"
+              src="{{ service.image.url }}"
+              srcset="{{ service.image.url }}, {{ service.image.url2x }} 2x"
+              alt="Pagina Web"
+            />
+          </figure>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</section>

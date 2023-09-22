@@ -19,6 +19,7 @@
   },
   "homepage": "https://luisvalladaresc.github.io/",
   "devDependencies": {
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-handlebars": "^1.6.0"
   }
 }

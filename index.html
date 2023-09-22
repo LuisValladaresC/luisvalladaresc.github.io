@@ -1,213 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Soy desarrollor de paginas web con mucha experiencia y un alto nivel de estudios en la rama.">
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Luis Valladares</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Soy desarrollor de paginas web con mucha experiencia y un alto nivel de estudios en la rama.">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Luis Valladares</title>
 </head>
+
 <body>
-    <!-- Seccion Header & Hero -->
-    <div id="inicio">
-        <div class="section-background-color">
-            <!-- Seccion Header -->
-            <header id="header">
-                <nav class="header-navbar">
-                    <a class="header-navbar-link">Inicio</a>
-                    <a class="header-navbar-link" href="#profesional">Profesional</a>
-                    <a class="header-navbar-link" href="#trabajo">Trabajo</a>
-                    <a class="header-navbar-link" href="#portafolio">Portafolio</a>
-                    <a class="header-navbar-link" href="#contacto"><span>Trabajemos Juntos</span></a>
-                </nav>
-                <div class="header-menu-button" id="btn_menu">
-                    <span class="header-button-line button-line-1"></span>
-                    <span class="header-button-line button-line-2"></span>
-                    <span class="header-button-line button-line-3"></span>
-                </div>
-                <nav class="header-menu" id="menu">
-                    <a class="header-menu-link inicio active" href="#inicio">Inicio</a>
-                    <a class="header-menu-link profesional" href="#profesional">Profesional</a>
-                    <a class="header-menu-link trabajo" href="#trabajo">Trabajo</a>
-                    <a class="header-menu-link portafolio" href="#portafolio">Portafolio</a>
-                    <a class="header-menu-link contacto" href="#contacto">Trabajemos Juntos</a>
-                </nav>
-            </header>
+  {{> hero }}
+  {{> professional }}
 
-            <!-- Seccion Hero -->
-            <section id="hero">
-                <h1 class="hero-titulo">Yo soy<br>Luis<br>Valladares<span>.</span></h1>
-                <h2 class="hero-subtitulo">Desarrollador de Paginas Web</h2>
-                <a class="hero-arrow-link" href="#profesional"><i class="fas fa-chevron-down"></i></a>
-            </section>
-        </div>
+  <main>
+    <div class="section-background-color">
+      {{> job }}
+      {{> portfolio }}
     </div>
+  </main>
 
-    <!-- Seccion Profesional -->
-    <section id="profesional">
-        <div class="section-background-color">
-            <div class="profesional-contenido">
-                <h2 class="profesional-titulo"><span>01</span> Profesional</h2>
-                <h3 class="profesional-subtitulo">Mi nivel de conocimiento en software</h3>
-    
-                <div class="profesional-conocimientos">
-                    <!-- Plantilla -->
-                    <!-- <p class="profesional-conocimiento-nombre">${conocimiento.titulo}</p>
-                    <div class="profesional-conocimiento-nivel">
-                        <div class="profesional-nivel-barra n${conocimiento.nivel}">
-                            <div class="profesional-barra-relleno"></div>
-                        </div>
-                        <p class="profesional-nivel-porcentaje">${conocimiento.nivel}%</p>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
+  {{> contact }}
+  {{> footer }}
+  {{> modal }}
 
-    <!-- Seccion Trabajo & Portafolio -->
-    <main>
-        <div class="section-background-color">
-
-            <!-- Seccion Trabajo -->
-            <section id="trabajo">
-                <div class="trabajo-encabezado">
-                    <h2 class="encabezado-titulo"><span>02</span> Trabajo</h2>
-                    <h3 class="encabezado-subtitulo">Descripcion de mis servicios</h3>
-                </div>
-
-                <div class="trabajo-servicios">
-                    <!-- Plantilla A-->
-                    <!-- <div class="trabajo-servicio">
-                        <figure class="trabajo-contenedor-imagen">
-                            <img class="trabajo-imagen" src="${servicio.imagen.url}" srcset="${servicio.imagen.url}, ${servicio.imagen.url2x} 2x" alt="Pagina Web">
-                            <div class="trabajo-imagen-capa">
-                                <p class="trabajo-etiqueta">${servicio.fecha_inicio} - 2020</p>
-                                <i class="trabajo-icono fab fa-html5"></i>
-                                <i class="trabajo-icono fab fa-css3-alt"></i>
-                                <i class="trabajo-icono fab fa-js-square"></i>
-                                <i class="trabajo-icono fab fa-bootstrap"></i>
-                                <i class="trabajo-icono fab fa-git-square"></i>
-                                <i class="trabajo-icono fab fa-github"></i>
-                            </div>
-                        </figure>
-                        <div class="trabajo-descripcion">
-                            <h3 class="trabajo-descripcion-titulo">${servicio.titulo}</h3>
-                            <p class="trabajo-descripcion-parrafo">${servicio.descripcion}</p>
-                        </div>
-                    </div> -->
-
-                    <!-- Plantilla B -->
-                    <!-- <div class="trabajo-servicio">
-                        <div class="trabajo-descripcion impar">
-                            <h3 class="trabajo-descripcion-titulo">${servicio.titulo}</h3>
-                            <p class="trabajo-descripcion-parrafo">${servicio.descripcion}</p>
-                        </div>
-                        <figure class="trabajo-contenedor-imagen impar">
-                            <div class="trabajo-imagen-capa">
-                                <p class="trabajo-etiqueta impar">${servicio.fecha_inicio} - 2020</p>
-                                <i class="trabajo-icono fab fa-html5"></i>
-                                <i class="trabajo-icono fab fa-css3-alt"></i>
-                                <i class="trabajo-icono fab fa-js-square"></i>
-                                <i class="trabajo-icono fab fa-bootstrap"></i>
-                                <i class="trabajo-icono fab fa-git-square"></i>
-                                <i class="trabajo-icono fab fa-github"></i>
-                            </div>
-                            <img class="trabajo-imagen" src="${servicio.imagen.url}" srcset="${servicio.imagen.url}, ${servicio.imagen.url2x} 2x" alt="Pagina Web">
-                        </figure>
-                    </div> -->
-                </div>
-            </section>
-
-            <!-- Seccion Portafolio -->
-            <section id="portafolio">
-                <h2 class="portafolio-titulo"><span>03</span> Portafolio</h2>
-                <h3 class="portafolio-subtitulo">Mis proyectos recientes</h3>
-                <div class="portafolio-proyectos">
-                    <!-- Plantilla -->
-                    <!-- <figure class="portafolio-proyecto">
-                        <picture class="portafolio-imagen">
-                            <source srcset="${proyecto.imagen.portada.responsive}" media="(max-width: 600px)">
-                            <img src="${proyecto.imagen.portada.url}" srcset="${proyecto.imagen.portada.url}, ${proyecto.imagen.portada.url2x} 2x" alt="Pagina Web">
-                        </picture>
-                        <div class="portafolio-descripcion" id="portafolio_personal">
-                            <h4 class="portafolio-descripcion-titulo">${proyecto.titulo}</h4>
-                            <p class="portafolio-descripcion-parrafo">${proyecto.resumen}</p>
-                            <i class="portafolio-icono fas fa-search-plus"></i>
-                        </div>
-                    </figure> -->
-                </div>
-                <div class="portafolio-espaciado-de-contacto"></div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Seccion Contacto -->
-    <section id="contacto">
-        <div class="section-background-color">
-            <div class="contacto-contenedor">
-                <div class="contacto-contenido">
-                    <div class="contacto-contenido-informacion">
-                        <!-- Plantilla -->
-                        <!-- <h2 class="contacto-informacion-titulo">Contacto</h2>
-                        <p class="contacto-informacion-descripcion">${contacto.acerca_de_mi}</p>
-                        <a class="contacto-informacion-correo" href="mailto:${contacto.correo}">${contacto.correo}</a>
-                        <div class="contacto-informacion-redes-sociales">
-                            <a href="${contacto.redes_sociales.github}" class="contacto-icono" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="${contacto.redes_sociales.instagram}" class="contacto-icono" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="${contacto.redes_sociales.twitter}" class="contacto-icono" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="${contacto.redes_sociales.linkedin}" class="contacto-icono" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        </div> -->
-                    </div>
-                    <form action="" class="contacto-formulario">
-                        <input type="text" name="name" id="name" placeholder="Nombre" required>
-                        <input type="email" name="email" id="email" placeholder="Correo" required>
-                        <textarea name="message" id="message" rows="5" placeholder="Mensaje" required></textarea>
-                        <input type="submit" value="Enviar" id="contacto_enviar">
-                    </form>
-                </div>
-                <div class="contacto-arrow-container">
-                    <a class="contacto-arrow-link" href="#inicio"><i class="fas fa-chevron-up"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seccion Footer -->
-    <footer id="footer">
-        <p class="footer-copyright">Derechos Reservados © 2020</p>
-    </footer>
-
-    <!-- Modal -->
-    <div id="modal" class="inactive">
-        <div id="modal_container">
-            <!-- Plantilla -->
-            <!-- <div class="modal-container-header">
-                <h3 class="modal-encabezado-titulo">${proyecto.titulo}</h3>
-                <button class="modal-encabezado-button" id="btn_cerrar_modal">×</button>
-            </div>
-            <div class="modal-container-body">
-                <figure class="modal-body-imagen">
-                    <img src="${proyecto.imagen.descripcion.url}" srcset="${proyecto.imagen.descripcion.url}, ${proyecto.imagen.descripcion.url2x} 2x" alt="Pagina Web">
-                </figure>
-                <div class="modal-body-contenido">
-                    <h4 class="modal-contenido-titulo">Descripcion</h4>
-                    <p class="modal-contenido-parrafo">${proyecto.descripcion}</p>
-                    <h4 class="modal-contenido-titulo">URL / Github</h4>
-                    <div class="modal-contenido-enlaces">
-                        <a class="modal-enlaces-url" href="https://${proyecto.url.website}" target="_blank">${proyecto.url.website}</a>
-                        <a class="modal-enlaces-github" href="${proyecto.url.github}" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <h4 class="modal-contenido-titulo">Requerimientos</h4>
-                    <div class="modal-contenido-requerimientos">
-                        <span class="${proyecto.herramientas[0]}">${proyecto.herramientas[0]}</span>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-
-    <script type="module" src="/assets/js/index.js"></script>
+  <script type="module" src="/assets/js/index.js"></script>
 </body>
 </html>
