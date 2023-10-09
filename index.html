@@ -1,30 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Soy desarrollor de paginas web con mucha experiencia y un alto nivel de estudios en la rama.">
-  <link rel="stylesheet" href="/assets/css/index.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <title>Luis Valladares</title>
-</head>
-
-<body>
-  {{> hero }}
-  {{> professional }}
-
-  <main>
-    <div class="section-background-color">
-      {{> job }}
-      {{> portfolio }}
-    </div>
-  </main>
-
-  {{> contact }}
-  {{> footer }}
-  {{> modal }}
-
-  <script type="module" src="/assets/js/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soy desarrollor de paginas web con mucha experiencia y un alto nivel de estudios en la rama.">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Luis Valladares</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="modal"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
