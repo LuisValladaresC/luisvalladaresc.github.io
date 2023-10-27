@@ -10,9 +10,9 @@ const Header = () => {
   const currentSection = useSelector(state => state.menu.currentSection)
 
   useEffect(() => {
+    // Establece como seccion actual, la seccion con mayor area visible en pantalla
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // Establece como seccion actual, la seccion con mayor area visible en pantalla
         if (entry.isIntersecting) {
           if (entry.intersectionRect.height > window.innerHeight / 2) {
             dispatch(setCurrentSection(entry.target.id))
@@ -34,43 +34,49 @@ const Header = () => {
   }, [])
 
   return (
-    <header className='header'>
-      <nav className='header-navbar'>
-        { langData.navbar.items.map((navItem, index) => 
+    <header className='absolute w-full'>
+      <nav id='navbar' className={`fixed left-0 right-0 z-10 hidden md:flex justify-center w-full h-navbar shadow-xl shadow-black/5 duration-500 ${currentSection && currentSection != langData.home.id ? 'bg-primary-light' : ''}`}>
+        { langData.header.navbar.map((navItem, index) => 
           <a
             key={index}
             href={navItem.href}
-            className={`header-navbar-link ${navItem.href == `#${currentSection}` ? 'active' : ''}`}
+            className={`flex items-center h-[inherit] px-6 lg:px-7 md:text-[0.7rem] uppercase duration-150 ${navItem.href == `#${currentSection}` ? 'text-tertiary border-tertiary' : 'border-secondary-dark hover:border-secondary text-secondary-dark hover:text-secondary'}`}
           >
             {navItem.border
-              ? <span>{navItem.text}</span>
-              : navItem.text 
+              ?
+              <span className={`p-2 border rounded border-current`}>
+                {navItem.text}
+              </span>
+              :
+              navItem.text 
             }
           </a>
         )}
       </nav>
 
-      <div
-        onClick={() => isOpenMenu ? dispatch(setCloseMenu()) : dispatch(setOpenMenu())}
-        className={`header-menu-button ${isOpenMenu ? 'active' : ''}`}
-      >
-        <span className='header-button-line button-line-1'></span>
-        <span className='header-button-line button-line-2'></span>
-        <span className='header-button-line button-line-3'></span>
-      </div>
+      <div className={`group/menu ${isOpenMenu ? 'active' : ''}`}>
+        <nav className='fixed top-0 bottom-0 left-0 right-0 -z-[1] grid justify-center content-center bg-primary opacity-0 duration-500 group-[.active]/menu:z-10 group-[.active]/menu:opacity-100'>
+          { langData.header.navbar.map((navItem, index) => 
+            <a
+              key={index}
+              href={navItem.href}
+              onClick={() => dispatch(setCloseMenu())}
+              className={`py-3 text-center text-xs sm:text-sm tracking-[0.2em] uppercase ${navItem.href == `#${currentSection}` ? 'text-tertiary' : 'text-white hover:text-tertiary'}`}
+            >
+              {navItem.text}
+            </a>
+          )}
+        </nav>
 
-      <nav className={`header-menu ${isOpenMenu ? 'active' : ''}`}>
-        { langData.navbar.items.map((navItem, index) => 
-          <a
-            key={index}
-            href={navItem.href}
-            onClick={() => dispatch(setCloseMenu())}
-            className={`header-menu-link ${navItem.href == currentSection ? 'active' : ''}`}
-          >
-            {navItem.text}
-          </a>
-        )}
-      </nav>
+        <button
+          onClick={() => isOpenMenu ? dispatch(setCloseMenu()) : dispatch(setOpenMenu())}
+          className='fixed z-10 grid md:hidden w-6 h-5 mx-4 my-5'
+        >
+          <span className='menu-button-line menu-button-line__top '></span>
+          <span className='menu-button-line menu-button-line__center'></span>
+          <span className='menu-button-line menu-button-line__bottom'></span>
+        </button>
+      </div>
     </header>
   )
 }

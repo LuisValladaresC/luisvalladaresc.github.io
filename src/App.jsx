@@ -20,11 +20,10 @@ const App = () => {
 
       <Home />
       <Professional />
-      <main>
-        <div className="section-background-color">
-          <Job />
-          <Portfolio />
-        </div>
+      <main className='relative grid justify-center pb-[calc(theme(minHeight.contact)/2)] bg-primary-dark'>
+        <div className='section-overlay section-overlay__main'></div>
+        <Job />
+        <Portfolio />
       </main>
       <Contact />
 

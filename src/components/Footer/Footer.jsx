@@ -5,8 +5,8 @@ const Footer = () => {
   const langData = useSelector(state => state.lang.data)
 
   return (
-    <footer id="footer">
-      <p className="footer-copyright">{ langData.footer.text }</p>
+    <footer className='h-navbar flex justify-center items-center bg-primary'>
+      <p className="p1 -tracking-tighter text-white">{ langData.footer.text }</p>
     </footer>
   )
 }
