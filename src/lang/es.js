@@ -12,8 +12,8 @@ export default {
         href: '#inicio'
       },
       {
-        text: 'Profesional',
-        href: '#profesional',
+        text: 'Conocimientos',
+        href: '#conocimientos',
       },
       {
         text: 'Trabajo',
@@ -40,7 +40,7 @@ export default {
     subtitle: 'Desarrollador de Paginas Web'
   },
   professional: {
-    id: 'profesional',
+    id: 'conocimientos',
     title: 'Profesional',
     subtitle: 'Mi nivel de conocimiento en software',
     knowledge: [

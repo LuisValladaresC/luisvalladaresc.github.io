@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { ReactSVG } from "react-svg";
 import { setCloseMenu, setOpenMenu, setCurrentSection } from '../../store/menuSlice'
+import logo from '/icons/logo.svg'
 import './Header.css'
 
 const Header = () => {
@@ -36,11 +38,12 @@ const Header = () => {
   return (
     <header className='absolute w-full'>
       <nav id='navbar' className={`fixed left-0 right-0 z-10 hidden md:flex justify-center w-full h-navbar shadow-xl shadow-black/5 duration-500 ${currentSection && currentSection != langData.home.id ? 'bg-primary-light' : ''}`}>
+        <ReactSVG src={logo} className='absolute left-0 top-0 bottom-0 flex items-center w-10 ml-4 lg:ml-6 text-tertiary' />
         { langData.header.navbar.map((navItem, index) => 
           <a
             key={index}
             href={navItem.href}
-            className={`flex items-center h-[inherit] px-6 lg:px-7 md:text-[0.7rem] uppercase duration-150 ${navItem.href == `#${currentSection}` ? 'text-tertiary border-tertiary' : 'border-secondary-dark hover:border-secondary text-secondary-dark hover:text-secondary'}`}
+            className={`flex items-center h-[inherit] px-5 lg:px-7 md:text-[0.7rem] uppercase duration-150 ${navItem.href == `#${currentSection}` ? 'text-tertiary border-tertiary' : 'border-secondary-dark hover:border-secondary text-secondary-dark hover:text-secondary'}`}
           >
             {navItem.border
               ?
@@ -70,12 +73,14 @@ const Header = () => {
 
         <button
           onClick={() => isOpenMenu ? dispatch(setCloseMenu()) : dispatch(setOpenMenu())}
-          className='fixed z-10 grid md:hidden w-6 h-5 mx-4 my-5'
+          className='fixed z-10 grid md:hidden w-6 h-5 mx-3 sm:mx-4 my-4 sm:my-5'
         >
           <span className='menu-button-line menu-button-line__top '></span>
           <span className='menu-button-line menu-button-line__center'></span>
           <span className='menu-button-line menu-button-line__bottom'></span>
         </button>
+
+        <ReactSVG src={logo} className='absolute group-[.active]/menu:fixed z-10 right-0 top-0 md:hidden w-[36px] mx-3 sm:mx-4 my-4 sm:my-5 text-tertiary' />
       </div>
     </header>
   )
