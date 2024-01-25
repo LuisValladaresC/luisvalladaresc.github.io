@@ -3,8 +3,7 @@ import {RemoveScroll} from 'react-remove-scroll'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import Professional from './components/Professional/Professional'
-import Job from './components/Job/Job'
-import Portfolio from './components/Portfolio/Portfolio'
+import Main from './components/Main/Main'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Modal from './components/Modal/Modal'
@@ -20,11 +19,7 @@ const App = () => {
 
       <Home />
       <Professional />
-      <main className='relative grid justify-center pb-[calc(theme(minHeight.contact)/2)] bg-primary-dark'>
-        <div className='section-overlay section-overlay__main'></div>
-        <Job />
-        <Portfolio />
-      </main>
+      <Main />
       <Contact />
 
       <Footer />

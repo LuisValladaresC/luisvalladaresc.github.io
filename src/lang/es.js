@@ -9,6 +9,7 @@ export default {
     wallpapers: {
       home: '/images/wallpapers/hero.png',                 // Max Height: 1200px
       professional: '/images/wallpapers/professional.jpg', // Aspect Ratio: 16:9 - Max Width: 1920px
+      main: '/images/wallpapers/main.jpg',                 // Aspect Ratio:  2:3 - Max Width: 1920px
     }
   },
 
