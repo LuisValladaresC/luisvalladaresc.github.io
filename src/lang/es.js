@@ -8,6 +8,7 @@ export default {
   general: {
     wallpapers: {
       home: '/images/wallpapers/hero.png',                 // Max Height: 1200px
+      professional: '/images/wallpapers/professional.jpg', // Aspect Ratio: 16:9 - Max Width: 1920px
     }
   },
 
@@ -51,20 +52,54 @@ export default {
       link: 'https://drive.google.com/file/d/1E6vjqJgxoJl3Y-NZ9BIkfEoY7s0yirfn/view'
     }
   },
+
   professional: {
     id: 'conocimientos',
-    title: 'Profesional',
-    subtitle: 'Mi nivel de conocimiento en software',
+    title: 'Conocimientos',
+    subtitle: 'Mi nivel de expertiz en desarrollo web',
     knowledge: [
-      { title: 'HTML', level: 95 },
-      { title: 'CSS', level: 90 },
-      { title: 'Javascript', level: 85 },
-      { title: 'Node.js', level: 70 },
-      { title: 'MySQL', level: 70 },
-      { title: 'Firebase', level: 75 },
-      { title: 'Git, GitHub', level: 85 },
+      {
+        title: 'HTML',
+        level: 95,
+        description: 'HTML nativo y gestores de plantillas como Pug, Nunjucks y JSX. Ademas de desarrollo optimizado para motores de búsqueda (SEO).'
+      },
+      {
+        title: 'CSS',
+        level: 95,
+        description: 'CSS nativo, librerias como Bootstrap y TailwindCSS, y preprocesadores como Sass y PostCSS.'
+      },
+      {
+        title: 'Javascript',
+        level: 90,
+        description: 'Javascript nativo, preprocesadores como TypeScript, librerias como JQuery y frameworks como React. Ademas de automatización de tareas con herramientas como Gulp, Webpack y Vite.js.'
+      },
+      {
+        title: 'React',
+        level: 90,
+        description: 'React y sus librerias mas comunmente utilizadas como "React Router Dom" y "React Redux".'
+      },
+    ],
+    subtitle_2: 'Experiencia Relacionada',
+    experience: [
+      {
+        title: 'Diseño',
+        description: 'Conocimientos basicos tanto en UI como UX, con experiencia en manejo de herramientas relacionadas como Figma, Sketch, Adobe XD, Photoshop e Illustrator.',
+      },
+      {
+        title: 'Backend',
+        description: 'Experiencia en entornos como Node.js, PHP y Ruby. Sin embargo, en la mayoria de casos mi rol se ha enfocado en el desarrollo Frontend.',
+      },
+      {
+        title: 'Base de Datos',
+        description: 'Experiencia en entornos como MySQL, PostgreSQL, MongoDB y Firebase.',
+      },
+      {
+        title: 'Herramientas para Desarrollo',
+        description: 'Manejo de herramientas para gestion de proyectos como Git, Github y Gitlab, para comunicacion y gestion de tareas como Slack, Trello y Google Workspace, y herramientas para un agil desarrollo como Visual Studio Code, Google Chrome y la Terminal',
+      }
     ],
   },
+
   job: {
     id: 'trabajo',
     title: 'Trabajo',

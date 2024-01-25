@@ -1,5 +1,5 @@
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { Fragment, useEffect } from 'react'
 import './Professional.css'
 
 const Professional = () => {
@@ -21,30 +21,45 @@ const Professional = () => {
     Array.from(skillLevels).forEach(element => observer.observe(element));
   }, [])
 
+  const knowledgeListElement = (items) => (
+    <ul className='grid gap-y-3'>
+      { items.map((knowledge, index) => 
+        <li key={index}>
+          <h4 className='flex gap-x-1 mb-0.5 text-[0.7rem] md:text-xs lg:text-sm font-medium tracking-wide text-secondary uppercase'>
+            { knowledge.title }
+          </h4>
+          <div className={`knowledge-level group w-full h-2 md:h-2.5 lg:h-3 ${knowledge.level ? 'border border-tertiary' : ''}`}>
+            <div className={`w-0 group-[.active]:w-full h-full duration-1000 ${knowledge.level ? `lvl${knowledge.level} bg-tertiary` : 'lvl100 bg-gradient-to-r from-secondary'}`}></div>
+          </div>
+          <div className='h-full overflow-hidden'>
+            <div className='w-full px-1 md:px-2 py-0.5 md:py-1 bg-primary-dark/50'>
+              <p className='text-justify text-2xs md:text-[0.7rem] lg:text-xs tracking-wide text-secondary/80'>
+                { knowledge.description }
+              </p>
+            </div>
+          </div>
+        </li>
+      )}
+    </ul>
+  )
+
   return (
-    <section id={langData.professional.id} className='relative flex justify-center items-center min-h-[calc(100vh-(theme(spacing.navbar)/1.5))] bg-primary-dark'>
-      <div className='section-overlay section-overlay__professional'></div>
-      <div className='section-container relative w-full'>
+    <section id={langData.professional.id} className='relative flex justify-center items-center min-h-[calc(100vh-theme(spacing.navbar))] pt-[calc(theme(minHeight.aboutme)/2)] bg-primary-dark'>
+      {/* WALLPAPER */}
+      <div className='absolute inset-0 opacity-[0.45] bg-fixed bg-cover bg-no-repeat bg-center' style={{backgroundImage: `url('${langData.general.wallpapers.professional}')`}}></div>
+      {/* CONTENT */}
+      <div className='section-container relative w-full pb-3'>
         <h2 className='h2'>
           <span className='text-secondary'>01</span> { langData.professional.title }
         </h2>
-        <h3 className='h3 mb-6'>
+        <h3 className='h3 mb-2'>
           { langData.professional.subtitle }
         </h3>
-
-        <div className='grid grid-cols-[auto_1fr] gap-y-3 md:gap-y-4 lg:gap-y-5 w-full text-[0.7rem] md:text-xs lg:text-sm text-secondary'>
-          { langData.professional.knowledge.map((knowledge, index) => 
-            <Fragment key={index}>
-              <p className='text-right uppercase'>{ knowledge.title }</p>
-              <div className='knowledge-level group flex items-center'>
-                <div className={`lvl${ knowledge.level } h-2 md:h-2.5 lg:h-3 box-border px-2`}>
-                  <div className='w-0 h-full bg-tertiary duration-1000 group-[.active]:w-full'></div>
-                </div>
-                <p className='uppercase opacity-0 duration-300 delay-[900ms] group-[.active]:opacity-100'>{ knowledge.level }%</p>
-              </div>
-            </Fragment>
-          )}
-        </div>
+        { knowledgeListElement(langData.professional.knowledge) }
+        <h3 className='h3 mt-6 lg:mt-7'>
+          { langData.professional.subtitle_2 }
+        </h3>
+        { knowledgeListElement(langData.professional.experience) }
       </div>
     </section>
   )
