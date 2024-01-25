@@ -5,6 +5,12 @@ service.image.description - max-width: 967px | proporcion: 16:9
 */
 
 export default {
+  general: {
+    wallpapers: {
+      home: '/images/wallpapers/hero.png',                 // Max Height: 1200px
+    }
+  },
+
   header: {
     navbar: [
       {
@@ -30,6 +36,7 @@ export default {
       },
     ],
   },
+
   home: {
     id: 'inicio',
     title: {
@@ -37,7 +44,12 @@ export default {
       line2: 'Luis',
       line3: 'Valladares',
     },
-    subtitle: 'Desarrollador de Paginas Web'
+    subtitle: 'Desarrollador Web',
+    about_me: 'Como Desarrollador Web me especializo en el area denominada como "Frontend", es decir, en todo lo relacionado con el desarrollo de una interfaz web y su interactividad con los usuarios. Cuento con mas de 5 años de experiencia y puedo resaltar mi trabajo como Freelancer, mediante el cual, he tenido la oportunidad de trabajar de manera remota y colaborativa con personas y equipos de trabajo de diferentes partes del mundo. Mi objetivo actual es seguir mejorando mis habilidades profesionales, por lo que me encuentro en la actualización continua de mis conocimientos y en la búsqueda de nuevos retos profesionales.',
+    curriculum: {
+      text: 'Descargar Currículum',
+      link: 'https://drive.google.com/file/d/1E6vjqJgxoJl3Y-NZ9BIkfEoY7s0yirfn/view'
+    }
   },
   professional: {
     id: 'conocimientos',

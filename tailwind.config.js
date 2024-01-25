@@ -40,6 +40,7 @@ export default {
         'navbar': '3.75rem', // 60px
       },
       minHeight: {
+        'aboutme': '500px',
         'contact': '60vh',
       }
     },

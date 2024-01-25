@@ -1,0 +1,5 @@
+@media (max-aspect-ratio: 19/21) {
+  .home-wallpaper__image {
+    display: none !important;
+  }
+}
