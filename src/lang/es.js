@@ -108,36 +108,38 @@ export default {
     services: [
       {
         title: 'Maquetación Web',
-        description: 'Desarrollo de cualquier tipo de interfaz web partiendo desde una idea o un diseño, hasta el desarrollo de un conjunto de archivos capaces de ser reproducidos por todo tipo de navegadores web.',
+        description: 'Desarrollo de cualquier tipo de interfaz web, comenzando desde una idea o un diseño, hasta el desarrollo de un conjunto de archivos listos para ser subidos a internet como una pagina web completamente funcional.',
         start_date: 2018,
         image: {
-          url: '/images/services/maquetacion.png',
-          url2x: '/images/services/maquetacion@2x.png'
+          // Aspect Ratio: 16:9 - Max Width: 751px
+          url: '/images/services/maquetacion.jpg',
+          url2x: '/images/services/maquetacion@2x.jpg'
         },
-        tools: ['html', 'css']
+        tools: ['HTML', 'CSS']
       },
       {
-        title: 'Interactividad local y remota',
-        description: 'Desarrollo de servicios e interfaces web dinámicos e interactivos encargados de gestionar las solicitudes de los clientes de una manera rápida, eficiente y automatizada.',
+        title: 'Interactividad web',
+        description: 'Desarrollo de interfaces web dinámicas e interactivas capaces de mostrar y/o actualizar su contenido segun las necesidades del cliente y gestionar sus interaciones de una manera rápida, segura e independiente.',
         start_date: 2018,
         image: {
-          url: '/images/services/interactividad.png',
-          url2x: '/images/services/interactividad@2x.png'
+          url: '/images/services/interactividad.jpg',
+          url2x: '/images/services/interactividad@2x.jpg'
         },
-        tools: ['javascript', 'nodejs', 'mysql', 'firebase']
+        tools: ['Javascript', 'React']
       },
       {
         title: 'Trabajo remoto y colaborativo',
         description: 'Manejo de múltiples herramientas que facilitan la comunicación y revision del proyecto durante el desarrollo, con respaldos en la nube y un control de versiones que garantizan un trabajo remoto y colaborativo completamente eficiente.',
         start_date: 2018,
         image: {
-          url: '/images/services/remoto.png',
-          url2x: '/images/services/remoto@2x.png'
+          url: '/images/services/remoto.jpg',
+          url2x: '/images/services/remoto@2x.jpg'
         },
-        tools: ['git', 'github', 'gitlab']
+        tools: ['Git', 'Github', 'Slack', 'Trello', 'Google Workspace']
       },
     ]
   },
+
   portfolio: {
     id: 'portafolio',
     title: 'Portafolio',

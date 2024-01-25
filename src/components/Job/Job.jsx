@@ -18,34 +18,35 @@ const Job = () => {
         { langData.job.services.map((service, index) => 
           <div key={index} className={`group relative sm:grid grid-cols-6 items-center mb-5 sm:mb-0`}>
             {/* IMAGE */}
-            <figure className='relative row-start-1 col-start-1 group-even:col-start-3 col-span-4 shadow-md bg-primary-dark'>
+            <figure className='row-start-1 col-start-1 group-even:col-start-3 col-span-4 relative w-full shadow-md bg-primary'>
               <img
-                src={service.image.url2x || service.image.url}
+                src={service.image.url}
                 srcSet={service.image.url2x && `${service.image.url}, ${service.image.url2x} 2x`}
-                alt={ service.title }
-                className='w-full h-full object-cover align-top opacity-70'
+                loading='lazy'
+                className='relative inset-0 w-full h-full object-cover align-top opacity-60'
               />
-              <div className='absolute top-0 bottom-0 left-0 right-0 flex sm:flex-col justify-between items-start sm:group-even:items-end m-1.5 sm:m-2 lg:m-3'>
+              <div className='absolute inset-0 flex sm:flex-col justify-between items-start sm:group-even:items-end m-1.5 sm:m-2 lg:m-3'>
                 <p className='inline-block h-fit w-fit p-1.5 text-[0.7rem] sm:text-xs md:text-sm border rounded border-white text-white opacity-90'>
                   { service.start_date } - { new Date().getFullYear() }
                 </p>
                 <div className='flex justify-end gap-x-3'>
                   { service.tools.map((tool, index) => {
-                    let iconElement;
-                    switch (tool) {
+                    let iconElement = "";
+                    switch (tool.toLowerCase()) {
                       case 'html': iconElement = <FontAwesomeIcon icon="fa-brands fa-html5" />; break;
                       case 'css': iconElement = <FontAwesomeIcon icon="fa-brands fa-css3-alt" />; break;
                       case 'javascript': iconElement = <FontAwesomeIcon icon="fa-brands fa-square-js" />; break;
-                      case 'nodejs': iconElement = <FontAwesomeIcon icon="fa-brands fa-node" />; break;
-                      case 'php': iconElement = <FontAwesomeIcon icon="fa-brands fa-php" />; break;
-                      case 'mysql': iconElement = <FontAwesomeIcon icon="fa-solid fa-database" />; break;
+                      case 'react': iconElement = <FontAwesomeIcon icon="fa-brands fa-react" />; break;
                       case 'git': iconElement = <FontAwesomeIcon icon="fa-brands fa-square-git" />; break;
                       case 'github': iconElement = <FontAwesomeIcon icon="fa-brands fa-github" />; break;
                       case 'gitlab': iconElement = <FontAwesomeIcon icon="fa-brands fa-square-gitlab" />; break;
+                      case 'slack': iconElement = <FontAwesomeIcon icon="fa-brands fa-slack" />; break;
+                      case 'trello': iconElement = <FontAwesomeIcon icon="fa-brands fa-trello" />; break;
+                      case 'google workspace': iconElement = <FontAwesomeIcon icon="fa-brands fa-google" />; break;
                     }
                     if (iconElement) {
                       return (
-                        <span key={index} className='text-2xl sm:text-[1.7rem] md:text-3xl text-white opacity-90'>
+                        <span key={index} className='text-2xl sm:text-[1.7rem] md:text-3xl text-white opacity-90 cursor-help' title={tool}>
                           {iconElement}
                         </span>
                       )
@@ -67,4 +68,3 @@ const Job = () => {
 }
 
 export default Job
-
