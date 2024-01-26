@@ -1,9 +1,3 @@
-/* 
-TAMAÑO DE IMAGENES
-service.image.card - max-width: 553px | proporcion: 16:9
-service.image.description - max-width: 967px | proporcion: 16:9
-*/
-
 export default {
   general: {
     wallpapers: {
@@ -143,107 +137,123 @@ export default {
   portfolio: {
     id: 'portafolio',
     title: 'Portafolio',
-    subtitle: 'Mis proyectos recientes',
+    subtitle: 'Mis proyectos destacados',
     projects: [
       {
-        title: 'Giacchetta Networks',
-        description: 'Proyecto en el que se desarrollo la pagina web de Giacchetta Networks, empresa que brinda servicios relacionados con Marketing, Negocios y Desarrollo de Proyectos. El desarrollado comenzó de 0, incluido su diseño, y se llevo a cabo con ayuda de "Front" una plantilla de Bootstrap. Cuenta con múltiples interfaces, desde su pagina de inicio, un blog e incluso términos y condiciones de uso. Cabe mencionar, que cada interfaz es responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con posibilidad de incluir diferentes idiomas, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.',
-        website: 'https://giacchetta.net',
+        title: 'Portafolio',
+        description: 'Página web actual enfocada en promover mi marca personal, en donde muestro información acerca de mí, mi perfil profesional, mi trabajo y un portafolio con algunos de los proyectos realizado previamente. Su interfaz cuenta con un diseño programado para adaptarse a cualquier tamaño de pantalla, optimizada para tener un excelente rendimiento y con animaciones sutiles que hacen más ameno su uso. Inicialmente, se programó con HTML, CSS y JavaScript vanilla, luego se implementó HandlebarsJS como gestor de plantillas, y finalmente, en su versión #3, se actualizó a la estructura de componentes de React. El proyecto se desarrolló desde 0, incluido su diseño, mi rol ha sido tanto Frontend Developer como Diseñador, y hasta la actualidad, soy la única persona involucrada en el desarrollo.',
+        website: 'https://luisvalladaresc.github.io',
+        github: 'https://github.com/LuisValladaresC/luisvalladaresc.github.io',
         image: {
-          card: {
-            url: '/images/projects/giacchetta_networks.png',
-            url2x: '',
+          // Aspect Ratio: 16:9 - Max Width: 751px
+          desktop: {
+            url1x: '/images/projects/portfolio-desktop.jpg',
+            url2x: '/images/projects/portfolio-desktop@2x.jpg'
           },
-          description: {
-            url: '/images/projects/giacchetta_networks_description.png',
-            url2x: '',
+          // Aspect Ratio: 9:16 - Max Width: 173px 
+          mobile: {
+            url1x: '/images/projects/portfolio-mobile.jpg',
+            url2x: '/images/projects/portfolio-mobile@2x.jpg'
           },
+          background_color: '#333b50',
+        },
+        tools: ['html', 'css', 'javascript', 'react', 'handlebars', 'tailwindcss', 'vite', 'git', 'github']
+      },
+      {
+        title: 'CCoins',
+        description: 'CCoins es un Mercado P2P de Criptomonedas, servicio que permite a sus usuarios comprar, vender e intercambiar criptomonedas. Su página web cuenta con muchísimas interfaces, un diseño responsivo programado para adaptarse a cualquier tamaño de pantalla, carga dinámica de contenido y mucha interactividad. Fue desarrollada en el entorno de Ruby on Rails, utilizando el gestor de plantillas Stimulus, Vue y TailwindCSS para la maquetación web, además de JavaScript para el manejo de la interactividad del lado del cliente. Empecé a trabajar desde una etapa media hasta una etapa avanzada de su desarrollo con un equipo de aproximadamente 8 personas. Mi rol fue como Frontend Developer, sin embargo, también colabore en el área de diseño y backend.',
+        website: 'https://ccoins.io',
+        image: {
+          desktop: {
+            url1x: '/images/projects/ccoins-desktop.jpg',
+            url2x: '/images/projects/ccoins-desktop@2x.jpg'
+          },
+          mobile: {
+            url1x: '/images/projects/ccoins-mobile.jpg',
+            url2x: '/images/projects/ccoins-mobile@2x.jpg'
+          },
+          background_color: '#499789',
+        },
+        tools: ['html', 'css', 'javascript', 'vue', 'tailwindcss', 'ruby', 'postgresql', 'git', 'github']
+      },
+      {
+        title: 'Giacchetta Networks',
+        description: 'Giacchetta Networks es una empresa que brinda servicios relacionados con Marketing, Negocios y Desarrollo de Proyectos. Su página web fue creada para proporcionar información acerca de su trabajo, conectar con nuevos clientes y como un blog. Cuenta con múltiples interfaces, un diseño responsivo programado para adaptarse a cualquier tamaño de pantalla, posibilidad de incluir múltiples idiomas, carga dinámica de contenido y optimizada para tener un excelente rendimiento. El proyecto se realizó con ayuda de "Front" una plantilla premium de Bootstrap, sin embargo, durante su desarrollo incorporé múltiples cambios en el framework, como la inclusión de Nunjucks como gestor de plantillas y la compilación para múltiples idiomas. El proyecto se desarrolló desde 0, mi rol fue como Frontend Developer, aportando en gran medida en el área de diseño, y hasta finalizar un MVP de la página web, fui el único programador en el desarrollo.',
+        website: 'https://luisvalladaresc.github.io/giacchetta-networks',
+        image: {
+          desktop: {
+            url1x: '/images/projects/giacchetta-networks-desktop.jpg',
+            url2x: '/images/projects/giacchetta-networks-desktop@2x.jpg'
+          },
+          mobile: {
+            url1x: '/images/projects/giacchetta-networks-mobile.jpg',
+            url2x: '/images/projects/giacchetta-networks-mobile@2x.jpg'
+          },
+          background_color: '#f6f7fa',
         },
         tools: ['html', 'css', 'javascript', 'bootstrap', 'nunjucks', 'gulp', 'git', 'gitlab']
       },
       {
         title: 'Moegui',
-        description: 'Proyecto en el que se desarrollo la pagina web de Moegui, empresa que brinda servicios de consultoría relacionados con DevOps, SecOps y TestOps. El desarrollado comenzó a partir de una pagina de inicio y se llevo a cabo con ayuda de \'Front\' una plantilla de Bootstrap. Cuenta con multiples interfaces, como su pagina de inicio (actualizada), nuevas paginas como acerca de, contacto, blog, documentación, ayuda, políticas de privacidad, términos y condiciones, e incluso paginas creadas dinámicamente para cada uno de sus productos, blogs, servicios y oportunidades de trabajo. Cabe mencionar, que cada interfaz es responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con posibilidad de incluir diferentes idiomas, con múltiples animaciones, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.',
-        website: 'https://moegui.com',
+        description: 'Moegui es una empresa que brinda servicios de consultoría relacionados con DevOps, SecOps y TestOps. Su página web fue creada para proporcionar información acerca de su trabajo, productos y servicios, conectar con nuevos clientes y como un blog. Cuenta con más de 12 interfaces, un diseño responsivo programado para adaptarse a cualquier tamaño de pantalla, posibilidad de incluir múltiples idiomas, carga dinámica de contenido y optimizada para tener un excelente rendimiento. El proyecto se realizó con ayuda de "Front" una plantilla premium de Bootstrap, sin embargo, durante su desarrollo incorporé múltiples cambios en el framework, como la inclusión de Nunjucks como gestor de plantillas y la compilación para múltiples idiomas. Empecé a trabajar en una etapa muy inicial de su desarrollo, mi rol fue como Frontend Developer, aportando en gran medida en el área de diseño, y hasta finalizar un MVP de la página web, fui el único programador en el desarrollo.',
+        website: 'https://luisvalladaresc.github.io/moegui',
         image: {
-          card: {
-            url: '/images/projects/moegui.png',
-            url2x: '',
+          desktop: {
+            url1x: '/images/projects/moegui-desktop.jpg',
+            url2x: '/images/projects/moegui-desktop@2x.jpg'
           },
-          description: {
-            url: '/images/projects/moegui_description.png',
-            url2x: '',
+          mobile: {
+            url1x: '/images/projects/moegui-mobile.jpg',
+            url2x: '/images/projects/moegui-mobile@2x.jpg'
           },
+          background_color: '#21325b',
         },
         tools: ['html', 'css', 'javascript', 'bootstrap', 'nunjucks', 'gulp', 'git', 'gitlab']
       },
       {
-        title: 'Portafolio',
-        description: 'Proyecto en el que se desarrollo la pagina web actual enfocada en promover mi trabajo. El desarrollado comenzó de 0, incluido su diseño. Cuenta con una interfaz responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con animaciones sutiles, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.',
-        website: 'https://luisvalladaresc.github.io',
-        github: 'https://github.com/LuisValladaresC/luisvalladaresc.github.io',
-        image: {
-          card: {
-            url: '/images/projects/portafolio.png',
-            url2x: '',
-          },
-          description: {
-            url: '/images/projects/portafolio_description.png',
-            url2x: '',
-          },
-        },
-        tools: ['html', 'css', 'javascript', 'git', 'github']
-      },
-      {
         title: 'Sistema de Inventarios',
-        description: 'Proyecto en el que se dio mantenimiento y desarrollaron nuevas características para una aplicación web enfocada gestionar inventarios de productos y realizar pedidos. Las nuevas implementaciones fueron desde cambios menores en las diferentes interfaces, revisión y reparación de errores, diseño y desarrollo de nuevas interfaces con su lógica de base de datos e interactividad con el servidor.',
+        description: 'Aplicación web diseñada para la gestión de un inventario de productos, desde gestionar compras, proveedores, productos, almacenes, zonas, categorías y otras funcionalidades como reportes personalizados. Durante el desarrollo se implementaron cambios menores en las interfaces existentes, revisión y reparación de errores tanto backend, frontend y de base de datos, y finalmente, diseño y desarrollo de nuevas interfaces y su correspondiente lógica backend y base de datos. Empecé a trabajar en una etapa media de su desarrollo, mi rol fue FullStack y hasta finalizar un MVP del proyecto fui la única persona en el desarrollo. Específicamente, durante ese proceso estuve encargado de trabajar en el Backend, para el cual se utilizaba PHP y Laravel, en el Frontend utilizando el gestor de plantillas Blade, HTML y CSS para la maquetación web, además de JavaScript para el manejo de la interactividad del lado del cliente, y finalmente, en su base de datos se utilizaba MySQL.',
         website: 'https://www.behance.net/gallery/135108777/Sistema-de-Inventarios',
         image: {
-          card: {
-            url: '/images/projects/sistema_inventarios.png',
-            url2x: '',
-          },
-          description: {
-            url: '/images/projects/sistema_inventarios_description.png',
-            url2x: '',
-          },
+          desktop: [
+            {
+              url1x: '/images/projects/sistema-inventarios-1.jpg',
+              url2x: '/images/projects/sistema-inventarios-1@2x.jpg'
+            }, {
+              url1x: '/images/projects/sistema-inventarios-2.jpg',
+              url2x: '/images/projects/sistema-inventarios-2@2x.jpg'
+            },
+          ],
+          mobile: null,
+          background_color: '#367fa9',
         },
         tools: ['php', 'html', 'css', 'javascript', 'bootstrap', 'mysql']
       },
       {
         title: 'RCavestany',
-        description: 'Proyecto en el que se desarrollo una pagina web minimalista enfocada en promover la marca personal del cliente. El desarrollado comenzó a partir de un diseño inicial. Cuenta con una interfaz responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con animaciones sutiles, carga dinámica de contenido y optimizada para tener un excelente rendimiento y velocidad de carga.',
+        description: 'Página web enfocada en promover la marca personal del cliente, en donde se proporciona información acerca de su persona, perfil profesional, redes sociales y métodos de contacto. Su interfaz posee un diseño minimalista y responsivo programado para adaptarse a cualquier tamaño de pantalla, con carga dinámica de contenido, animaciones sutiles muy bien incorporadas y optimizada para tener un excelente rendimiento. El proyecto se desarrolló desde 0, mi rol fue como Frontend Developer, y fui el único programador en el desarrollo.',
         website: 'http://www.rcavestany.com',
         image: {
-          card: {
-            url: '/images/projects/rcavestany.png',
-            url2x: '',
+          desktop: {
+            url1x: '/images/projects/rcavestany-desktop.jpg',
+            url2x: '/images/projects/rcavestany-desktop@2x.jpg'
           },
-          description: {
-            url: '/images/projects/rcavestany_description.png',
-            url2x: ''
+          mobile: {
+            url1x: '/images/projects/rcavestany-mobile.jpg',
+            url2x: '/images/projects/rcavestany-mobile@2x.jpg'
           },
-        },
-        tools: ['html', 'css', 'javascript']
-      },
-      {
-        title: 'XabiDB',
-        description: 'Proyecto en el que se desarrollo una pagina web enfocada en promover la marca personal del cliente. El desarrollado comenzó a partir de un diseño inicial. Cuenta con una interfaz responsiva e interactiva, programada para adaptarse a cualquier tipo de pantalla, con animaciones sutiles y optimizada para tener un excelente rendimiento y velocidad de carga.',
-        website: 'https://luisvalladaresc.github.io/XabiDB',
-        image: {
-          card: {
-            url: '/images/projects/xabidb.png',
-            url2x: '',
-          },
-          description: {
-            url: '/images/projects/xabidb_description.png',
-            url2x: ''
-          },
+          background_color: '#f4f4f4',
         },
         tools: ['html', 'css', 'javascript']
       },
     ],
+    modal: {
+      description: 'Descripcion',
+      url: 'URL',
+      experience: 'Experiencia Adquirida',
+    },
   },
+
   contact: {
     id: 'contacto',
     title: 'Contacto',
@@ -277,12 +287,5 @@ export default {
   },
   footer: {
     text: `Derechos Reservados © ${new Date().getFullYear()}`
-  },
-  modal: {
-    project: {
-      description: 'Descripcion',
-      url: 'URL',
-      requirements: 'Requerimientos',
-    },
   },
 }
