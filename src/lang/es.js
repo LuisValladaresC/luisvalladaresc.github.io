@@ -282,6 +282,6 @@ export default {
   },
 
   footer: {
-    text: `Derechos Reservados © ${new Date().getFullYear()}`
+    text: `© ${new Date().getFullYear()} Sitio Web creado por Luis Valladares`
   },
 }

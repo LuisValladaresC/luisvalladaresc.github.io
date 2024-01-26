@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className='h-navbar flex justify-center items-center bg-primary'>
-      <p className="p1 -tracking-tighter text-white">{ langData.footer.text }</p>
+      <p className="p1 text-white">{ langData.footer.text }</p>
     </footer>
   )
 }
