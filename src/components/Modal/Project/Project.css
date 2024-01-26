@@ -1,0 +1,3 @@
+.project-subtitles {
+  @apply h3 mt-0 mb-1 text-left font-medium lg:text-base text-black;
+}
