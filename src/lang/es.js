@@ -4,6 +4,7 @@ export default {
       home: '/images/wallpapers/hero.png',                 // Max Height: 1200px
       professional: '/images/wallpapers/professional.jpg', // Aspect Ratio: 16:9 - Max Width: 1920px
       main: '/images/wallpapers/main.jpg',                 // Aspect Ratio:  2:3 - Max Width: 1920px
+      contact: '/images/wallpapers/contact.jpg',           // Aspect Ratio: 16:9 - Max Width: 1920px
     }
   },
 
@@ -257,15 +258,9 @@ export default {
   contact: {
     id: 'contacto',
     title: 'Contacto',
-    // about_me: 'Soy un Frontend Developer con mas de 3 años de experiencia en desarrollo y mantenimiento de paginas web para diferentes sectores, entre los que puedo resaltar mi colaboración trabajando de manera remota en la plataforma de Workana. Mi objetivo es seguir mejorando mis habilidades profesionales, por lo que me encuentro en una continua actualización de mis conocimientos y en la búsqueda de nuevas oportunidades laborales.',
-    description: 'Soy un Frontend Developer con mas de 5 años de experiencia en desarrollo de paginas web. Mi objetivo es seguir mejorando mis habilidades profesionales, por lo que me encuentro en una continua actualización de mis conocimientos y en la búsqueda de nuevas oportunidades laborales.',
+    description: '¿Necesita ayuda con el desarrollo de una página web? Pues no dudes en escribirme con los detalles del trabajo que desea realizar y para mí será un placer brindarle una asesoría profesional para el proyecto.',
     email: 'ls.valladares7@gmail.com',
     phone: '',
-    social_networks: {
-      workana: 'https://www.workana.com/freelancer/ed6857354a8d6dccd9db81d9d9a40743',
-      github: 'https://github.com/LuisValladaresC/',
-      linkedin: '',
-    },
     form: {
       name: {
         placeholder: 'Nombre',
@@ -285,6 +280,7 @@ export default {
       submit: 'Enviar',
     }
   },
+
   footer: {
     text: `Derechos Reservados © ${new Date().getFullYear()}`
   },

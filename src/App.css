@@ -27,25 +27,4 @@
   .section-container {
     @apply max-w-5xl mx-3 sm:mx-4 md:mx-5 my-navbar md:my-[calc(theme(spacing.navbar)*2)];
   }
-
-  .section-overlay {
-    @apply absolute inset-0 bg-fixed bg-cover bg-no-repeat;
-  }
-  .section-overlay__home {
-    background-image: url('/images/hero.png');
-    background-position: calc(100% + 12vh) center;
-    @apply bg-white lg:bg-right lg:bg-contain opacity-30;
-  }
-  .section-overlay__professional {
-    background-image: url('/images/conocimientos.png');
-    @apply bg-center opacity-[0.45];
-  }
-  .section-overlay__main {
-    background-image: url('/images/main.png');
-    @apply bg-scroll opacity-[0.35];
-  }
-  .section-overlay__contact {
-    background-image: url('/images/contacto.png');
-    @apply bg-center opacity-30;
-  }
 }
