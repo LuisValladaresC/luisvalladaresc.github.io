@@ -86,7 +86,7 @@ const Project = () => {
             <p 
               key={index} 
               className={`bg-technology-${tool} p1 px-2 sm:px-4 md:px-6 p-px text-center text-white uppercase`}
-              // bg-technology-html bg-technology-css bg-technology-javascript bg-technology-nunjucks bg-technology-handlebars bg-technology-bootstrap bg-technology-tailwindcss bg-technology-react bg-technology-vue bg-technology-nodejs bg-technology-php bg-technology-ruby bg-technology-mysql bg-technology-postgresql bg-technology-firebase bg-technology-webpack bg-technology-gulp bg-technology-vite bg-technology-git bg-technology-github bg-technology-gitlab
+              // bg-technology-html bg-technology-css bg-technology-javascript bg-technology-nunjucks bg-technology-handlebars bg-technology-bootstrap bg-technology-tailwindcss bg-technology-react bg-technology-vue bg-technology-nodejs bg-technology-php bg-technology-laravel bg-technology-ruby bg-technology-rails bg-technology-mysql bg-technology-postgresql bg-technology-firebase bg-technology-webpack bg-technology-gulp bg-technology-vite bg-technology-git bg-technology-github bg-technology-gitlab
             >
               {tool}
             </p>
