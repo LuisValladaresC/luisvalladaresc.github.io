@@ -103,34 +103,28 @@ export default {
     services: [
       {
         title: 'Maquetación Web',
-        description: 'Desarrollo de cualquier tipo de interfaz web, comenzando desde una idea o un diseño, hasta el desarrollo de un conjunto de archivos listos para ser subidos a internet como una pagina web completamente funcional.',
-        start_date: 2018,
+        description: 'Desarrollo de páginas web, desde la conceptualización hasta la creación de interfaces visuales, asegurando que el resultado final sea estético, funcional y accesible en todos los dispositivos. Incluyendo la optimización para que la aplicacion web cargue rápido y esté bien posicionada en motores de búsqueda (SEO).',
         image: {
           // Aspect Ratio: 16:9 - Max Width: 751px
           url: '/images/services/maquetacion.jpg',
           url2x: '/images/services/maquetacion@2x.jpg'
         },
-        tools: ['HTML', 'CSS']
       },
       {
         title: 'Interactividad web',
-        description: 'Desarrollo de interfaces web dinámicas e interactivas capaces de mostrar y/o actualizar su contenido segun las necesidades del cliente y gestionar sus interaciones de una manera rápida, segura e independiente.',
-        start_date: 2018,
+        description: 'Creación de experiencias web dinámicas, donde los usuarios pueden interactuar de manera fluida y rápida con el contenido. Esto abarca el desarrollo de funcionalidades que respondan a las necesidades del cliente y sus usuarios, asegurando que las interacciones sean seguras y efectivas.',
         image: {
           url: '/images/services/interactividad.jpg',
           url2x: '/images/services/interactividad@2x.jpg'
         },
-        tools: ['Javascript', 'React']
       },
       {
         title: 'Trabajo remoto y colaborativo',
-        description: 'Manejo de múltiples herramientas que facilitan la comunicación y revision del proyecto durante el desarrollo, con respaldos en la nube y un control de versiones que garantizan un trabajo remoto y colaborativo completamente eficiente.',
-        start_date: 2018,
+        description: 'Gestión integral de proyectos de manera remota, asegurando una colaboración fluida con clientes y equipos mediante herramientas que permiten un seguimiento constante del proyecto, control de versiones y almacenamiento en la nube. Garantizando que el trabajo colaborativo sea eficiente, transparente y organizado.',
         image: {
           url: '/images/services/remoto.jpg',
           url2x: '/images/services/remoto@2x.jpg'
         },
-        tools: ['Git', 'Github', 'Slack', 'Trello', 'Google Workspace']
       },
     ]
   },
