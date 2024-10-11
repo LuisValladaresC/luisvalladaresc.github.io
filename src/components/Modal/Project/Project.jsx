@@ -13,12 +13,12 @@ const Project = () => {
       {/* Header */}
       <div className='relative'>
         <h3 className='text-center font-semibold text-sm/none sm:text-base/none md:text-lg/none tracking-[0.15em] lg:tracking-[0.2em] uppercase'>{project.title}</h3>
-        <button onClick={() => dispatch(setCloseModal())} className='absolute top-0 bottom-0 right-0 text-xs/none sm:text-sm/none md:text-base/none text-tertiary hover:text-tertiary/60'>
+        {/* <button onClick={() => dispatch(setCloseModal())} className='absolute top-0 bottom-0 right-0 text-xs/none sm:text-sm/none md:text-base/none text-tertiary hover:text-tertiary/60'>
           <FontAwesomeIcon icon="fa-solid fa-x" />
-        </button>
+        </button> */}
       </div>
       {/* Image */}
-      <div className={`grid grid-cols-10 items-end gap-2 sm:gap-4 md:gap-5 w-full px-3 sm:px-4 md:px-5 py-4 sm:py-6 md:py-8`} style={{backgroundColor: project.image.background_color}}>
+      <div className={`relative grid grid-cols-10 items-end gap-2 sm:gap-4 md:gap-5 w-full px-3 sm:px-4 md:px-5 py-4 sm:py-6 md:py-8`} style={{backgroundColor: project.image.background_color}}>
         { !project.image.mobile
         ?
           <>
@@ -55,6 +55,14 @@ const Project = () => {
             />
           </>
         }
+        <a 
+          href={project.website}
+          target='_blank'
+          rel='noreferrer'
+          className='absolute right-0 top-0 bg-tertiary text-[0.6rem] sm:text-[0.7rem] tracking-widest uppercase text-white font-semibold px-3 md:px-5 py-2 duration-150 origin-top-right hover:scale-[1.04] shadow'
+        >
+          Ver Proyecto
+        </a>
       </div>
       {/* Description */}
       <div>
@@ -62,7 +70,7 @@ const Project = () => {
         <p className='p1 text-justify'>{project.description}</p>
       </div>
       {/* Url */}
-      <div>
+      {/* <div>
         <h4 className='project-subtitles mb-0'>{langData.portfolio.modal.url}</h4>
         <div className='flex justify-between'>
           <a className='p1 text-blue-500 hover:text-blue-700 underline' href={project.website} target='_blank' rel='noreferrer'>{project.website}</a>
@@ -77,7 +85,7 @@ const Project = () => {
             </a>
           }
         </div>
-      </div>
+      </div> */}
       {/* Experience */}
       <div>
         <h4 className='project-subtitles'>{langData.portfolio.modal.experience}</h4>
