@@ -42,7 +42,7 @@ export default {
       line3: 'Valladares',
     },
     subtitle: 'Desarrollador Web',
-    about_me: 'Como Desarrollador Web me especializo en el area denominada como Frontend, es decir, en todo lo relacionado con el desarrollo de una interfaz web y su interactividad con los usuarios. Cuento con mas de 5 años de experiencia y puedo resaltar mi trabajo como Freelancer, mediante el cual, he tenido la oportunidad de trabajar de manera remota y colaborativa con personas y equipos de trabajo de diferentes partes del mundo. Mi objetivo actual es seguir mejorando mis habilidades profesionales, por lo que me encuentro en la actualización continua de mis conocimientos y en la búsqueda de nuevos retos profesionales.',
+    about_me: 'Como Desarrollador Web me especializo en el Frontend, con más de 4 años de experiencia en el area, trabajando principalmente de manera remota. Puedo resaltar mi perfil como freelancer que me ha permitido trabajar con personas y equipos de diferentes partes del mundo, mejorando tanto mis habilidades técnicas como de comunicación. Aunque mi enfoque principal es el desarrollo frontend también tengo experiencia complementaria en diseño, backend y bases de datos. Ademas, me mantengo en constante actualización de mis conocimientos y en la búsqueda de nuevos retos profesionales que me permitan seguir creciendo.',
     curriculum: {
       text: 'Descargar Currículum',
       link: 'https://drive.google.com/file/d/1E6vjqJgxoJl3Y-NZ9BIkfEoY7s0yirfn/view'

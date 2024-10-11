@@ -30,7 +30,7 @@ const Home = () => {
       <div className='z-[1] absolute left-0 right-0 -bottom-[calc(theme(minHeight.aboutme)/2)] flex justify-center w-full px-3 sm:px-4 md:px-5'>
         <div className='flex flex-col items-center justify-center max-w-3xl min-h-aboutme gap-y-4 md:gap-y-6 lg:gap-y-8 px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 bg-primary text-white'>
           <ReactSVG src={logo} className='w-16 sm:w-[4.5rem] md:w-20 lg:w-24 mx-auto text-tertiary' />
-          <p className='p1 text-center leading-loose -tracking-tighter text-white'>
+          <p className='p1 text-justify leading-loose -tracking-tighter text-white'>
             { langData.home.about_me }
           </p>
           <a href={ langData.home.curriculum.link } target='_blank' rel='referrer' className='p1 border border-tertiary px-7 py-2 hover:bg-tertiary uppercase duration-300'>
