@@ -252,9 +252,12 @@ export default {
   contact: {
     id: 'contacto',
     title: 'Contacto',
-    description: '¿Necesita ayuda con el desarrollo de una página web? Pues no dude en escribirme con los detalles del trabajo que desea realizar, será un placer brindarle mis servicios.',
-    email: 'luis.valladares.dev@gmail.com',
-    phone: '',
+    description: '¿Estás buscando colaboración o necesitas apoyo en el desarrollo de una página web? Ya sea que trabaje en equipo o de manera independiente, estaré encantado de aportar mi experiencia y habilidades para llevar tu proyecto al siguiente nivel.',
+    contact_networks: {
+      email: 'luis.valladares.dev@gmail.com',
+      github: 'https://github.com/luisvalladaresc',
+      linkedin: 'https://www.linkedin.com/in/luisvalladaresc',
+    },
     form: {
       name: {
         placeholder: 'Nombre',

@@ -35,7 +35,7 @@ const Contact = () => {
     const name = form.get('name')
     const subject = form.get('subject')
     const message = form.get('message')
-    window.location.href = `mailto:${langData.contact.email}?subject=${name} - ${subject}&body=${message}`;
+    window.location.href = `mailto:${langData.contact.contact_networks.email}?subject=${name} - ${subject}&body=${message}`;
   }
 
   return (
@@ -58,15 +58,19 @@ const Contact = () => {
               <p className='contact-paragraph'>
                 {langData.contact.description}
               </p>
-              <div className='grid justify-center sm:justify-normal'>
-                <a href={`mailto:${langData.contact.email}`} className='contact-paragraph hover:text-tertiary focus:text-tertiary underline underline-offset-2'>
-                  {langData.contact.email}
+              {/* CONTACT NETWORKS */}
+              <div className='flex justify-between items-center'>
+                <a href={`mailto:${langData.contact.contact_networks.email}`} className='contact-paragraph hover:text-tertiary focus:text-tertiary underline underline-offset-2'>
+                  {langData.contact.contact_networks.email}
                 </a>
-                { langData.contact.phone &&
-                  <a href={`tel:${langData.contact.phone}`} className='contact-paragraph hover:text-tertiary focus:text-tertiary underline underline-offset-2'>
-                    Tel: {langData.contact.phone}
+                <div className='sm:col-span-2 flex justify-center gap-x-3 sm:gap-x-2 lg:gap-x-3 text-[1.375rem]/none md:text-2xl/none pb-0.5'>
+                  <a href={langData.contact.contact_networks.github} target='_blank' rel='noreferrer' className='text-white hover:text-tertiary'>
+                    <FontAwesomeIcon icon="fa-brands fa-github" />
                   </a>
-                }
+                  <a href={langData.contact.contact_networks.linkedin} target='_blank' rel='noreferrer' className='text-white hover:text-tertiary'>
+                    <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
+                  </a>
+                </div>
               </div>
             </div>
             {/* FORM */}
@@ -109,18 +113,6 @@ const Contact = () => {
                 {langData.contact.form.submit}
               </button>
             </form>
-            {/* SOCIAL NETWORKS */}
-            {/* <div className='sm:col-span-2 flex justify-center gap-x-3 lg:gap-x-5 text-[1.375rem]/none md:text-2xl/none'>
-              <a href={langData.contact.social_networks.workana} target='_blank' rel='noreferrer' className='text-white hover:text-tertiary'>
-                <FontAwesomeIcon icon="fa-solid fa-globe" />
-              </a>
-              <a href={langData.contact.social_networks.github} target='_blank' rel='noreferrer' className='text-white hover:text-tertiary'>
-                <FontAwesomeIcon icon="fa-brands fa-github" />
-              </a>
-              <a href={langData.contact.social_networks.linkedin} target='_blank' rel='noreferrer' className='text-white hover:text-tertiary'>
-                <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
-              </a>
-            </div> */}
           </div>
           {/* NAV ARROW */}
           <div className='absolute left-0 right-0 flex justify-center items-center h-[calc(theme(minHeight.contact)/2)]'>
