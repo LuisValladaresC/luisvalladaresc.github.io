@@ -52,46 +52,46 @@ export default {
   professional: {
     id: 'conocimientos',
     title: 'Conocimientos',
-    subtitle: 'Mi nivel de expertiz en desarrollo web',
+    subtitle: 'Habilidades Principales',
     knowledge: [
       {
         title: 'HTML',
-        level: 95,
-        description: 'HTML nativo y gestores de plantillas como Pug, Nunjucks y JSX. Ademas de desarrollo optimizado para motores de búsqueda (SEO).'
+        level: 100,
+        description: 'Desarrollo con HTML nativo y uso gestores de plantillas como Pug, Nunjucks y JSX. Ademas, tengo experiencia con desarrollo optimizado para motores de búsqueda (SEO) y optimizacion web.'
       },
       {
         title: 'CSS',
-        level: 95,
-        description: 'CSS nativo, librerias como Bootstrap y TailwindCSS, y preprocesadores como Sass y PostCSS.'
+        level: 100,
+        description: 'Desarrollo con CSS nativo, librerias como Bootstrap y TailwindCSS, preprocesadores como Sass, Stylus y PostCSS, y metodologias como BEM. Ademas, tengo experiencia avanzada en el uso de Flexbox y CSS Grid para crear interfaces responsivas y escalables.'
       },
       {
         title: 'Javascript',
-        level: 90,
-        description: 'Javascript nativo, preprocesadores como TypeScript, librerias como JQuery y frameworks como React. Ademas de automatización de tareas con herramientas como Gulp, Webpack y Vite.js.'
+        level: 100,
+        description: 'Desarrollo con Javascript nativo y TypeScript, librerias como JQuery y frameworks como React. Manejo de herramientas de testing como Jest y para automatización de tareas como Gulp, Webpack y Vite.js. Ademas, tengo experiencia avanzada en asincronía y consumo de API REST.'
       },
       {
         title: 'React',
-        level: 90,
-        description: 'React y sus librerias mas comunmente utilizadas como "React Router Dom" y "React Redux".'
+        level: 100,
+        description: 'Experiencia avanzada en React, incluyendo el manejo de sus librerías más utilizadas como React Router Dom y React Redux. Ademas, utilizo herramientas como Vite.js para configuraciones rápidas y escalables, y TypeScript para asegurar la estabilidad y tipado del código.'
       },
     ],
-    subtitle_2: 'Experiencia Relacionada',
+    subtitle_2: 'Habilidades Complementarias',
     experience: [
       {
         title: 'Diseño',
-        description: 'Conocimientos basicos tanto en UI como UX, con experiencia en manejo de herramientas relacionadas como Figma, Sketch, Adobe XD, Photoshop e Illustrator.',
+        description: 'Conocimientos en principios basicos de diseño UI/UX, permitiéndome colaborar en la creación de interfaces intuitivas y agradables. Ademas, tengo experiencia con el manejo de herramientas como Figma, Sketch, Adobe XD, Photoshop e Illustrator.',
       },
       {
         title: 'Backend',
-        description: 'Experiencia en entornos como Node.js, PHP y Ruby. Sin embargo, en la mayoria de casos mi rol se ha enfocado en el desarrollo Frontend.',
+        description: 'Experiencia en entornos backend como Node.js, PHP y Ruby.',
       },
       {
         title: 'Base de Datos',
-        description: 'Experiencia en entornos como MySQL, PostgreSQL, MongoDB y Firebase.',
+        description: 'Experiencia en el manejo de bases de datos SQL como MySQL y PostgreSQL, y NoSQL como MongoDB y Firebase.',
       },
       {
-        title: 'Herramientas para Desarrollo',
-        description: 'Manejo de herramientas para gestion de proyectos como Git, Github y Gitlab, para comunicacion y gestion de tareas como Slack, Trello y Google Workspace, y herramientas para un agil desarrollo como Visual Studio Code, Google Chrome y la Terminal',
+        title: 'Herramientas de Desarrollo',
+        description: 'Uso de herramientas de control de versiones y gestión de proyectos como Git, Github y Gitlab. Herramientas para comunicacion y gestion de tareas como Slack, Trello y Google Workspace, ademas de entornos de desarrollo como Visual Studio Code, Google Chrome, y la Terminal.',
       }
     ],
   },
